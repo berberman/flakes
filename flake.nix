@@ -16,8 +16,17 @@
     in {
       overlay = final: prev:
         withContents (name:
-          final.callPackage (pkgDir + "/${name}") {
-            pythonPackages = final.python3.pkgs;
+          let
+            pyOverrides = pself: psuper:
+              {
+                # in favour of pyqt5-jesus
+                # pyqt5 = psuper.pyqt5.overridePythonAttrs (old: {});
+              };
+          in final.callPackage (pkgDir + "/${name}") {
+
+            pythonPackages =
+              final.python38.pkgs.override { overrides = pyOverrides; };
+
           });
     } // flake-utils.lib.eachDefaultSystem (system:
       let

@@ -1,4 +1,4 @@
-{ stdenv, lib, pythonPackages, qasync, mpv }:
+{ stdenv, lib, pythonPackages, qasync, mpv, pyqt5-jesus }:
 
 let inherit (pythonPackages) buildPythonApplication fetchPypi;
 
@@ -16,12 +16,12 @@ in buildPythonApplication rec {
   propagatedBuildInputs = (with pythonPackages; [
     dbus-python
     setuptools
-    pyqt5
+    # pyqt5
     pyopengl
     janus
     requests
     tomlkit
-  ]) ++ [ mpv qasync ];
+  ]) ++ [ mpv qasync pyqt5-jesus ];
 
   postUnpack = ''
     substituteInPlace ./${pname}-${version}/mpv.py \
