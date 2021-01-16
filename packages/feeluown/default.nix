@@ -1,35 +1,52 @@
-{ stdenv, lib, pythonPackages, qasync, mpv }:
+{ stdenv, lib, makeDesktopItem, feeluown-core, feeluown-netease, feeluown-kuwo
+, feeluown-qqmusic, feeluown-local, pythonPackages, qt5 }:
 
 let
-  buildPythonApplication = pythonPackages.buildPythonApplication;
-  fetchPypi = pythonPackages.fetchPypi;
-
-in buildPythonApplication rec {
-  pname = "feeluown";
-  version = "3.6.1";
-
-  src = fetchPypi {
-    inherit pname version;
-    sha256 = "dXFSAH2CdWkJsidFqwvnftPHKFcLCq7MjRIjDGYy/ds=";
+  inherit (pythonPackages) wrapPython;
+  desktop = makeDesktopItem rec {
+    name = "FeelUOwn";
+    desktopName = name;
+    exec = "feeluown --log-to-file";
+    categories = "AudioVideo;Audio;Player;Qt;";
+    terminal = "false";
+    icon = "feeluown";
+    comment = "FeelUOwn Launcher";
+    startupNotify = "true";
+    extraEntries = ''
+      StartupWMClass=${name}
+          '';
   };
+in stdenv.mkDerivation {
 
-  doCheck = false;
+  pname = "feeluown";
+  inherit (feeluown-core) version src;
 
-  propagatedBuildInputs = (with pythonPackages; [
-    dbus-python
-    setuptools
-    pyqt5
-    pyopengl
-    janus
-    requests
-    tomlkit
-  ]) ++ [ mpv qasync ];
+  nativeBuildInputs = [ wrapPython qt5.wrapQtAppsHook ];
 
-  postUnpack = ''
-    substituteInPlace ./${pname}-${version}/mpv.py \
-      --replace "_dll = ctypes.util.find_library(_default_mpv_dylib)" \
-                '_dll = "${mpv}/lib/libmpv${stdenv.targetPlatform.extensions.sharedLibrary}"'
+  buildInputs = [
+    feeluown-core
+    feeluown-netease
+    feeluown-kuwo
+    feeluown-qqmusic
+    feeluown-local
+  ];
+
+  dontBuild = true;
+  dontConfigure = true;
+
+  installPhase = ''
+    runHook preInstall
+    mkdir -p $out/bin
+    cp ${feeluown-core}/bin/* $out/bin
+    install -D ${desktop}/share/applications/FeelUOwn.desktop $out/share/applications/FeelUOwn.desktop
+    runHook postInstall
   '';
+
+  preFixup = ''
+    wrapPythonProgramsIn "$out/bin" "$buildInputs"
+    wrapQtApp $out/bin/feeluown
+  '';
+
   meta = with lib; {
     homepage = "https://github.com/feeluown/FeelUOwn";
     description = "FeelUOwn Music Player";

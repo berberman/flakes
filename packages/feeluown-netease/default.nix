@@ -1,8 +1,6 @@
-{ lib, pythonPackages, feeluown }:
+{ lib, pythonPackages, feeluown-core }:
 
-let
-  buildPythonPackage = pythonPackages.buildPythonApplication;
-  fetchPypi = pythonPackages.fetchPypi;
+let inherit (pythonPackages) buildPythonPackage fetchPypi;
 
 in buildPythonPackage rec {
   pname = "fuo_netease";
@@ -21,10 +19,11 @@ in buildPythonPackage rec {
     beautifulsoup4
     marshmallow
     requests
-  ]) ++ [ feeluown ];
+  ]) ++ [ feeluown-core ];
 
   meta = with lib; {
     homepage = "https://github.com/feeluown/feeluown-netease";
     description = "feeluown netease plugin";
+    license = licenses.gpl3Only;
   };
 }
