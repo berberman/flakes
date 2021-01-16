@@ -2,14 +2,14 @@
 , feeluown-qqmusic, feeluown-local, pythonPackages, qt5 }:
 
 let
-  inherit (pythonPackages) wrapPython;
+  inherit (pythonPackages) python wrapPython;
   desktop = makeDesktopItem rec {
     name = "FeelUOwn";
     desktopName = name;
     exec = "feeluown --log-to-file";
     categories = "AudioVideo;Audio;Player;Qt;";
     terminal = "false";
-    icon = "feeluown";
+    icon = "${feeluown-core}/lib/${python.executable}/site-packages/icons/feeluown.ico";
     comment = "FeelUOwn Launcher";
     startupNotify = "true";
     extraEntries = ''
@@ -38,6 +38,7 @@ in stdenv.mkDerivation {
     runHook preInstall
     mkdir -p $out/bin
     cp ${feeluown-core}/bin/* $out/bin
+    rm $out/bin/feeluown-genicon
     install -D ${desktop}/share/applications/FeelUOwn.desktop $out/share/applications/FeelUOwn.desktop
     runHook postInstall
   '';
