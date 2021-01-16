@@ -1,8 +1,6 @@
 { lib, pythonPackages }:
 
-let
-  buildPythonPackage = pythonPackages.buildPythonPackage;
-  fetchPypi = pythonPackages.fetchPypi;
+let inherit (pythonPackages) buildPythonPackage fetchPypi;
 
 in buildPythonPackage rec {
   pname = "qasync";
@@ -13,11 +11,10 @@ in buildPythonPackage rec {
     sha256 = "B6GUqfF3Bu7JCFlrOkC0adLL+BwbnTOVNXpMkQRLovI=";
   };
 
-  # doCheck = true;
+  # check needs X server
   doCheck = false;
 
   propagatedBuildInputs = with pythonPackages; [ pyqt5 ];
-  # checkInputs = with pythonPackages; [ pytest pyside2 virtual-display ];
 
   meta = with lib; {
     homepage = "https://github.com/CabbageDevelopment/qasync";
