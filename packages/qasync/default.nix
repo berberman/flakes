@@ -1,4 +1,4 @@
-{ lib, pythonPackages, pyqt5-jesus }:
+{ lib, pythonPackages }:
 
 let
   buildPythonPackage = pythonPackages.buildPythonPackage;
@@ -16,7 +16,7 @@ in buildPythonPackage rec {
   # doCheck = true;
   doCheck = false;
 
-  propagatedBuildInputs = [ pyqt5-jesus ]; # with pythonPackages; [ pyqt5 ];
+  propagatedBuildInputs = with pythonPackages; [ pyqt5 ];
   # checkInputs = with pythonPackages; [ pytest pyside2 virtual-display ];
 
   meta = with lib; {

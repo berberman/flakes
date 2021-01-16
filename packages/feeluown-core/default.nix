@@ -1,4 +1,4 @@
-{ stdenv, lib, pythonPackages, qasync, mpv, pyqt5-jesus }:
+{ stdenv, lib, pythonPackages, qasync, mpv }:
 
 let inherit (pythonPackages) buildPythonApplication fetchPypi;
 
@@ -16,17 +16,20 @@ in buildPythonApplication rec {
   propagatedBuildInputs = (with pythonPackages; [
     dbus-python
     setuptools
-    # pyqt5
+    pyqt5
     pyopengl
     janus
     requests
     tomlkit
-  ]) ++ [ mpv qasync pyqt5-jesus ];
+  ]) ++ [ mpv qasync ];
 
   postUnpack = ''
     substituteInPlace ./${pname}-${version}/mpv.py \
       --replace "_dll = ctypes.util.find_library(_default_mpv_dylib)" \
                 '_dll = "${mpv}/lib/libmpv${stdenv.targetPlatform.extensions.sharedLibrary}"'
+    substituteInPlace ./${pname}-${version}/feeluown/linux/__init__.py \
+      --replace dbus.mainloop.pyqt5 dbus.mainloop.glib \
+      --replace DBusQtMainLoop DBusGMainLoop
   '';
 
   dontWrapPythonPrograms = true;
