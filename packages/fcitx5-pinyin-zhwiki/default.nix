@@ -16,7 +16,7 @@ in stdenv.mkDerivation rec {
   dontConfigure = true;
 
   installPhase = ''
-    install -D -m644 $src -t $out/share/fcitx5/pinyin/dictionaries
+    install -D -m644 $src $out/share/fcitx5/pinyin/dictionaries/${dic}
   '';
 
   meta = with lib; {
