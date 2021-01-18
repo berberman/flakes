@@ -11,15 +11,20 @@
         value = f name;
       };
       pkgDir = ./packages;
-      names = with builtins; attrNames (readDir pkgDir);
+      broken = [ "python-opencc" ];
+      names = with builtins;
+        nixpkgs.lib.subtractLists broken (attrNames (readDir pkgDir));
       withContents = f: with builtins; listToAttrs (map (genPkg f) names);
-    in {
+    in with flake-utils.lib;
+    {
       overlay = final: prev:
         withContents (name:
           final.callPackage (pkgDir + "/${name}") {
             pythonPackages = final.python38.pkgs;
           });
-    } // flake-utils.lib.eachDefaultSystem (system:
+    }
+    // eachSystem (nixpkgs.lib.subtractLists [ "x86_64-darwin" ] defaultSystems)
+    (system:
       let
         pkgs = import nixpkgs {
           inherit system;
