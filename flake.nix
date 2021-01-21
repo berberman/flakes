@@ -11,7 +11,7 @@
         value = f name;
       };
       pkgDir = ./packages;
-      broken = [ "python-opencc" ];
+      broken = (import ./broken.nix).broken;
       names = with builtins;
         nixpkgs.lib.subtractLists broken (attrNames (readDir pkgDir));
       withContents = f: with builtins; listToAttrs (map (genPkg f) names);
@@ -19,9 +19,12 @@
     {
       overlay = final: prev:
         withContents (name:
-          final.callPackage (pkgDir + "/${name}") {
-            pythonPackages = final.python38.pkgs;
-          });
+          let
+            pkg = import (pkgDir + "/${name}");
+            override = builtins.intersectAttrs (builtins.functionArgs pkg) {
+              pythonPackages = final.python3.pkgs;
+            };
+          in final.callPackage pkg override);
     }
     // eachSystem (nixpkgs.lib.subtractLists [ "x86_64-darwin" ] defaultSystems)
     (system:

@@ -1,4 +1,4 @@
-{ stdenv, lib, fetchurl, ... }:
+{ stdenv, lib, fetchurl }:
 
 let dic = "zhwiki-20210101.dict";
 in stdenv.mkDerivation rec {

@@ -1,4 +1,4 @@
-{ stdenv, lib, fetchurl, ... }:
+{ stdenv, lib, fetchurl }:
 
 let dic = "moegirl.dict";
 in stdenv.mkDerivation rec {
