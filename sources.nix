@@ -2,6 +2,14 @@
 { fetchFromGitHub, fetchurl }:
 let sums = with builtins; (fromJSON (readFile ./sha256sums.json));
 in {
+  feeluown-core = {
+    pname = "feeluown-core";
+    version = "3.7";
+    src = fetchurl {
+      sha256 = sums.feeluown-core;
+      url = "mirror://pypi/f/feeluown/feeluown-3.7.tar.gz";
+    };
+  };
   feeluown-kuwo = {
     pname = "feeluown-kuwo";
     version = "0.1.2";
@@ -59,14 +67,6 @@ in {
       rev = "3.21.1";
       fetchSubmodules = true;
       sha256 = sums.qliveplayer;
-    };
-  };
-  feeluown-core = {
-    pname = "feeluown-core";
-    version = "3.7";
-    src = fetchurl {
-      sha256 = sums.feeluown-core;
-      url = "mirror://pypi/f/feeluown/feeluown-3.7.tar.gz";
     };
   };
 }
