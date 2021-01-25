@@ -1,15 +1,9 @@
-{ lib, pythonPackages }:
+{ lib, pythonPackages, mySource }:
 
-let inherit (pythonPackages) buildPythonPackage fetchPypi;
+let inherit (pythonPackages) buildPythonPackage;
 
 in buildPythonPackage rec {
-  pname = "qasync";
-  version = "0.13.0";
-
-  src = fetchPypi {
-    inherit pname version;
-    sha256 = "B6GUqfF3Bu7JCFlrOkC0adLL+BwbnTOVNXpMkQRLovI=";
-  };
+  inherit (mySource) pname version src;
 
   # check needs X server
   doCheck = false;

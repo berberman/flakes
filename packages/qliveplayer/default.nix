@@ -1,18 +1,9 @@
-{ stdenv, pythonPackages, lib, ffmpeg, qt5, cmake, extra-cmake-modules
-, fetchFromGitHub, mpv, curl, streamlink, makeWrapper }:
+{ stdenv, pythonPackages, lib, ffmpeg, qt5, cmake, extra-cmake-modules, mySource
+, mpv, curl, streamlink, makeWrapper }:
 
 stdenv.mkDerivation rec {
 
-  pname = "qliveplayer";
-  version = "3.21.0";
-
-  src = fetchFromGitHub {
-    owner = "IsoaSFlus";
-    repo = "QLivePlayer";
-    rev = version;
-    sha256 = "/FngoMpSJaALgrCaqq5F3dOtcjVMBzmMTyEN39u7ulY=";
-    fetchSubmodules = true;
-  };
+  inherit (mySource) pname version src;
 
   nativeBuildInputs =
     [ cmake extra-cmake-modules qt5.wrapQtAppsHook makeWrapper ];

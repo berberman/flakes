@@ -1,0 +1,50 @@
+[__config__]
+oldver = "old_ver.json"
+newver = "new_ver.json"
+
+# [fcitx5-pinyin-moegirl]
+# source = "github"
+# github = "outloudvi/mw2fcitx"
+# use_latest_release = true
+
+# [fcitx5-pinyin-zhwiki]
+# source = "github"
+# github = "felixonmars/fcitx5-pinyin-zhwiki"
+# use_latest_release = true
+
+[feeluown-core]
+source = "pypi"
+pypi = "feeluown"
+
+[feeluown-kuwo]
+source = "pypi"
+pypi = "fuo_kuwo"
+
+[feeluown-local]
+source = "pypi"
+pypi = "fuo_local"
+
+[feeluown-netease]
+source = "pypi"
+pypi = "fuo_netease"
+
+[feeluown-qqmusic]
+source = "pypi"
+pypi = "fuo_qqmusic"
+
+[pypinyin]
+source = "pypi"
+pypi = "pypinyin"
+
+# [python-opencc]
+# source = "manual"
+# manual = "broken"
+
+[qasync]
+source = "pypi"
+pypi = "qasync"
+
+[qliveplayer]
+source = "github"
+github = "IsoaSFlus/QLivePlayer"
+use_latest_release = true

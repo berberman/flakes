@@ -1,15 +1,12 @@
-{ stdenv, lib, pythonPackages, qasync, mpv }:
+{ stdenv, lib, pythonPackages, qasync, mpv, mySource }:
 
-let inherit (pythonPackages) buildPythonApplication fetchPypi;
+let inherit (pythonPackages) buildPythonApplication;
 
 in buildPythonApplication rec {
-  pname = "feeluown";
-  version = "3.6.1";
 
-  src = fetchPypi {
-    inherit pname version;
-    sha256 = "dXFSAH2CdWkJsidFqwvnftPHKFcLCq7MjRIjDGYy/ds=";
-  };
+  pname = "feeluown";
+
+  inherit (mySource) version src;
 
   doCheck = false;
 

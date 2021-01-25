@@ -1,15 +1,10 @@
-{ lib, pythonPackages, feeluown-core }:
+{ lib, pythonPackages, feeluown-core, mySource }:
 
-let inherit (pythonPackages) buildPythonPackage fetchPypi;
+let inherit (pythonPackages) buildPythonPackage;
 
 in buildPythonPackage rec {
-  pname = "fuo_kuwo";
-  version = "0.1.2";
 
-  src = fetchPypi {
-    inherit pname version;
-    sha256 = "M/RDVmok9WMK7EXZ1+icRwBr5cD+hFt5rvRjdf9RmA0=";
-  };
+  inherit (mySource) pname version src;
 
   doCheck = false;
 

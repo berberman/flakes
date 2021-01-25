@@ -12,6 +12,7 @@
       };
       pkgDir = ./packages;
       broken = (import ./broken.nix).broken;
+      sources = import ./sources.nix;
       names = with builtins;
         nixpkgs.lib.subtractLists broken (attrNames (readDir pkgDir));
       withContents = f: with builtins; listToAttrs (map (genPkg f) names);
@@ -21,9 +22,11 @@
         withContents (name:
           let
             pkg = import (pkgDir + "/${name}");
-            override = builtins.intersectAttrs (builtins.functionArgs pkg) {
+            override = builtins.intersectAttrs (builtins.functionArgs pkg) ({
               pythonPackages = final.python3.pkgs;
-            };
+              mySource =
+                (sources { inherit (final) fetchurl fetchFromGitHub; }).${name};
+            });
           in final.callPackage pkg override);
     }
     // eachSystem (nixpkgs.lib.subtractLists [ "x86_64-darwin" ] defaultSystems)
@@ -33,6 +36,18 @@
           inherit system;
           overlays = [ self.overlay ];
         };
-      in { packages = withContents (name: pkgs.${name}); });
+      in {
+        packages = withContents (name: pkgs.${name});
+        devShell = with pkgs;
+          mkShell {
+            buildInputs = [
+              nvchecker
+              nix-prefetch
+              haskell-language-server
+              (haskellPackages.ghcWithPackages
+                (p: with p; [ aeson tomland neat-interpolation async ]))
+            ];
+          };
+      });
 
 }

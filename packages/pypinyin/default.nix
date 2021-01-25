@@ -1,15 +1,9 @@
-{ lib, pythonPackages }:
+{ lib, pythonPackages, mySource }:
 
-let inherit (pythonPackages) buildPythonPackage fetchPypi;
+let inherit (pythonPackages) buildPythonPackage;
 
 in buildPythonPackage rec {
-  pname = "pypinyin";
-  version = "0.40.0";
-
-  src = fetchPypi {
-    inherit pname version;
-    sha256 = "P0jY/U56XIh74zO7PqwHtwchGM858RgXTNvReX2exbM=";
-  };
+  inherit (mySource) pname version src;
 
   doCheck = false;
 
