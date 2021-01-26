@@ -2,16 +2,6 @@
 oldver = "old_ver.json"
 newver = "new_ver.json"
 
-# [fcitx5-pinyin-moegirl]
-# source = "github"
-# github = "outloudvi/mw2fcitx"
-# use_latest_release = true
-
-# [fcitx5-pinyin-zhwiki]
-# source = "github"
-# github = "felixonmars/fcitx5-pinyin-zhwiki"
-# use_latest_release = true
-
 [feeluown-core]
 source = "pypi"
 pypi = "feeluown"
@@ -32,14 +22,6 @@ pypi = "fuo_netease"
 source = "pypi"
 pypi = "fuo_qqmusic"
 
-[pypinyin]
-source = "pypi"
-pypi = "pypinyin"
-
-# [python-opencc]
-# source = "manual"
-# manual = "broken"
-
 [qasync]
 source = "pypi"
 pypi = "qasync"
@@ -48,3 +30,12 @@ pypi = "qasync"
 source = "github"
 github = "IsoaSFlus/QLivePlayer"
 use_latest_release = true
+
+[src-8]
+source = "github"
+github = "outloudvi/mw2fcitx"
+use_latest_release = true
+
+[src-9]
+source = "manual"
+manual = "0.2.2"
