@@ -1,5 +1,8 @@
 # flakes
 
+![Auto update](https://github.com/berberman/flakes/workflows/Auto%20update/badge.svg)
+![Check flake](https://github.com/berberman/flakes/workflows/Check%20flake/badge.svg)
+
 This repo adopts automatic update mechanism, packages sources are defined in [Config.hs](./Config.hs).
 The update script generates configuration file of [nvchecker](https://github.com/lilydjwg/nvchecker),
 then calls it to find out if there are packages need to update. If so, it then uses [nix-prefetch](https://github.com/msteen/nix-prefetch)
