@@ -9,7 +9,7 @@ nixSources = do
   -----------------------------------------------------------------------------
   package "feeluown-core" `hasPypiName` "feeluown"
   let fuoPlugins xs = sequence_ [latestPypi ("feeluown-" <> x) ("fuo_" <> unPkgName x) | x <- xs]
-   in fuoPlugins ["kuwo", "netease", "qqmusic", "local"]
+  fuoPlugins ["kuwo", "netease", "qqmusic", "local"]
   -----------------------------------------------------------------------------
   package "pypinyin" `hasPypiName` "pypinyin"
   -----------------------------------------------------------------------------
@@ -18,9 +18,12 @@ nixSources = do
   package "qliveplayer" `hasGitHubRepo` ("IsoaSFlus", "QLivePlayer")
   -----------------------------------------------------------------------------
   let moegirlDicRepo = ("outloudvi", "mw2fcitx")
-  moegirlDicSource <- newSource' "fcitx5-pinyin-moegirl" $ uncurry GitHub moegirlDicRepo
-  githubReleaseFile "fcitx5-pinyin-moegirl" moegirlDicRepo moegirlDicSource "moegirl.dict"
+      moegirlDicPkgName = "fcitx5-pinyin-moegirl"
+  moegirlDicSource <- newSource' moegirlDicPkgName $ uncurry GitHub moegirlDicRepo
+  githubReleaseFile (package moegirlDicPkgName) moegirlDicRepo moegirlDicSource "moegirl.dict"
   -----------------------------------------------------------------------------
-  -- we use manual version here since the file name of dictionary changes each version
-  zhwikiDicSource <- newSource' "fcitx5-pinyin-moegirl" $ Manual "0.2.2"
-  githubReleaseFile "fcitx5-pinyin-zhwiki" ("felixonmars", "fcitx5-pinyin-zhwiki") zhwikiDicSource "zhwiki-20210101.dict"
+  -- we don't update this package automatically, since the file name of dictionary changes each version
+  let zhwikiDicRepo = ("felixonmars", "fcitx5-pinyin-zhwiki")
+      zhwikiDicPkgName = "fcitx5-pinyin-zhwiki"
+  zhwikiDicSource <- newSource' zhwikiDicPkgName $ Manual "0.2.2"
+  githubReleaseFile (package zhwikiDicPkgName) ("felixonmars", "fcitx5-pinyin-zhwiki") zhwikiDicSource "zhwiki-20210101.dict"
