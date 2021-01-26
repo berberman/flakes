@@ -9,6 +9,7 @@ import Control.Concurrent.Async (mapConcurrently)
 import Control.Monad (void)
 import qualified Data.Aeson as A
 import qualified Data.HashMap.Strict as HMap
+import Data.List (sortBy)
 import qualified Data.Map.Merge.Strict as Map
 import qualified Data.Map.Strict as Map
 import Data.Maybe (catMaybes, fromMaybe)
@@ -254,7 +255,7 @@ main = do
       )
       needFetch
 
-  let sha256sumsWithRecovered = [(pkg, recovered Map.! name) | pkg@Pkg {..} <- pkgs, name `elem` ignoredNames] <> sha256sums
+  let sha256sumsWithRecovered = sortBy (\(Pkg {name = name1}, _) (Pkg {name = name2}, _) -> name1 `compare` name2) $ [(pkg, recovered Map.! name) | pkg@Pkg {..} <- pkgs, name `elem` ignoredNames] <> sha256sums
 
   T.putStrLn "Fetch result:"
   print sha256sums

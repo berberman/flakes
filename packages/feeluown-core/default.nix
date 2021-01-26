@@ -18,6 +18,7 @@ in buildPythonApplication rec {
     janus
     requests
     tomlkit
+    pydantic
   ]) ++ [ mpv qasync ];
 
   postUnpack = ''
