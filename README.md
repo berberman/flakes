@@ -1,7 +1,6 @@
 # flakes
 
-![Auto update](https://github.com/berberman/flakes/workflows/Auto%20update/badge.svg)
-![Check flake](https://github.com/berberman/flakes/workflows/Check%20flake/badge.svg)
+![CI](https://github.com/berberman/flakes/workflows/Update%20and%20check/badge.svg)
 
 This repo adopts automatic update mechanism, where packages sources are defined in [Config.hs](./Config.hs).
 The update script generates configuration file of [nvchecker](https://github.com/lilydjwg/nvchecker),
