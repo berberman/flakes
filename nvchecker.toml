@@ -22,6 +22,10 @@ pypi = "fuo_netease"
 source = "pypi"
 pypi = "fuo_qqmusic"
 
+[pypinyin]
+source = "pypi"
+pypi = "pypinyin"
+
 [qasync]
 source = "pypi"
 pypi = "qasync"
@@ -31,11 +35,11 @@ source = "github"
 github = "IsoaSFlus/QLivePlayer"
 use_latest_release = true
 
-[src-8]
+[src-10]
+source = "manual"
+manual = "0.2.2"
+
+[src-9]
 source = "github"
 github = "outloudvi/mw2fcitx"
 use_latest_release = true
-
-[src-9]
-source = "manual"
-manual = "0.2.2"

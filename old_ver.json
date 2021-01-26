@@ -4,8 +4,9 @@
   "feeluown-local": "0.2.1",
   "feeluown-netease": "0.5",
   "feeluown-qqmusic": "0.3.1",
+  "pypinyin": "0.40.0",
   "qasync": "0.13.0",
   "qliveplayer": "3.21.1",
-  "src-8": "20210114",
-  "src-9": "0.2.2"
+  "src-10": "0.2.2",
+  "src-9": "20210114"
 }

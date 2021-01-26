@@ -6,7 +6,7 @@ in {
     pname = "fcitx5-pinyin-moegirl";
     version = "20210114";
     src = fetchurl {
-      sha256 = sums.src-8;
+      sha256 = sums.src-9;
       url = "https://github.com/outloudvi/mw2fcitx/releases/download/20210114/moegirl.dict";
     };
   };
@@ -14,7 +14,7 @@ in {
     pname = "fcitx5-pinyin-zhwiki";
     version = "0.2.2";
     src = fetchurl {
-      sha256 = sums.src-9;
+      sha256 = sums.src-10;
       url = "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.2/zhwiki-20210101.dict";
     };
   };
@@ -56,6 +56,14 @@ in {
     src = fetchurl {
       sha256 = sums.feeluown-qqmusic;
       url = "mirror://pypi/f/fuo_qqmusic/fuo_qqmusic-0.3.1.tar.gz";
+    };
+  };
+  pypinyin = {
+    pname = "pypinyin";
+    version = "0.40.0";
+    src = fetchurl {
+      sha256 = sums.pypinyin;
+      url = "mirror://pypi/p/pypinyin/pypinyin-0.40.0.tar.gz";
     };
   };
   qasync = {
