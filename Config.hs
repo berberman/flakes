@@ -18,9 +18,9 @@ nixSources = do
   package "qliveplayer" `hasGitHubRepo` ("IsoaSFlus", "QLivePlayer")
   -----------------------------------------------------------------------------
   let moegirlDicRepo = ("outloudvi", "mw2fcitx")
-  moegirlDicSource <- newSource $ uncurry GitHub moegirlDicRepo
+  moegirlDicSource <- newSource' "fcitx5-pinyin-moegirl" $ uncurry GitHub moegirlDicRepo
   githubReleaseFile "fcitx5-pinyin-moegirl" moegirlDicRepo moegirlDicSource "moegirl.dict"
   -----------------------------------------------------------------------------
   -- we use manual version here since the file name of dictionary changes each version
-  zhwikiDicSource <- newSource $ Manual "0.2.2"
+  zhwikiDicSource <- newSource' "fcitx5-pinyin-moegirl" $ Manual "0.2.2"
   githubReleaseFile "fcitx5-pinyin-zhwiki" ("felixonmars", "fcitx5-pinyin-zhwiki") zhwikiDicSource "zhwiki-20210101.dict"
