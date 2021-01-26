@@ -9,7 +9,7 @@ let
     exec = "feeluown --log-to-file";
     categories = "AudioVideo;Audio;Player;Qt;";
     terminal = "false";
-    icon = "${feeluown-core}/lib/${python.executable}/site-packages/icons/feeluown.ico";
+    icon = "${feeluown-core}/lib/${python.executable}/site-packages/feeluown/icons/feeluown.png";
     comment = "FeelUOwn Launcher";
     startupNotify = "true";
     extraEntries = ''
