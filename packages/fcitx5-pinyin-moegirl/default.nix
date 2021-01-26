@@ -1,15 +1,8 @@
-{ stdenv, lib, fetchurl }:
+{ stdenv, lib, mySource }:
 
 let dic = "moegirl.dict";
 in stdenv.mkDerivation rec {
-  pname = "fcitx5-pinyin-moegirl";
-  version = "20210114";
-
-  src = fetchurl {
-    url =
-      "https://github.com/outloudvi/mw2fcitx/releases/download/${version}/${dic}";
-    sha256 = "sha256-HZabFVvobT7QnKIak+cyILOHIWhdfxNmpPyLrnD4nGo=";
-  };
+  inherit (mySource) pname version src;
 
   dontUnpack = true;
   dontBuild = true;

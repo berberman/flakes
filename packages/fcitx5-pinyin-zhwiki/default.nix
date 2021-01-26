@@ -1,15 +1,8 @@
-{ stdenv, lib, fetchurl }:
+{ stdenv, lib, mySource }:
 
 let dic = "zhwiki-20210101.dict";
 in stdenv.mkDerivation rec {
-  pname = "fcitx5-pinyin-zhwiki";
-  version = "0.2.2";
-
-  src = fetchurl {
-    url =
-      "https://github.com/felixonmars/${pname}/releases/download/${version}/${dic}";
-    sha256 = "HCwQ7RekneUXqXfYmRiJ93CX+Oscn8gmAU+sIKqYJwQ=";
-  };
+  inherit (mySource) pname version src;
 
   dontUnpack = true;
   dontBuild = true;
