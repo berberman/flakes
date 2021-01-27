@@ -20,10 +20,10 @@ in {
   };
   feeluown-core = {
     pname = "feeluown-core";
-    version = "3.7";
+    version = "3.7.1";
     src = fetchurl {
       sha256 = sums.feeluown-core;
-      url = "mirror://pypi/f/feeluown/feeluown-3.7.tar.gz";
+      url = "mirror://pypi/f/feeluown/feeluown-3.7.1.tar.gz";
     };
   };
   feeluown-kuwo = {
