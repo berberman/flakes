@@ -19,6 +19,7 @@ import qualified Data.Text.IO as T
 import Lib
 import NeatInterpolation (trimming)
 import System.Directory (doesFileExist)
+import System.Environment (lookupEnv)
 import System.Process (CreateProcess, readCreateProcessWithExitCode, shell)
 
 -----------------------------------------------------------------------------
@@ -198,6 +199,13 @@ main = do
 
   -- write all sums for next use
   A.encodeFile sha256Data sha256sumsWithRecovered
+
+  githubEnv <- lookupEnv "GITHUB_ENV"
+  case githubEnv of
+    Just fp ->
+      let commitMessage = T.unpack $ "Auto update: " <> T.intercalate ", " [unPkgName pkgName | Pkg {..} <- Map.keys pkgsNeedFetch]
+       in appendFile fp $ "COMMIT_MSG=" <> commitMessage
+    _ -> T.putStrLn "Not in github environment"
 
 runMyProcess :: CreateProcess -> IO Text
 runMyProcess c = do

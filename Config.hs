@@ -26,4 +26,4 @@ nixSources = do
   let zhwikiDicRepo = ("felixonmars", "fcitx5-pinyin-zhwiki")
       zhwikiDicPkgName = "fcitx5-pinyin-zhwiki"
   zhwikiDicSource <- newSource' zhwikiDicPkgName $ Manual "0.2.2"
-  githubReleaseFile (package zhwikiDicPkgName) ("felixonmars", "fcitx5-pinyin-zhwiki") zhwikiDicSource "zhwiki-20210101.dict"
+  githubReleaseFile (package zhwikiDicPkgName) zhwikiDicRepo zhwikiDicSource "zhwiki-20210101.dict"
