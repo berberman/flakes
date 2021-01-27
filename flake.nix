@@ -36,8 +36,7 @@
       let
         pkgs = import nixpkgs {
           inherit system;
-          overlays =
-            [ self.overlay (final: prev: (import ./overlay.nix) final.sources final prev) ];
+          overlays = [ self.overlay ];
         };
       in {
         packages = withContents (name: pkgs.${name});

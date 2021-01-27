@@ -6,7 +6,7 @@
 {-# LANGUAGE ViewPatterns #-}
 {-# OPTIONS_GHC -Wall #-}
 
-module Lib where
+module Updater.Lib where
 
 import Control.Monad.State
 import Data.Map (Map)

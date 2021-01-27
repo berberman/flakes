@@ -6,6 +6,8 @@
 {-# LANGUAGE ViewPatterns #-}
 {-# OPTIONS_GHC -Wall #-}
 
+module Updater.Main where
+
 import Config
 import Control.Concurrent.Async (mapConcurrently)
 import Control.Monad (void)
@@ -16,19 +18,20 @@ import Data.Text (Text)
 import qualified Data.Text as T
 import Data.Text.Encoding (encodeUtf8)
 import qualified Data.Text.IO as T
-import Lib
 import NeatInterpolation (trimming)
 import System.Directory (doesFileExist)
 import System.Environment (lookupEnv)
+import System.FilePath ((</>))
 import System.Process (CreateProcess, readCreateProcessWithExitCode, shell)
+import Updater.Lib
 
 -----------------------------------------------------------------------------
 
 nvcheckerConfig :: FilePath
-nvcheckerConfig = "nvchecker.toml"
+nvcheckerConfig = "Updater/nvchecker.toml"
 
 sha256Data :: FilePath
-sha256Data = "sha256sums.json"
+sha256Data = "sums.json"
 
 newVerData :: FilePath
 newVerData = "new_ver.json"
@@ -68,7 +71,7 @@ instance A.FromJSON NvcheckerResult where
 
 runNvchecker :: IO [NvcheckerResult]
 runNvchecker = do
-  txt <- runMyProcess . shell $ "nvchecker --logger json -c" <> nvcheckerConfig
+  txt <- runMyProcess $ shell ("nvchecker --logger json -c" <> nvcheckerConfig)
   pure . catMaybes $ A.decodeStrict . encodeUtf8 <$> T.lines txt
 
 runNvtake :: IO ()
@@ -143,7 +146,7 @@ main = do
 
   -- parse new_ver.json
   T.putStrLn "Parsing newver json"
-  newVers <- decodeAsMap <$> A.decodeFileStrict' newVerData
+  newVers <- decodeAsMap <$> A.decodeFileStrict' ("Updater" </> newVerData)
 
   -- stale sources
   let sourcesNeedFetch = Map.filterWithKey (\srcName _ -> srcName `notElem` ignoredNames) newVers
@@ -166,7 +169,7 @@ main = do
 
   -- recover fresh sha256sums from file
   T.putStrLn "Parsing sha256 json"
-  hasOld <- doesFileExist oldVerData
+  hasOld <- doesFileExist sha256Data
   recovered <-
     if hasOld
       then Map.filterWithKey (\k _ -> k `elem` ignoredNames) . decodeAsMap <$> A.decodeFileStrict' sha256Data

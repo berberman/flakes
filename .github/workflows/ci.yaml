@@ -21,7 +21,7 @@ jobs:
           experimental-features = nix-command flakes
 
     - name: Run Update.hs
-      run: nix develop --command runghc Update.hs
+      run: nix develop --command runghc ./Updater/Main.hs
 
     - name: Run flake check
       run: nix flake check

@@ -2,7 +2,7 @@
 
 module Config (nixSources) where
 
-import Lib
+import Updater.Lib
 
 nixSources :: Definition ()
 nixSources = do
