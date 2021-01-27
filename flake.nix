@@ -19,22 +19,25 @@
     in with flake-utils.lib;
     {
       overlay = final: prev:
-        withContents (name:
+        let sources' = sources { inherit (final) fetchurl fetchFromGitHub; };
+        in withContents (name:
           let
             pkg = import (pkgDir + "/${name}");
             override = builtins.intersectAttrs (builtins.functionArgs pkg) ({
               pythonPackages = final.python3.pkgs;
-              mySource =
-                (sources { inherit (final) fetchurl fetchFromGitHub; }).${name};
+              mySource = sources'.${name};
             });
-          in final.callPackage pkg override);
-    }
-    // eachSystem (nixpkgs.lib.subtractLists [ "x86_64-darwin" ] defaultSystems)
+          in final.callPackage pkg override) // {
+            sources = sources';
+          };
+    } // eachSystem
+    (nixpkgs.lib.subtractLists [ "x86_64-darwin" "i686-linux" ] defaultSystems)
     (system:
       let
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [ self.overlay ];
+          overlays =
+            [ self.overlay (final: prev: (import ./overlay.nix) final.sources final prev) ];
         };
       in {
         packages = withContents (name: pkgs.${name});
