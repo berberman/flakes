@@ -8,8 +8,8 @@ nixSources :: Definition ()
 nixSources = do
   -----------------------------------------------------------------------------
   package "feeluown-core" `hasPypiName` "feeluown"
-  let fuoPlugins xs = sequence_ [latestPypi ("feeluown-" <> x) ("fuo_" <> unPkgName x) | x <- xs]
-  fuoPlugins ["kuwo", "netease", "qqmusic", "local"]
+  let fuoPlugins = mapM_ $ \x -> package ("feeluown-" <> x) `hasPypiName` ("fuo_" <> x)
+  fuoPlugins ["kuwo", "netease", "qqmusic", "local", "xiami"]
   -----------------------------------------------------------------------------
   package "pypinyin" `hasPypiName` "pypinyin"
   -----------------------------------------------------------------------------

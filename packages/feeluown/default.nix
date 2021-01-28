@@ -1,5 +1,5 @@
 { stdenv, lib, makeDesktopItem, feeluown-core, feeluown-netease, feeluown-kuwo
-, feeluown-qqmusic, feeluown-local, pythonPackages, qt5 }:
+, feeluown-qqmusic, feeluown-local, feeluown-xiami, pythonPackages, qt5 }:
 
 let
   inherit (pythonPackages) python wrapPython;
@@ -9,7 +9,8 @@ let
     exec = "feeluown --log-to-file";
     categories = "AudioVideo;Audio;Player;Qt;";
     terminal = "false";
-    icon = "${feeluown-core}/lib/${python.executable}/site-packages/feeluown/icons/feeluown.png";
+    icon =
+      "${feeluown-core}/lib/${python.executable}/site-packages/feeluown/icons/feeluown.png";
     comment = "FeelUOwn Launcher";
     startupNotify = "true";
     extraEntries = ''
@@ -29,6 +30,7 @@ in stdenv.mkDerivation {
     feeluown-kuwo
     feeluown-qqmusic
     feeluown-local
+    feeluown-xiami
   ];
 
   dontBuild = true;

@@ -57,30 +57,42 @@ instance ToNix NixFetcher where
       }
     |]
 
-data NvcheckerSource = GitHub {owner :: Text, repo :: Text} | Pypi {pypi :: Text} | Manual Version
+data NvcheckerSource
+  = GitHub {owner :: Text, repo :: Text}
+  | Pypi {pypi :: Text}
+  | ArchLinux {archpkg :: Text}
+  | Manual {manual :: Version}
 
 type SourceName = Text
 
 toNvEntry :: SourceName -> NvcheckerSource -> Text
-toNvEntry srcName GitHub {..} =
-  [trimming|
-    [$srcName]
-    source = "github"
-    github = "$owner/$repo"
-    use_latest_release = true
-  |]
-toNvEntry srcName Pypi {..} =
-  [trimming|
-    [$srcName]
-    source = "pypi"
-    pypi = "$pypi"
-  |]
-toNvEntry srcName (Manual (unVersion -> v)) =
-  [trimming|
-    [$srcName]
-    source = "manual"
-    manual = "$v"
-  |]
+toNvEntry srcName = \case
+  GitHub {..} ->
+    [trimming|
+      [$srcName]
+      source = "github"
+      github = "$owner/$repo"
+      use_latest_release = true
+    |]
+  ArchLinux {..} ->
+    [trimming|
+      [$srcName]
+      source = "archpkg"
+      archpkg = "$archpkg"
+    |]
+  Pypi {..} ->
+    [trimming|
+      [$srcName]
+      source = "pypi"
+      pypi = "$pypi"
+    |]
+  Manual {..} ->
+    let v = unVersion manual
+     in [trimming|
+          [$srcName]
+          source = "manual"
+          manual = "$v"
+        |]
 
 newtype PkgName = PkgName {unPkgName :: Text}
   deriving (Eq, Show, Ord, IsString, Semigroup, Monoid)
