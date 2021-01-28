@@ -11,12 +11,14 @@ module Updater.Main where
 import Config
 import Control.Monad (void, (<=<))
 import qualified Data.Aeson as A
+import qualified Data.ByteString.Lazy as LBS
 import qualified Data.Map.Strict as Map
 import Data.Maybe (catMaybes)
 import Data.Text (Text)
 import qualified Data.Text as T
-import Data.Text.Encoding (encodeUtf8)
+import Data.Text.Encoding (decodeUtf8, encodeUtf8)
 import qualified Data.Text.IO as T
+import qualified Data.Text.Lazy.IO as LT
 import NeatInterpolation (trimming)
 import System.Directory (doesFileExist)
 import System.Environment (lookupEnv)
@@ -210,7 +212,7 @@ main = do
   runNvtake
 
   -- write all sums for next use
-  A.encodeFile sha256Data sha256sumsWithRecovered
+  LT.writeFile sha256Data $ pStringNoColor . T.unpack . decodeUtf8 . LBS.toStrict $ A.encode sha256sumsWithRecovered
   T.appendFile sha256Data "\n"
 
   githubEnv <- lookupEnv "GITHUB_ENV"
