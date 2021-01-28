@@ -1,3 +1,5 @@
+{-# LANGUAGE DerivingStrategies #-}
+{-# LANGUAGE DerivingVia #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# LANGUAGE LambdaCase #-}
 {-# LANGUAGE OverloadedStrings #-}
@@ -9,6 +11,7 @@
 module Updater.Lib where
 
 import Control.Monad.State
+import Data.Aeson (FromJSON, FromJSONKey, ToJSON, ToJSONKey)
 import Data.Map (Map)
 import qualified Data.Map as Map
 import Data.Maybe (fromMaybe)
@@ -63,10 +66,8 @@ data NvcheckerSource
   | ArchLinux {archpkg :: Text}
   | Manual {manual :: Version}
 
-type SourceName = Text
-
 toNvEntry :: SourceName -> NvcheckerSource -> Text
-toNvEntry srcName = \case
+toNvEntry (unSourceName -> srcName) = \case
   GitHub {..} ->
     [trimming|
       [$srcName]
@@ -99,6 +100,10 @@ newtype PkgName = PkgName {unPkgName :: Text}
 
 newtype Version = Version {unVersion :: Text}
   deriving (Eq, Show, Ord, IsString, Semigroup, Monoid)
+
+newtype SourceName = SourceName {unSourceName :: Text}
+  deriving (Eq, Show, Ord, IsString, Semigroup, Monoid)
+  deriving (FromJSON, ToJSON, FromJSONKey, ToJSONKey) via Text
 
 data Pkg = Pkg
   { pkgName :: PkgName,
@@ -142,7 +147,7 @@ newFixedSource = newSource . Manual
 newSource :: NvcheckerSource -> Definition SourceName
 newSource source = do
   count <- use srcCount
-  newSource' ("src-" <> T.pack (show $ succ count)) source
+  newSource' ("src-" <> SourceName (T.pack (show $ succ count))) source
 
 newSource' :: SourceName -> NvcheckerSource -> Definition SourceName
 newSource' srcName source = do
@@ -155,12 +160,12 @@ attatchTo srcName pkg = pkgs %= Map.insert pkg srcName
 
 latestGitHub :: PkgName -> (Text, Text) -> Definition ()
 latestGitHub name (owner, repo) = do
-  src <- newSource' (unPkgName name) $ GitHub owner repo
+  src <- newSource' (SourceName $ unPkgName name) $ GitHub owner repo
   src `attatchTo` Pkg name (FetchFromGitHub owner repo attatchedVer Nothing)
 
 latestPypi :: PkgName -> Text -> Definition ()
 latestPypi name pypi = do
-  src <- newSource' (unPkgName name) $ Pypi pypi
+  src <- newSource' (SourceName $ unPkgName name) $ Pypi pypi
   let h = T.cons (T.head pypi) ""
       ver = unVersion attatchedVer
   src `attatchTo` Pkg name (FetchUrl [trimming|mirror://pypi/$h/$pypi/$pypi-$ver.tar.gz|] Nothing)
@@ -168,6 +173,10 @@ latestPypi name pypi = do
 -- for DSL
 package :: Text -> PkgName
 package = PkgName
+
+-- for DSL
+sourceName :: Text -> SourceName
+sourceName = SourceName
 
 -- for infix
 hasPypiName :: PkgName -> Text -> Definition ()

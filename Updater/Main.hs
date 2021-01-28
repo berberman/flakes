@@ -81,7 +81,7 @@ runNvtake = void $ runMyProcess . shell $ "nvtake --all -c" <> nvcheckerConfig
 runNvcmp :: IO Text
 runNvcmp = runMyProcess . shell $ "nvcmp -c" <> nvcheckerConfig
 
-decodeAsMap :: Maybe A.Value -> Map.Map Text Text
+decodeAsMap :: (A.FromJSONKey a, Ord a) => Maybe A.Value -> Map.Map a Text
 decodeAsMap (Just o) = case A.fromJSON o of
   A.Success x -> x
   A.Error e -> error e
@@ -196,13 +196,14 @@ main = do
                     T.replace
                       (unVersion attatchedVer)
                       (newVers Map.! srcName)
-                      $ toNix $ setSHA256 fetcher $ Just $ fixedSN srcName
+                      $ toNix $ setSHA256 fetcher $ Just $ fixedSN $ unSourceName srcName
           ]
   T.writeFile "sources.nix" $ sourcesN k
 
   -- use nvcmp output as commit message
   T.putStrLn "Running nvcmp"
   commitMessage <- ("Auto update: " <>) <$> runNvcmp
+  T.putStrLn "Commit message:"
   T.putStrLn commitMessage
 
   -- update old_ver.json
