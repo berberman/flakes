@@ -9,7 +9,6 @@
 module Updater.Main where
 
 import Config
--- import Control.Concurrent.Async (mapConcurrently)
 import Control.Monad (void, (<=<))
 import qualified Data.Aeson as A
 import qualified Data.Map.Strict as Map
@@ -202,7 +201,7 @@ main = do
 
   -- use nvcmp output as commit message
   T.putStrLn "Running nvcmp"
-  commitMessage <- ("Auto update: " <>) <$> runNvcmp
+  commitMessage <- ("Auto update: " <>) . T.intercalate ", " . T.lines <$> runNvcmp
   T.putStrLn "Commit message:"
   T.putStrLn commitMessage
 
@@ -223,8 +222,8 @@ runShell :: Text -> IO Text
 runShell x = do
   (_, T.pack -> stdout, T.pack -> stderr) <- readCreateProcessWithExitCode (shell $ T.unpack x) ""
   let s = T.replicate 10 "-"
-  T.putStrLn $ s <> " " <> T.pack (show x) <> " " <> s
+  T.putStrLn $ s <> " stdout: " <> T.pack (show x) <> " " <> s
   T.putStrLn stdout
-  T.putStrLn $ s <> " " <> T.pack (show x) <> " " <> s
+  T.putStrLn $ s <> " stderr: " <> T.pack (show x) <> " " <> s
   T.putStrLn stderr
   pure stdout

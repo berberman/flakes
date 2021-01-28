@@ -47,7 +47,7 @@
               nix-prefetch
               haskell-language-server
               (haskellPackages.ghcWithPackages
-                (p: with p; [ aeson neat-interpolation async pretty-simple ]))
+                (p: with p; [ aeson neat-interpolation pretty-simple ]))
             ];
           };
       });
