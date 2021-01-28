@@ -23,6 +23,7 @@ import System.Directory (doesFileExist)
 import System.Environment (lookupEnv)
 import System.FilePath ((</>))
 import System.Process (CreateProcess, readCreateProcessWithExitCode, shell)
+import Text.Pretty.Simple
 import Updater.Lib
 
 -----------------------------------------------------------------------------
@@ -145,7 +146,7 @@ main = do
   ignoredNames <- fmap nvName . filter isUpToDate <$> runNvchecker
 
   T.putStr "The following packages are up-to-date: "
-  T.putStrLn $ T.intercalate ", " ignoredNames
+  pPrint ignoredNames
 
   -- parse new_ver.json
   T.putStrLn "Parsing newver json"
@@ -165,7 +166,7 @@ main = do
           pkgsNeedFetch
 
   T.putStrLn "Packages to fetch: "
-  print pkgsNeedFetch
+  pPrint pkgsNeedFetch
 
   -- run fetchers to get SHA256
   sha256sums <- mapConcurrently prefetchPackage fetchersNeedRun
@@ -181,7 +182,7 @@ main = do
   let sha256sumsWithRecovered = recovered <> Map.fromList [(_pkgs Map.! pkg, sha256) | (pkg, sha256) <- Map.toList sha256sums]
 
   T.putStrLn "Fetch result:"
-  print sha256sums
+  pPrint sha256sums
 
   -- generate sources
   T.putStrLn "Generating sources.nix"
