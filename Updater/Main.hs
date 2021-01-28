@@ -9,7 +9,7 @@
 module Updater.Main where
 
 import Config
-import Control.Concurrent.Async (mapConcurrently)
+-- import Control.Concurrent.Async (mapConcurrently)
 import Control.Monad (void, (<=<))
 import qualified Data.Aeson as A
 import qualified Data.Map.Strict as Map
@@ -169,7 +169,7 @@ main = do
   pPrint pkgsNeedFetch
 
   -- run fetchers to get SHA256
-  sha256sums <- mapConcurrently prefetchPackage fetchersNeedRun
+  sha256sums <- mapM prefetchPackage fetchersNeedRun
 
   -- recover fresh sha256sums from file
   T.putStrLn "Parsing sha256 json"
