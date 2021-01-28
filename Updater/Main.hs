@@ -218,6 +218,9 @@ main = do
     Just fp -> T.appendFile fp $ "COMMIT_MSG=" <> commitMessage
     _ -> T.putStrLn "Not in github environment"
 
+  -- stage changes
+  void $ runShell "git add ."
+
 runShell :: Text -> IO Text
 runShell x = do
   (_, T.pack -> stdout, T.pack -> stderr) <- readCreateProcessWithExitCode (shell $ T.unpack x) ""
