@@ -198,7 +198,7 @@ main = do
                       (newVers Map.! srcName)
                       $ toNix $ setSHA256 fetcher $ Just $ fixedSN $ unSourceName srcName
           ]
-  T.writeFile "sources.nix" $ sourcesN k
+  T.writeFile "sources.nix" $ sourcesN k <> "\n"
 
   -- use nvcmp output as commit message
   T.putStrLn "Running nvcmp"
