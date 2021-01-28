@@ -210,10 +210,11 @@ main = do
 
   -- write all sums for next use
   A.encodeFile sha256Data sha256sumsWithRecovered
+  T.appendFile sha256Data "\n"
 
   githubEnv <- lookupEnv "GITHUB_ENV"
   case githubEnv of
-    Just fp -> appendFile fp $ "COMMIT_MSG=" <> T.unpack commitMessage
+    Just fp -> T.appendFile fp $ "COMMIT_MSG=" <> commitMessage
     _ -> T.putStrLn "Not in github environment"
 
 runMyProcess :: CreateProcess -> IO Text
