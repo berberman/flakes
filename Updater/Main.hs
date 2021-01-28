@@ -22,7 +22,7 @@ import NeatInterpolation (trimming)
 import System.Directory (doesFileExist)
 import System.Environment (lookupEnv)
 import System.FilePath ((</>))
-import System.Process (CreateProcess, readCreateProcessWithExitCode, shell)
+import System.Process (readCreateProcessWithExitCode, shell)
 import Text.Pretty.Simple
 import Updater.Lib
 
@@ -72,14 +72,14 @@ instance A.FromJSON NvcheckerResult where
 
 runNvchecker :: IO [NvcheckerResult]
 runNvchecker = do
-  txt <- runMyProcess $ shell ("nvchecker --logger json -c" <> nvcheckerConfig)
+  txt <- runShell ("nvchecker --logger json -c" <> T.pack nvcheckerConfig)
   pure . catMaybes $ A.decodeStrict . encodeUtf8 <$> T.lines txt
 
 runNvtake :: IO ()
-runNvtake = void $ runMyProcess . shell $ "nvtake --all -c" <> nvcheckerConfig
+runNvtake = void $ runShell ("nvtake --all -c" <> T.pack nvcheckerConfig)
 
 runNvcmp :: IO Text
-runNvcmp = runMyProcess . shell $ "nvcmp -c" <> nvcheckerConfig
+runNvcmp = runShell ("nvcmp -c" <> T.pack nvcheckerConfig)
 
 decodeAsMap :: (A.FromJSONKey a, Ord a) => Maybe A.Value -> Map.Map a Text
 decodeAsMap (Just o) = case A.fromJSON o of
@@ -91,11 +91,11 @@ decodeAsMap _ = error "failed to parse json"
 
 -- prefetch
 
-prefetchCommand :: Text -> CreateProcess
-prefetchCommand template = shell $ "nix-prefetch '" <> T.unpack template <> "'"
+prefetchCommand :: Text -> Text
+prefetchCommand template = "nix-prefetch '" <> template <> "'"
 
 prefetchPackage :: Text -> IO Text
-prefetchPackage fetcherExpr = strip <$> runMyProcess (prefetchCommand fetcherExpr)
+prefetchPackage fetcherExpr = strip <$> runShell (prefetchCommand fetcherExpr)
   where
     strip :: Text -> Text
     strip s = case (T.stripPrefix "sha256-" <=< lastMaybe . T.lines) s of
@@ -219,9 +219,12 @@ main = do
     Just fp -> T.appendFile fp $ "COMMIT_MSG=" <> commitMessage
     _ -> T.putStrLn "Not in github environment"
 
-runMyProcess :: CreateProcess -> IO Text
-runMyProcess c = do
-  (_, stdout, stderr) <- readCreateProcessWithExitCode c ""
-  putStrLn stdout
-  putStrLn stderr
-  pure $ T.pack stdout
+runShell :: Text -> IO Text
+runShell x = do
+  (_, T.pack -> stdout, T.pack -> stderr) <- readCreateProcessWithExitCode (shell $ T.unpack x) ""
+  let s = T.replicate 10 "-"
+  T.putStrLn $ s <> " " <> T.pack (show x) <> " " <> s
+  T.putStrLn stdout
+  T.putStrLn $ s <> " " <> T.pack (show x) <> " " <> s
+  T.putStrLn stderr
+  pure stdout
