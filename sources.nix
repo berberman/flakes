@@ -2,9 +2,20 @@
 { fetchFromGitHub, fetchurl }:
 let sums = with builtins; (fromJSON (readFile ./sums.json));
 in {
+  fcitx5-material-color = {
+    pname = "fcitx5-material-color";
+    version = "0.0.0.20201212";
+    src = fetchFromGitHub {
+      owner = "hosxy";
+      repo = "fcitx5-material-color";
+      rev = "c5f240591af52a041ff0fcde6fe245761c926f61";
+      fetchSubmodules = true;
+      sha256 = sums.fcitx5-material-color;
+    };
+  };
   fcitx5-nord = {
     pname = "fcitx5-nord";
-    version = "28ada26f4e926a741d8645cb8fa9d9d8ab3a3b70";
+    version = "0.0.0.20210116";
     src = fetchFromGitHub {
       owner = "tonyfettes";
       repo = "fcitx5-nord";

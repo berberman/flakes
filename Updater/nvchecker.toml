@@ -3,9 +3,13 @@
 oldver = "old_ver.json"
 newver = "new_ver.json"
 
+[fcitx5-material-color]
+source = "manual"
+manual = "0.0.0.20201212"
+
 [fcitx5-nord]
 source = "manual"
-manual = "28ada26f4e926a741d8645cb8fa9d9d8ab3a3b70"
+manual = "0.0.0.20210116"
 
 [fcitx5-pinyin-moegirl]
 source = "github"
