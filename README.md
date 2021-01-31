@@ -9,6 +9,7 @@ to get SHA256 of source, storing it to [sums.json](./sums.json). Finally, it gen
 
 #### packages available:
 
+* [fcitx5-material-color](https://github.com/hosxy/Fcitx5-Material-Color)
 * [fcitx5-nord](https://github.com/tonyfettes/fcitx5-nord)
 * [fcitx5-pinyin-moegirl](https://github.com/outloudvi/mw2fcitx)
 * [fcitx5-pinyin-zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki)

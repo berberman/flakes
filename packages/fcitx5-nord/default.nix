@@ -3,13 +3,11 @@
 stdenv.mkDerivation rec {
   inherit (mySource) pname version src;
 
-  dontUnpack = true;
   dontBuild = true;
   dontConfigure = true;
 
   installPhase = ''
     install -dm755 $out/share/fcitx5/themes/
-    cd $src
     cp -r Nord-Dark Nord-Light $out/share/fcitx5/themes/
   '';
 

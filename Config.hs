@@ -29,5 +29,15 @@ nixSources = do
   githubReleaseFile (package zhwikiDic) zhwikiDicRepo zhwikiDicSource "zhwiki-20210101.dict"
   -----------------------------------------------------------------------------
   let fcitx5Nord = "fcitx5-nord"
-  fcitx5NordSource <- newSource' (sourceName fcitx5Nord) $ Manual "28ada26f4e926a741d8645cb8fa9d9d8ab3a3b70"
-  fcitx5NordSource `attatchTo` Pkg (package fcitx5Nord) (FetchFromGitHub "tonyfettes" fcitx5Nord attatchedVer Nothing)
+  fcitx5NordSource <- newSource' (sourceName fcitx5Nord) $ Manual "0.0.0.20210116"
+  fcitx5NordSource
+    `attatchTo` Pkg
+      (package fcitx5Nord)
+      (FetchFromGitHub "tonyfettes" fcitx5Nord "28ada26f4e926a741d8645cb8fa9d9d8ab3a3b70" Nothing)
+  -----------------------------------------------------------------------------
+  let fcitx5MaterialColor = "fcitx5-material-color"
+  fcitx5MaterialColorSource <- newSource' (sourceName fcitx5MaterialColor) $ Manual "0.0.0.20201212"
+  fcitx5MaterialColorSource
+    `attatchTo` Pkg
+      (package fcitx5MaterialColor)
+      (FetchFromGitHub "hosxy" fcitx5MaterialColor "c5f240591af52a041ff0fcde6fe245761c926f61" Nothing)
