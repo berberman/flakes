@@ -27,3 +27,7 @@ nixSources = do
       zhwikiDic = "fcitx5-pinyin-zhwiki"
   zhwikiDicSource <- newSource' (sourceName zhwikiDic) $ Manual "0.2.2"
   githubReleaseFile (package zhwikiDic) zhwikiDicRepo zhwikiDicSource "zhwiki-20210101.dict"
+  -----------------------------------------------------------------------------
+  let fcitx5Nord = "fcitx5-nord"
+  fcitx5NordSource <- newSource' (sourceName fcitx5Nord) $ Manual "28ada26f4e926a741d8645cb8fa9d9d8ab3a3b70"
+  fcitx5NordSource `attatchTo` Pkg (package fcitx5Nord) (FetchFromGitHub "tonyfettes" fcitx5Nord attatchedVer Nothing)

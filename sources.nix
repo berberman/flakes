@@ -2,6 +2,17 @@
 { fetchFromGitHub, fetchurl }:
 let sums = with builtins; (fromJSON (readFile ./sums.json));
 in {
+  fcitx5-nord = {
+    pname = "fcitx5-nord";
+    version = "28ada26f4e926a741d8645cb8fa9d9d8ab3a3b70";
+    src = fetchFromGitHub {
+      owner = "tonyfettes";
+      repo = "fcitx5-nord";
+      rev = "28ada26f4e926a741d8645cb8fa9d9d8ab3a3b70";
+      fetchSubmodules = true;
+      sha256 = sums.fcitx5-nord;
+    };
+  };
   fcitx5-pinyin-moegirl = {
     pname = "fcitx5-pinyin-moegirl";
     version = "20210114";
