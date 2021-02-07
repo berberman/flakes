@@ -222,7 +222,7 @@ main = do
 
   githubEnv <- lookupEnv "GITHUB_ENV"
   case githubEnv of
-    Just fp -> T.appendFile fp $ "COMMIT_MSG=" <> commitMessage
+    Just fp -> T.appendFile fp $ "COMMIT_MSG<<EOF" <> commitMessage <> "EOF"
     _ -> T.putStrLn "Not in github environment"
 
   -- stage changes
