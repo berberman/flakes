@@ -144,14 +144,14 @@ main = do
   generateNvcheckerConfig $ Map.toList _sources
 
   -- run nvchecker to generate new_ver.json
-  T.putStrLn "Running nvchecker"
+  T.putStrLn "Running nvchecker..."
   ignoredNames <- fmap nvName . filter isUpToDate <$> runNvchecker
 
   T.putStr "The following packages are up-to-date: "
   pPrint ignoredNames
 
   -- parse new_ver.json
-  T.putStrLn "Parsing newver json"
+  T.putStrLn "Parsing newver json..."
   newVers <- decodeAsMap <$> A.decodeFileStrict' ("Updater" </> newVerData)
 
   -- stale sources

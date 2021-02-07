@@ -23,10 +23,7 @@ import Distribution.Compat.Lens
 import NeatInterpolation (trimming)
 
 emptySha256 :: Sha256
-emptySha256 = quoted "lib.fakeSha256"
-
-quoted :: Text -> Text
-quoted x = [trimming|"$x"|]
+emptySha256 = "lib.fakeSha256"
 
 type Sha256 = Text
 
