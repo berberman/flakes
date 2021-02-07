@@ -93,6 +93,7 @@ toNvEntry (unSourceName -> srcName) = \case
       [$srcName]
       source = "archpkg"
       archpkg = "$archpkg"
+      strip_release = true
     |]
   Pypi {..} ->
     [trimming|

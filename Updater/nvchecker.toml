@@ -6,10 +6,12 @@ newver = "new_ver.json"
 [fcitx5-material-color]
 source = "archpkg"
 archpkg = "fcitx5-material-color"
+strip_release = true
 
 [fcitx5-nord]
 source = "archpkg"
 archpkg = "fcitx5-nord"
+strip_release = true
 
 [fcitx5-pinyin-moegirl]
 source = "github"
