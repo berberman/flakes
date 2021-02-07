@@ -9,7 +9,7 @@
 module Updater.Main where
 
 import Config
-import Control.Monad (unless, void, (<=<))
+import Control.Monad (unless, void, when, (<=<))
 import qualified Data.Aeson as A
 import qualified Data.ByteString.Lazy as LBS
 import qualified Data.Map.Strict as Map
@@ -22,6 +22,7 @@ import qualified Data.Text.Lazy.IO as LT
 import NeatInterpolation (trimming)
 import System.Directory (doesFileExist)
 import System.Environment (lookupEnv)
+import System.Exit (exitSuccess)
 import System.FilePath ((</>))
 import System.Process (readCreateProcessWithExitCode, shell)
 import Text.Pretty.Simple
@@ -73,11 +74,11 @@ instance A.FromJSON NvcheckerResult where
 
 runNvchecker :: IO [NvcheckerResult]
 runNvchecker = do
-  txt <- runShell ("nvchecker --logger json -c" <> T.pack nvcheckerConfig)
+  txt <- runShell ("nvchecker --logger json -c " <> T.pack nvcheckerConfig)
   pure . catMaybes $ A.decodeStrict . encodeUtf8 <$> T.lines txt
 
 runNvtake :: IO ()
-runNvtake = void $ runShell ("nvtake --all -c" <> T.pack nvcheckerConfig)
+runNvtake = void $ runShell ("nvtake --all -c " <> T.pack nvcheckerConfig)
 
 runNvcmp :: IO Text
 runNvcmp = runShell ("nvcmp -c" <> T.pack nvcheckerConfig)
@@ -169,11 +170,15 @@ main = do
   T.putStrLn "Packages to fetch: "
   pPrint pkgsNeedFetch
 
+  when (Map.null pkgsNeedFetch) $ do
+    T.putStrLn "Nothing to do"
+    exitSuccess
+
   -- run fetchers to get SHA256
   sha256sums <- mapM prefetchPackage fetchersNeedRun
 
   -- recover fresh sha256sums from file
-  T.putStrLn "Parsing sha256 json"
+  T.putStrLn "Parsing sha256 json..."
   hasOld <- doesFileExist sha256Data
   recovered <-
     if hasOld
@@ -186,7 +191,7 @@ main = do
   pPrint sha256sums
 
   -- generate sources
-  T.putStrLn "Generating sources.nix"
+  T.putStrLn "Generating sources.nix..."
 
   let k =
         T.unlines
@@ -202,13 +207,13 @@ main = do
   T.writeFile "sources.nix" $ sourcesN k <> "\n"
 
   -- use nvcmp output as commit message
-  T.putStrLn "Running nvcmp"
-  commitMessage <- ("Auto update: " <>) . T.intercalate ", " . T.lines <$> runNvcmp
-  T.putStrLn "Commit message:"
+  T.putStrLn "Running nvcmp..."
+  commitMessage <- (\x -> "'Auto update: " <> x <> "'") . T.intercalate "\n" . T.lines <$> runNvcmp
+  T.putStr "Commit message: "
   T.putStrLn commitMessage
 
   -- update old_ver.json
-  T.putStrLn "Running nvtake"
+  T.putStrLn "Running nvtake..."
   runNvtake
 
   -- write all sums for next use
