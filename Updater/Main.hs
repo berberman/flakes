@@ -208,7 +208,7 @@ main = do
 
   -- use nvcmp output as commit message
   T.putStrLn "Running nvcmp..."
-  commitMessage <- (\x -> "'Auto update: " <> x <> "'") . T.intercalate "\n" . T.lines <$> runNvcmp
+  commitMessage <- ("Auto update\n" <>) . T.intercalate "\n" . T.lines <$> runNvcmp
   T.putStr "Commit message: "
   T.putStrLn commitMessage
 
