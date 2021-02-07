@@ -9,7 +9,7 @@
 module Updater.Main where
 
 import Config
-import Control.Monad (void, (<=<))
+import Control.Monad (unless, void, (<=<))
 import qualified Data.Aeson as A
 import qualified Data.ByteString.Lazy as LBS
 import qualified Data.Map.Strict as Map
@@ -59,7 +59,7 @@ generateNvcheckerConfig entries = T.writeFile nvcheckerConfig file
 
         $body
       |]
-    body = T.unlines [toNvEntry srcName src <> "\n" | (srcName, src) <- entries]
+    body = T.unlines [toNvEntry srcName srcNv <> "\n" | (srcName, srcNv) <- entries]
 
 data NvcheckerResult = NvcheckerResult
   { nvName :: SourceName,
@@ -110,12 +110,12 @@ lastMaybe xs = Just $ last xs
 -----------------------------------------------------------------------------
 
 snippetN :: Text -> Text -> Text -> Text
-snippetN name ver src =
+snippetN name ver srcP =
   [trimming|
     $name = {
       pname = "$name";
       version = "$ver";
-      src = $src;
+      src = $srcP;
     };
   |]
 
@@ -221,7 +221,8 @@ main = do
     _ -> T.putStrLn "Not in github environment"
 
   -- stage changes
-  void $ runShell "git add ."
+  unless (null githubEnv) $
+    void $ runShell "git add ."
 
 runShell :: Text -> IO Text
 runShell x = do
