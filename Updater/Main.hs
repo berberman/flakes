@@ -208,7 +208,7 @@ main = do
 
   -- use nvcmp output as commit message
   T.putStrLn "Running nvcmp..."
-  commitMessage <- ("Auto update\n" <>) . T.intercalate "\n" . T.lines <$> runNvcmp
+  commitMessage <- ("Auto update\n" <>) <$> runNvcmp
   T.putStr "Commit message: "
   T.putStrLn commitMessage
 
@@ -222,7 +222,10 @@ main = do
 
   githubEnv <- lookupEnv "GITHUB_ENV"
   case githubEnv of
-    Just fp -> T.appendFile fp $ "COMMIT_MSG<<EOF" <> commitMessage <> "EOF"
+    Just fp -> do
+      appendFile fp "COMMIT_MSG<<EOF\n"
+      T.appendFile fp commitMessage
+      appendFile fp "\nEOF\n"
     _ -> T.putStrLn "Not in github environment"
 
   -- stage changes
