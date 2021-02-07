@@ -46,8 +46,14 @@
               nvchecker
               nix-prefetch
               haskell-language-server
-              (haskellPackages.ghcWithPackages
-                (p: with p; [ aeson neat-interpolation pretty-simple ]))
+              (haskellPackages.ghcWithPackages (p:
+                with p; [
+                  aeson
+                  neat-interpolation
+                  pretty-simple
+                  http-client
+                  http-client-tls
+                ]))
             ];
           };
       });

@@ -139,7 +139,7 @@ sourcesN body =
 
 main :: IO ()
 main = do
-  let DefState {_pkgs, _sources} = runDefinition nixSources
+  DefState {_pkgs, _sources} <- runDefinition nixSources
   -- generate nvchecker config file
   generateNvcheckerConfig $ Map.toList _sources
 

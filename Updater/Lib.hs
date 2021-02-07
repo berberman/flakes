@@ -12,6 +12,7 @@ module Updater.Lib where
 
 import Control.Monad.State
 import Data.Aeson (FromJSON, FromJSONKey, ToJSON, ToJSONKey)
+import Data.ByteString.Lazy (toStrict)
 import Data.Functor ((<&>))
 import Data.Map (Map)
 import qualified Data.Map as Map
@@ -19,8 +20,22 @@ import Data.Maybe (fromMaybe)
 import Data.String (IsString (..))
 import Data.Text (Text)
 import qualified Data.Text as T
+import Data.Text.Encoding (decodeUtf8)
 import Distribution.Compat.Lens
 import NeatInterpolation (trimming)
+import Network.HTTP.Client (Response (responseBody), httpLbs, parseRequest)
+import Network.HTTP.Client.TLS (getGlobalManager)
+
+downloadArchPKGBUILD :: Text -> IO Text
+downloadArchPKGBUILD pkg = do
+  tlsManager <- getGlobalManager
+  req <- parseRequest $ T.unpack [trimming|https://raw.githubusercontent.com/archlinux/svntogit-community/packages/$pkg/trunk/PKGBUILD|]
+  res <- httpLbs req tlsManager
+  pure . decodeUtf8 . toStrict $ responseBody res
+
+-- unsafe
+extractCommitRevFromPKGBUILD :: Text -> Text
+extractCommitRevFromPKGBUILD txt = head [rev | (T.stripPrefix "_commit=" -> Just rev) <- T.lines txt]
 
 emptySha256 :: Sha256
 emptySha256 = "lib.fakeSha256"
@@ -128,10 +143,10 @@ srcCount f s = fmap (\x -> s {_srcCount = x}) (f (_srcCount s))
 attatchedVer :: Version
 attatchedVer = "$src"
 
-type Definition = State DefState
+type Definition = StateT DefState IO
 
-runDefinition :: Definition a -> DefState
-runDefinition = flip execState (DefState Map.empty Map.empty 0)
+runDefinition :: Definition a -> IO DefState
+runDefinition = flip execStateT (DefState Map.empty Map.empty 0)
 
 -----------------------------------------------------------------------------
 
@@ -225,7 +240,9 @@ class Sem r where
   fromGitHub :: (HasPkg a) => r a -> (Text, Text) -> r (ESrc (EFetch a))
   fromGitHub e s = sourceGitHub (fetchGitHub e s) s
 
-  sourceManual :: (HasPkg a) => r a -> Version -> r (ESrc a)
+  sourceArchLinux :: r a -> Text -> r (ESrc a)
+  sourceArchLinux e s = src e $ ArchLinux s
+  sourceManual :: r a -> Version -> r (ESrc a)
   sourceManual e ver = src e $ Manual ver
 
 newtype R a = R {unR :: Definition a}
