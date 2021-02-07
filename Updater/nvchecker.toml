@@ -4,12 +4,12 @@ oldver = "old_ver.json"
 newver = "new_ver.json"
 
 [fcitx5-material-color]
-source = "manual"
-manual = "0.0.0.20201212"
+source = "archpkg"
+archpkg = "fcitx5-material-color"
 
 [fcitx5-nord]
-source = "manual"
-manual = "0.0.0.20210116"
+source = "archpkg"
+archpkg = "fcitx5-nord"
 
 [fcitx5-pinyin-moegirl]
 source = "github"

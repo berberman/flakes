@@ -4,7 +4,7 @@ let sums = with builtins; (fromJSON (readFile ./sums.json));
 in {
   fcitx5-material-color = {
     pname = "fcitx5-material-color";
-    version = "0.0.0.20201212";
+    version = "0.0.0.20201212-2";
     src = fetchFromGitHub {
       owner = "hosxy";
       repo = "fcitx5-material-color";
@@ -15,7 +15,7 @@ in {
   };
   fcitx5-nord = {
     pname = "fcitx5-nord";
-    version = "0.0.0.20210116";
+    version = "0.0.0.20210116-1";
     src = fetchFromGitHub {
       owner = "tonyfettes";
       repo = "fcitx5-nord";
