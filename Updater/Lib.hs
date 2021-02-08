@@ -168,22 +168,20 @@ newSource' srcName source = do
 attatchTo :: SourceName -> Pkg -> Definition ()
 attatchTo srcName pkg = pkgs %= Map.insert pkg srcName
 
-pypiFetcher :: Text -> NixFetcher
-pypiFetcher pypi =
+pypiFetcher :: Text -> Version -> NixFetcher
+pypiFetcher pypi (unVersion -> ver) =
   let h = T.cons (T.head pypi) ""
-      ver = unVersion attatchedVer
    in FetchUrl [trimming|mirror://pypi/$h/$pypi/$pypi-$ver.tar.gz|] Nothing
 
-githubReleaseFetcher :: (Text, Text) -> Text -> NixFetcher
-githubReleaseFetcher (owner, repo) fp =
-  let ver = unVersion attatchedVer
-   in FetchUrl [trimming|https://github.com/$owner/$repo/releases/download/$ver/$fp|] Nothing
+githubReleaseFetcher :: (Text, Text) -> Text -> Version -> NixFetcher
+githubReleaseFetcher (owner, repo) fp (unVersion -> ver) =
+  FetchUrl [trimming|https://github.com/$owner/$repo/releases/download/$ver/$fp|] Nothing
 
 -----------------------------------------------------------------------------
 
 newtype EPkg = EPkg PkgName
 
-data EFetch a = EFetch NixFetcher a
+data EFetch a = EFetch (Version -> NixFetcher) a
 
 data ESrc a = ESrc NvcheckerSource a
 
@@ -200,7 +198,7 @@ instance (HasPkg a) => HasPkg (ESrc a) where
   getPkgName (ESrc _ x) = getPkgName x
 
 class HasFetch a where
-  getFetch :: a -> NixFetcher
+  getFetch :: a -> Version -> NixFetcher
 
 instance HasFetch (EFetch a) where
   getFetch (EFetch x _) = x
@@ -219,7 +217,7 @@ instance (HasSrc a) => HasSrc (EFetch a) where
 
 class Sem r where
   package :: PkgName -> r EPkg
-  fetch :: r a -> NixFetcher -> r (EFetch a)
+  fetch :: r a -> (Version -> NixFetcher) -> r (EFetch a)
   src :: r a -> NvcheckerSource -> r (ESrc a)
   end :: (HasPkg a, HasFetch a, HasSrc a) => r a -> r ()
 
@@ -231,9 +229,9 @@ class Sem r where
   fromPypi e name = sourcePypi (fetchPypi e name) name
 
   fetchGitHubByRev :: r a -> (Text, Text, Text) -> r (EFetch a)
-  fetchGitHubByRev e (owner, repo, rev) = fetch e $ FetchFromGitHub owner repo (Version rev) Nothing
+  fetchGitHubByRev e (owner, repo, rev) = fetch e $ \_ -> FetchFromGitHub owner repo (Version rev) Nothing
   fetchGitHub :: r a -> (Text, Text) -> r (EFetch a)
-  fetchGitHub e (owner, repo) = fetch e $ FetchFromGitHub owner repo attatchedVer Nothing
+  fetchGitHub e (owner, repo) = fetch e $ \v -> FetchFromGitHub owner repo v Nothing
   fetchGitHubFile :: r a -> (Text, Text, Text) -> r (EFetch a)
   fetchGitHubFile e (owner, repo, fp) = fetch e $ githubReleaseFetcher (owner, repo) fp
   sourceGitHub :: r a -> (Text, Text) -> r (ESrc a)
@@ -258,7 +256,7 @@ instance Sem R where
         s = getSrc x
         f = getFetch x
     srcName <- newSource' (SourceName $ unPkgName p) s
-    srcName `attatchTo` Pkg p f
+    srcName `attatchTo` Pkg p (f attatchedVer)
 
 def :: (HasPkg a, HasFetch a, HasSrc a) => R a -> Definition ()
 def = unR . end

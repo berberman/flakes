@@ -4,8 +4,9 @@
 
 This repo adopts automatic update mechanism, where packages sources are defined in [Config.hs](./Config.hs).
 The update script generates configuration file for [nvchecker](https://github.com/lilydjwg/nvchecker),
-and then calls it to find outoutdated packages, feeding them to [nix-prefetch](https://github.com/msteen/nix-prefetch),
-storing fetched SHA256 sums to [sums.json](./sums.json). Finally, it generates [sources.nix](./sources.nix), which is imported to the flake.
+and then consults it to find outdated packages, feeding them to [nix-prefetch](https://github.com/msteen/nix-prefetch)
+to recalculate SHA256 sums. The results will be dumped to [sums.json](./sums.json),
+and corresponding nix exprs will be written to [sources.nix](./sources.nix).
 
 #### packages available:
 
