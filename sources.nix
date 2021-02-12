@@ -4,7 +4,7 @@ let sums = with builtins; (fromJSON (readFile ./sums.json));
 in {
   fcitx5-material-color = {
     pname = "fcitx5-material-color";
-    version = "0.0.0.20201212-2";
+    version = "0.0.0.20201212";
     src = fetchFromGitHub {
       owner = "hosxy";
       repo = "fcitx5-material-color";
@@ -15,7 +15,7 @@ in {
   };
   fcitx5-nord = {
     pname = "fcitx5-nord";
-    version = "0.0.0.20210116-1";
+    version = "0.0.0.20210116";
     src = fetchFromGitHub {
       owner = "tonyfettes";
       repo = "fcitx5-nord";
@@ -42,10 +42,10 @@ in {
   };
   feeluown-core = {
     pname = "feeluown-core";
-    version = "3.7.3";
+    version = "3.7.4";
     src = fetchurl {
       sha256 = sums.feeluown-core;
-      url = "mirror://pypi/f/feeluown/feeluown-3.7.3.tar.gz";
+      url = "mirror://pypi/f/feeluown/feeluown-3.7.4.tar.gz";
     };
   };
   feeluown-kuwo = {
