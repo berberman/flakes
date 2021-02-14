@@ -40,6 +40,7 @@
         };
       in {
         packages = withContents (name: pkgs.${name});
+        checks = self.${system}.packages;
         devShell = with pkgs;
           mkShell {
             buildInputs = [
