@@ -38,9 +38,9 @@
           inherit system;
           overlays = [ self.overlay ];
         };
-      in {
+      in rec {
         packages = withContents (name: pkgs.${name});
-        checks = self.${system}.packages;
+        checks = packages;
         devShell = with pkgs;
           mkShell {
             buildInputs = [
