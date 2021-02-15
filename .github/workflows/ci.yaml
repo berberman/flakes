@@ -11,7 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-          # Nix Flakes doesn't work on shallow clones
           fetch-depth: 0
     - uses: cachix/install-nix-action@v12
       with:
@@ -19,6 +18,10 @@ jobs:
         nix_path: nixpkgs=channel:nixos-unstable
         extra_nix_config: |
           experimental-features = nix-command flakes
+    - uses: cachix/cachix-action@v8
+      with:
+        name: berberman
+        signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
 
     - name: Run Updater
       run: nix develop --command runghc ./Updater/Main.hs
