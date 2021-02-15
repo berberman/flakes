@@ -3,6 +3,10 @@
 oldver = "old_ver.json"
 newver = "new_ver.json"
 
+[fastocr]
+source = "pypi"
+pypi = "fastocr"
+
 [fcitx5-material-color]
 source = "archpkg"
 archpkg = "fcitx5-material-color"
@@ -46,9 +50,18 @@ pypi = "fuo_qqmusic"
 source = "pypi"
 pypi = "fuo_xiami"
 
+[new-pyside2]
+source = "archpkg"
+archpkg = "pyside2"
+strip_release = true
+
 [pypinyin]
 source = "pypi"
 pypi = "pypinyin"
+
+[python-baidu-aip]
+source = "pypi"
+pypi = "baidu-aip"
 
 [qasync]
 source = "pypi"

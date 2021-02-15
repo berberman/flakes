@@ -1,0 +1,3 @@
+cradle:
+  direct:
+    arguments: ["Config", "Updater.Lib", "Updater.Main"]

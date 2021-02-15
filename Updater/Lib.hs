@@ -236,8 +236,11 @@ class Sem r where
   fetchGitHubFile e (owner, repo, fp) = fetch e $ githubReleaseFetcher (owner, repo) fp
   sourceGitHub :: r a -> (Text, Text) -> r (ESrc a)
   sourceGitHub e (owner, repo) = src e $ GitHub owner repo
-  fromGitHub :: (HasPkg a) => r a -> (Text, Text) -> r (ESrc (EFetch a))
+  fromGitHub :: r a -> (Text, Text) -> r (ESrc (EFetch a))
   fromGitHub e s = sourceGitHub (fetchGitHub e s) s
+
+  fetchUrl :: r a -> (Version -> Text) -> r (EFetch a)
+  fetchUrl e f = fetch e $ \v -> FetchUrl (f v) Nothing
 
   sourceArchLinux :: r a -> Text -> r (ESrc a)
   sourceArchLinux e s = src e $ ArchLinux s

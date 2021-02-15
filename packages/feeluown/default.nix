@@ -15,7 +15,7 @@ let
     startupNotify = "true";
     extraEntries = ''
       StartupWMClass=${name}
-          '';
+    '';
   };
 in stdenv.mkDerivation {
 
