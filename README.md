@@ -10,6 +10,12 @@ and corresponding nix exprs will be written to [sources.nix](./sources.nix).
 
 ## Usage
 
+Use binary cache from cachix:
+
+```
+$ cachix use berberman
+```
+
 ### Run a package immediately
 
 ```

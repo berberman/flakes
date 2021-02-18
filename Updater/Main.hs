@@ -263,6 +263,12 @@ readme ps vs =
 
     ## Usage
 
+    Use binary cache from cachix:
+    
+    ```
+    $ cachix use berberman
+    ```
+
     ### Run a package immediately
     
     ```
