@@ -8,7 +8,7 @@ import Updater.Lib
 
 nixSources :: Definition ()
 nixSources = do
-  def $ package "fastocr" `fromPypi` "fastocr"
+  -- def $ package "fastocr" `fromPypi` "fastocr"
   -----------------------------------------------------------------------------
   let defFuoPlugins = mapM_ $ \x ->
         def $
@@ -26,18 +26,18 @@ nixSources = do
   -----------------------------------------------------------------------------
   def $ package "pypinyin" `fromPypi` "pypinyin"
   -----------------------------------------------------------------------------
-  def $ package "python-baidu-aip" `fromPypi` "baidu-aip"
+  -- def $ package "python-baidu-aip" `fromPypi` "baidu-aip"
   -----------------------------------------------------------------------------
-  def $
-    package "new-pyside2"
-      `sourceArchLinux` "pyside2"
-      `fetchUrl` ( \(unVersion -> version) ->
-                     "https://download.qt.io/official_releases/QtForPython/pyside2/PySide2-"
-                       <> version
-                       <> "-src/pyside-setup-opensource-src-"
-                       <> version
-                       <> ".tar.xz"
-                 )
+  -- def $
+  --   package "new-pyside2"
+  --     `sourceArchLinux` "pyside2"
+  --     `fetchUrl` ( \(unVersion -> version) ->
+  --                    "https://download.qt.io/official_releases/QtForPython/pyside2/PySide2-"
+  --                      <> version
+  --                      <> "-src/pyside-setup-opensource-src-"
+  --                      <> version
+  --                      <> ".tar.xz"
+  --                )
   -----------------------------------------------------------------------------
   def $ package "qasync" `fromPypi` "qasync"
   -----------------------------------------------------------------------------
