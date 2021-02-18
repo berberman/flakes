@@ -56,7 +56,7 @@ nixSources = do
       `sourceManual` "0.2.2" -- we don't update this package automatically
       `fetchGitHubFile` ( "felixonmars",
                           "fcitx5-pinyin-zhwiki",
-                          "zhwiki-20210101.dict" -- since this file name changes each version
+                          "zhwiki-20210201.dict" -- since this file name changes each version
                         )
   -----------------------------------------------------------------------------
   -- this is evil :(
