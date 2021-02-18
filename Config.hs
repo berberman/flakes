@@ -8,6 +8,11 @@ import Updater.Lib
 
 nixSources :: Definition ()
 nixSources = do
+  def $
+    package "apple-emoji"
+      `sourceManual` "0.0.0"
+      `fetchUrl` (\_ -> "https://github.com/samuelngs/apple-emoji-linux/releases/download/latest/AppleColorEmoji.ttf")
+  -----------------------------------------------------------------------------
   -- def $ package "fastocr" `fromPypi` "fastocr"
   -----------------------------------------------------------------------------
   let defFuoPlugins = mapM_ $ \x ->

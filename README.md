@@ -55,6 +55,7 @@ so you can also use the CN flakes by following their instructions.
 
 #### This part was generated automatically.
 
+* apple-emoji - 0.0.0
 * fcitx5-material-color - 0.0.0.20201212
 * fcitx5-nord - 0.0.0.20210116
 * fcitx5-pinyin-moegirl - 20210217

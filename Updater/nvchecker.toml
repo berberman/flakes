@@ -3,6 +3,10 @@
 oldver = "old_ver.json"
 newver = "new_ver.json"
 
+[apple-emoji]
+source = "manual"
+manual = "0.0.0"
+
 [fcitx5-material-color]
 source = "archpkg"
 archpkg = "fcitx5-material-color"

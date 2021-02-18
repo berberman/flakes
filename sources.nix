@@ -2,6 +2,14 @@
 { fetchFromGitHub, fetchurl }:
 let sums = with builtins; (fromJSON (readFile ./sums.json));
 in {
+  apple-emoji = {
+    pname = "apple-emoji";
+    version = "0.0.0";
+    src = fetchurl {
+      sha256 = sums.apple-emoji;
+      url = "https://github.com/samuelngs/apple-emoji-linux/releases/download/latest/AppleColorEmoji.ttf";
+    };
+  };
   fcitx5-material-color = {
     pname = "fcitx5-material-color";
     version = "0.0.0.20201212";
@@ -37,7 +45,7 @@ in {
     version = "0.2.2";
     src = fetchurl {
       sha256 = sums.fcitx5-pinyin-zhwiki;
-      url = "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.2/zhwiki-20210101.dict";
+      url = "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.2/zhwiki-20210201.dict";
     };
   };
   feeluown-core = {
