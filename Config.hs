@@ -26,7 +26,7 @@ nixSources = do
   -----------------------------------------------------------------------------
   def $ package "pypinyin" `fromPypi` "pypinyin"
   -----------------------------------------------------------------------------
-  -- def $ package "python-baidu-aip" `fromPypi` "baidu-aip"
+  def $ package "python-baidu-aip" `fromPypi` "baidu-aip"
   -----------------------------------------------------------------------------
   -- def $
   --   package "new-pyside2"
