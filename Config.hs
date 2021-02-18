@@ -10,7 +10,7 @@ nixSources :: Definition ()
 nixSources = do
   def $
     package "apple-emoji"
-      `sourceManual` "0.0.0"
+      `sourceManual` "0.0.0.20200413"
       `fetchUrl` (\_ -> "https://github.com/samuelngs/apple-emoji-linux/releases/download/latest/AppleColorEmoji.ttf")
   -----------------------------------------------------------------------------
   -- def $ package "fastocr" `fromPypi` "fastocr"
