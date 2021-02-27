@@ -122,11 +122,11 @@ in {
   };
   qliveplayer = {
     pname = "qliveplayer";
-    version = "3.21.1";
+    version = "3.22.0";
     src = fetchFromGitHub {
       owner = "IsoaSFlus";
       repo = "QLivePlayer";
-      rev = "3.21.1";
+      rev = "3.22.0";
       fetchSubmodules = true;
       sha256 = sums.qliveplayer;
     };

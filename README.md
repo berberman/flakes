@@ -69,4 +69,4 @@ so you can also use the CN flakes by following their instructions.
 * pypinyin - 0.40.0
 * python-baidu-aip - 2.2.18.0
 * qasync - 0.13.0
-* qliveplayer - 3.21.1
+* qliveplayer - 3.22.0
