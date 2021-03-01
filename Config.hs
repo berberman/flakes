@@ -13,7 +13,7 @@ nixSources = do
       `sourceManual` "0.0.0.20200413"
       `fetchUrl` (\_ -> "https://github.com/samuelngs/apple-emoji-linux/releases/download/latest/AppleColorEmoji.ttf")
   -----------------------------------------------------------------------------
-  -- def $ package "fastocr" `fromPypi` "fastocr"
+  def $ package "fastocr" `fromPypi` "fastocr"
   -----------------------------------------------------------------------------
   let defFuoPlugins = mapM_ $ \x ->
         def $
@@ -30,19 +30,6 @@ nixSources = do
     ]
   -----------------------------------------------------------------------------
   def $ package "pypinyin" `fromPypi` "pypinyin"
-  -----------------------------------------------------------------------------
-  def $ package "python-baidu-aip" `fromPypi` "baidu-aip"
-  -----------------------------------------------------------------------------
-  -- def $
-  --   package "new-pyside2"
-  --     `sourceArchLinux` "pyside2"
-  --     `fetchUrl` ( \(unVersion -> version) ->
-  --                    "https://download.qt.io/official_releases/QtForPython/pyside2/PySide2-"
-  --                      <> version
-  --                      <> "-src/pyside-setup-opensource-src-"
-  --                      <> version
-  --                      <> ".tar.xz"
-  --                )
   -----------------------------------------------------------------------------
   def $ package "qasync" `fromPypi` "qasync"
   -----------------------------------------------------------------------------

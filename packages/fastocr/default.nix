@@ -1,11 +1,7 @@
-{ lib, pythonPackages, mySource, makeDesktopItem, qasync, python-baidu-aip
-, sources }:
+{ lib, pythonPackages, mySource, makeDesktopItem, qasync, qt5 }:
 
 let
-  inherit (pythonPackages) buildPythonApplication pyside2;
-
-  new-pyside2 =
-    pyside2.overrideAttrs (_: { inherit (sources.new-pyside2) version src; });
+  inherit (pythonPackages) buildPythonApplication;
 
   desktop = makeDesktopItem rec {
     name = "FastOCR";
@@ -28,8 +24,11 @@ in buildPythonApplication rec {
 
   doCheck = false;
 
-  propagatedBuildInputs = (with pythonPackages; [ dbus-python setuptools ])
-    ++ [ new-pyside2 qasync python-baidu-aip ];
+  propagatedBuildInputs =
+    (with pythonPackages; [ dbus-python setuptools pyqt5 click aiohttp ])
+    ++ [ qasync ];
+
+  nativeBuildInputs = [ qt5.wrapQtAppsHook ];
 
   postInstall = ''
     install -D ${desktop}/share/applications/FastOCR.desktop $out/share/applications/FastOCR.desktop

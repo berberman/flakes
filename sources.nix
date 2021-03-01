@@ -10,6 +10,14 @@ in {
       url = "https://github.com/samuelngs/apple-emoji-linux/releases/download/latest/AppleColorEmoji.ttf";
     };
   };
+  fastocr = {
+    pname = "fastocr";
+    version = "0.1.3";
+    src = fetchurl {
+      sha256 = sums.fastocr;
+      url = "mirror://pypi/f/fastocr/fastocr-0.1.3.tar.gz";
+    };
+  };
   fcitx5-material-color = {
     pname = "fcitx5-material-color";
     version = "0.0.0.20201212";
@@ -102,14 +110,6 @@ in {
     src = fetchurl {
       sha256 = sums.pypinyin;
       url = "mirror://pypi/p/pypinyin/pypinyin-0.40.0.tar.gz";
-    };
-  };
-  python-baidu-aip = {
-    pname = "python-baidu-aip";
-    version = "2.2.18.0";
-    src = fetchurl {
-      sha256 = sums.python-baidu-aip;
-      url = "mirror://pypi/b/baidu-aip/baidu-aip-2.2.18.0.tar.gz";
     };
   };
   qasync = {

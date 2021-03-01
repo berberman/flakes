@@ -7,6 +7,10 @@ newver = "new_ver.json"
 source = "manual"
 manual = "0.0.0.20200413"
 
+[fastocr]
+source = "pypi"
+pypi = "fastocr"
+
 [fcitx5-material-color]
 source = "archpkg"
 archpkg = "fcitx5-material-color"
@@ -53,10 +57,6 @@ pypi = "fuo_xiami"
 [pypinyin]
 source = "pypi"
 pypi = "pypinyin"
-
-[python-baidu-aip]
-source = "pypi"
-pypi = "baidu-aip"
 
 [qasync]
 source = "pypi"

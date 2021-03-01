@@ -56,6 +56,7 @@ so you can also use the CN flakes by following their instructions.
 #### This part was generated automatically.
 
 * apple-emoji - 0.0.0.20200413
+* fastocr - 0.1.3
 * fcitx5-material-color - 0.0.0.20201212
 * fcitx5-nord - 0.0.0.20210116
 * fcitx5-pinyin-moegirl - 20210217
@@ -67,6 +68,5 @@ so you can also use the CN flakes by following their instructions.
 * feeluown-qqmusic - 0.3.1
 * feeluown-xiami - 0.2.4
 * pypinyin - 0.40.0
-* python-baidu-aip - 2.2.18.0
 * qasync - 0.13.0
 * qliveplayer - 3.22.0

@@ -1,1 +1,1 @@
-{ broken = [ "python-opencc" "fastocr" ]; }
+{ broken = [ "python-opencc" ]; }
