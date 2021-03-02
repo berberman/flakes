@@ -34,6 +34,10 @@ in buildPythonApplication rec {
     install -D ${desktop}/share/applications/FastOCR.desktop $out/share/applications/FastOCR.desktop
   '';
 
+  postFixup = ''
+    wrapQtApp $out/bin/fastocr
+  '';
+
   meta = with lib; {
     homepage = "https://github.com/BruceZhang1993/FastOCR";
     description = "FastOCR is a desktop application for OCR API.";
