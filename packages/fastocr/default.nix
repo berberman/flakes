@@ -35,6 +35,8 @@ in buildPythonApplication rec {
   '';
 
   postFixup = ''
+    qtWrapperArgs+=(--prefix QML2_IMPORT_PATH : "${qt5.qtquickcontrols2.bin}/lib/qt-${qt5.qtbase.version}/qml")
+    # https://github.com/NixOS/nixpkgs/issues/28336
     wrapQtApp $out/bin/fastocr
   '';
 
