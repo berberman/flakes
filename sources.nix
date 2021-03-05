@@ -12,10 +12,10 @@ in {
   };
   fastocr = {
     pname = "fastocr";
-    version = "0.1.3";
+    version = "0.1.4";
     src = fetchurl {
       sha256 = sums.fastocr;
-      url = "mirror://pypi/f/fastocr/fastocr-0.1.3.tar.gz";
+      url = "mirror://pypi/f/fastocr/fastocr-0.1.4.tar.gz";
     };
   };
   fcitx5-material-color = {
