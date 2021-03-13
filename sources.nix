@@ -106,10 +106,10 @@ in {
   };
   pypinyin = {
     pname = "pypinyin";
-    version = "0.40.0";
+    version = "0.41.0";
     src = fetchurl {
       sha256 = sums.pypinyin;
-      url = "mirror://pypi/p/pypinyin/pypinyin-0.40.0.tar.gz";
+      url = "mirror://pypi/p/pypinyin/pypinyin-0.41.0.tar.gz";
     };
   };
   qasync = {

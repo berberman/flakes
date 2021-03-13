@@ -67,6 +67,6 @@ so you can also use the CN flakes by following their instructions.
 * feeluown-netease - 0.5
 * feeluown-qqmusic - 0.3.1
 * feeluown-xiami - 0.2.4
-* pypinyin - 0.40.0
+* pypinyin - 0.41.0
 * qasync - 0.13.0
 * qliveplayer - 3.22.0
