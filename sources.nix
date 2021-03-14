@@ -114,10 +114,10 @@ in {
   };
   qasync = {
     pname = "qasync";
-    version = "0.13.0";
+    version = "0.14.0";
     src = fetchurl {
       sha256 = sums.qasync;
-      url = "mirror://pypi/q/qasync/qasync-0.13.0.tar.gz";
+      url = "mirror://pypi/q/qasync/qasync-0.14.0.tar.gz";
     };
   };
   qliveplayer = {
