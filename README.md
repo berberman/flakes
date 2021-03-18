@@ -59,7 +59,7 @@ so you can also use the CN flakes by following their instructions.
 * fastocr - 0.1.4
 * fcitx5-material-color - 0.0.0.20201212
 * fcitx5-nord - 0.0.0.20210116
-* fcitx5-pinyin-moegirl - 20210217
+* fcitx5-pinyin-moegirl - 20210318
 * fcitx5-pinyin-zhwiki - 0.2.2
 * feeluown-core - 3.7.5
 * feeluown-kuwo - 0.1.2
