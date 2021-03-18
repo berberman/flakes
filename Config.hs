@@ -11,7 +11,7 @@ nixSources = do
   def $
     package "apple-emoji"
       `sourceManual` "0.0.0.20200413"
-      `fetchUrl` (\_ -> "https://github.com/samuelngs/apple-emoji-linux/releases/download/latest/AppleColorEmoji.ttf")
+      `fetchUrl` const "https://github.com/samuelngs/apple-emoji-linux/releases/download/latest/AppleColorEmoji.ttf"
   -----------------------------------------------------------------------------
   def $ package "fastocr" `fromPypi` "fastocr"
   -----------------------------------------------------------------------------
@@ -45,11 +45,8 @@ nixSources = do
   -----------------------------------------------------------------------------
   def $
     package "fcitx5-pinyin-zhwiki"
-      `sourceManual` "0.2.2" -- we don't update this package automatically
-      `fetchGitHubFile` ( "felixonmars",
-                          "fcitx5-pinyin-zhwiki",
-                          "zhwiki-20210201.dict" -- since this file name changes each version
-                        )
+      `sourceAur` "fcitx5-pinyin-zhwiki"
+      `fetchUrl` (\v -> "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.2/zhwiki-" <> unVersion v <> ".dict")
   -----------------------------------------------------------------------------
   -- this is evil :(
   nordRev <- liftIO $ extractCommitRevFromPKGBUILD <$> downloadArchPKGBUILD "fcitx5-nord"

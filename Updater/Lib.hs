@@ -77,6 +77,7 @@ data NvcheckerSource
   = GitHub {owner :: Text, repo :: Text}
   | Pypi {pypi :: Text}
   | ArchLinux {archpkg :: Text}
+  | Aur {aur :: Text}
   | Manual {manual :: Version}
 
 toNvEntry :: SourceName -> NvcheckerSource -> Text
@@ -87,6 +88,13 @@ toNvEntry (unSourceName -> srcName) = \case
       source = "github"
       github = "$owner/$repo"
       use_latest_release = true
+    |]
+  Aur {..} ->
+    [trimming|
+      [$srcName]
+      source = "aur"
+      archpkg = "$aur"
+      strip_release = true
     |]
   ArchLinux {..} ->
     [trimming|
@@ -244,6 +252,8 @@ class Sem r where
 
   sourceArchLinux :: r a -> Text -> r (ESrc a)
   sourceArchLinux e s = src e $ ArchLinux s
+  sourceAur :: r a -> Text -> r (ESrc a)
+  sourceAur e s = src e $ Aur s
   sourceManual :: r a -> Version -> r (ESrc a)
   sourceManual e ver = src e $ Manual ver
 

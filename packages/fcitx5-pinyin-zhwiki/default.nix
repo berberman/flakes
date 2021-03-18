@@ -1,7 +1,6 @@
 { stdenv, lib, mySource }:
 
-let dic = "zhwiki-20210101.dict";
-in stdenv.mkDerivation rec {
+stdenv.mkDerivation rec {
   inherit (mySource) pname version src;
 
   dontUnpack = true;

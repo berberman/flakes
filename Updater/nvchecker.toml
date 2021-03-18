@@ -27,8 +27,9 @@ github = "outloudvi/mw2fcitx"
 use_latest_release = true
 
 [fcitx5-pinyin-zhwiki]
-source = "manual"
-manual = "0.2.2"
+source = "aur"
+archpkg = "fcitx5-pinyin-zhwiki"
+strip_release = true
 
 [feeluown-core]
 source = "pypi"
