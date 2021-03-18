@@ -55,18 +55,18 @@ so you can also use the CN flakes by following their instructions.
 
 #### This part was generated automatically.
 
-* apple-emoji - 0.0.0.20200413
-* fastocr - 0.1.4
-* fcitx5-material-color - 0.0.0.20201212
-* fcitx5-nord - 0.0.0.20210116
-* fcitx5-pinyin-moegirl - 20210318
-* fcitx5-pinyin-zhwiki - 20210301
-* feeluown-core - 3.7.5
-* feeluown-kuwo - 0.1.2
-* feeluown-local - 0.2.1
-* feeluown-netease - 0.5
-* feeluown-qqmusic - 0.3.1
-* feeluown-xiami - 0.2.4
-* pypinyin - 0.41.0
-* qasync - 0.14.0
-* qliveplayer - 3.22.0
+* [apple-emoji](https://github.com/samuelngs/apple-emoji-linux) - 0.0.0.20200413
+* [fastocr](https://github.com/BruceZhang1993/FastOCR) - 0.1.4
+* [fcitx5-material-color](https://github.com/hosxy/Fcitx5-Material-Color) - 0.0.0.20201212
+* [fcitx5-nord](https://github.com/tonyfettes/fcitx5-nord) - 0.0.0.20210116
+* [fcitx5-pinyin-moegirl](https://github.com/outloudvi/mw2fcitx) - 20210318
+* [fcitx5-pinyin-zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) - 20210301
+* [feeluown-core](https://github.com/feeluown/FeelUOwn) - 3.7.5
+* [feeluown-kuwo](https://github.com/feeluown/feeluown-kuwo) - 0.1.2
+* [feeluown-local](https://github.com/feeluown/feeluown-local) - 0.2.1
+* [feeluown-netease](https://github.com/feeluown/feeluown-netease) - 0.5
+* [feeluown-qqmusic](https://github.com/feeluown/feeluown-qqmusic) - 0.3.1
+* [feeluown-xiami](https://github.com/feeluown/feeluown-xiami) - 0.2.4
+* [pypinyin](https://github.com/mozillazg/python-pinyin) - 0.41.0
+* [qasync](https://github.com/CabbageDevelopment/qasync) - 0.14.0
+* [qliveplayer](https://github.com/IsoaSFlus/QLivePlayer) - 3.22.0

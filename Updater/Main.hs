@@ -13,7 +13,7 @@ import Control.Monad (unless, void, when, (<=<))
 import qualified Data.Aeson as A
 import qualified Data.ByteString.Lazy as LBS
 import qualified Data.Map.Strict as Map
-import Data.Maybe (catMaybes)
+import Data.Maybe (catMaybes, fromJust)
 import Data.Text (Text)
 import qualified Data.Text as T
 import Data.Text.Encoding (decodeUtf8, encodeUtf8)
@@ -110,6 +110,14 @@ lastMaybe xs = Just $ last xs
 
 -----------------------------------------------------------------------------
 
+-- homepage
+
+evalHomePages :: IO (Map.Map Text Text)
+evalHomePages = fromJust . A.decodeStrict . encodeUtf8 <$>
+  runShell [trimming|nix eval './#packages.x86_64-linux' --apply 'with builtins; mapAttrs (_: value: value.meta.homepage or "")' --json|]
+
+-----------------------------------------------------------------------------
+
 snippetN :: Text -> Text -> Text -> Text
 snippetN name ver srcP =
   [trimming|
@@ -173,7 +181,8 @@ main = do
   when (Map.null pkgsNeedFetch) $ do
     T.putStrLn "Nothing to do"
     -- TODO: always update README
-    T.writeFile "README.md" $ readme _pkgs newVers
+    hs <- evalHomePages
+    T.writeFile "README.md" $ readme _pkgs newVers hs
     exitSuccess
 
   -- run fetchers to get SHA256
@@ -223,7 +232,8 @@ main = do
   T.appendFile sha256Data "\n"
 
   -- update README
-  T.writeFile "README.md" $ readme _pkgs newVers
+  hs <- evalHomePages
+  T.writeFile "README.md" $ readme _pkgs newVers hs
 
   githubEnv <- lookupEnv "GITHUB_ENV"
   case githubEnv of
@@ -247,8 +257,8 @@ runShell x = do
   T.putStrLn stderr
   pure stdout
 
-readme :: Map.Map Pkg SourceName -> Map.Map SourceName Text -> Text
-readme ps vs =
+readme :: Map.Map Pkg SourceName -> Map.Map SourceName Text -> Map.Map Text Text -> Text
+readme ps vs hs =
   [trimming|
 
     # flakes
@@ -314,8 +324,9 @@ readme ps vs =
   where
     rendered =
       T.unlines
-        [ [trimming|* $name - $ver|]
+        [ [trimming|* [$name]($homepage) - $ver|]
           | (Pkg {..}, srcName) <- Map.toList ps,
             let name = unPkgName pkgName
                 ver = vs Map.! srcName
+                homepage = hs Map.! name
         ]

@@ -32,4 +32,9 @@ in buildPythonApplication rec {
 
   dontWrapPythonPrograms = true;
 
+  meta = with lib; {
+    homepage = "https://github.com/feeluown/FeelUOwn";
+    description = "FeelUOwn Music Player";
+    license = licenses.gpl3Only;
+  };
 }
