@@ -68,5 +68,5 @@ so you can also use the CN flakes by following their instructions.
 * [feeluown-qqmusic](https://github.com/feeluown/feeluown-qqmusic) - 0.3.1
 * [feeluown-xiami](https://github.com/feeluown/feeluown-xiami) - 0.2.4
 * [pypinyin](https://github.com/mozillazg/python-pinyin) - 0.41.0
-* [qasync](https://github.com/CabbageDevelopment/qasync) - 0.14.0
+* [qasync](https://github.com/CabbageDevelopment/qasync) - 0.15.0
 * [qliveplayer](https://github.com/IsoaSFlus/QLivePlayer) - 3.22.0
