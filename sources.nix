@@ -12,10 +12,10 @@ in {
   };
   fastocr = {
     pname = "fastocr";
-    version = "0.1.4";
+    version = "0.2.0";
     src = fetchurl {
       sha256 = sums.fastocr;
-      url = "mirror://pypi/f/fastocr/fastocr-0.1.4.tar.gz";
+      url = "mirror://pypi/f/fastocr/fastocr-0.2.0.tar.gz";
     };
   };
   fcitx5-material-color = {
@@ -42,10 +42,10 @@ in {
   };
   fcitx5-pinyin-moegirl = {
     pname = "fcitx5-pinyin-moegirl";
-    version = "20210318";
+    version = "20210415";
     src = fetchurl {
       sha256 = sums.fcitx5-pinyin-moegirl;
-      url = "https://github.com/outloudvi/mw2fcitx/releases/download/20210318/moegirl.dict";
+      url = "https://github.com/outloudvi/mw2fcitx/releases/download/20210415/moegirl.dict";
     };
   };
   fcitx5-pinyin-zhwiki = {

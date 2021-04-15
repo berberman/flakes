@@ -56,10 +56,10 @@ so you can also use the CN flakes by following their instructions.
 #### This part was generated automatically.
 
 * [apple-emoji](https://github.com/samuelngs/apple-emoji-linux) - 0.0.0.20200413
-* [fastocr](https://github.com/BruceZhang1993/FastOCR) - 0.1.4
+* [fastocr](https://github.com/BruceZhang1993/FastOCR) - 0.2.0
 * [fcitx5-material-color](https://github.com/hosxy/Fcitx5-Material-Color) - 0.0.0.20201212
 * [fcitx5-nord](https://github.com/tonyfettes/fcitx5-nord) - 0.0.0.20210116
-* [fcitx5-pinyin-moegirl](https://github.com/outloudvi/mw2fcitx) - 20210318
+* [fcitx5-pinyin-moegirl](https://github.com/outloudvi/mw2fcitx) - 20210415
 * [fcitx5-pinyin-zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) - 20210401
 * [feeluown-core](https://github.com/feeluown/FeelUOwn) - 3.7.5
 * [feeluown-kuwo](https://github.com/feeluown/feeluown-kuwo) - 0.1.2
