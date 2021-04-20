@@ -32,8 +32,8 @@ archpkg = "fcitx5-pinyin-zhwiki"
 strip_release = true
 
 [feeluown-core]
-source = "manual"
-manual = "3.7.5"
+source = "pypi"
+pypi = "feeluown"
 
 [feeluown-kuwo]
 source = "pypi"

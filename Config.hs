@@ -20,9 +20,7 @@ nixSources = do
           package ("feeluown-" <> x)
             `fromPypi` ("fuo_" <> unPkgName x)
 
-  -- https://github.com/NixOS/nixpkgs/issues/119284
-  def $ package "feeluown-core" `sourceManual` "3.7.5" `fetchPypi` "feeluown"
-  -- def $ package "feeluown-core" `fromPypi` "feeluown"
+  def $ package "feeluown-core" `fromPypi` "feeluown"
   defFuoPlugins
     [ "kuwo",
       "netease",
