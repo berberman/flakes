@@ -20,8 +20,7 @@ nixSources = do
           package ("feeluown-" <> x)
             `fromPypi` ("fuo_" <> unPkgName x)
 
-  def $ package "feeluown-core" `sourceManual` "3.7.6" `fetchPypi` "feeluown"
-  -- def $ package "feeluown-core" `fromPypi` "feeluown"
+  def $ package "feeluown-core" `fromPypi` "feeluown"
   defFuoPlugins
     [ "kuwo",
       "netease",
