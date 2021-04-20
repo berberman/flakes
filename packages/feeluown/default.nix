@@ -6,7 +6,7 @@ let
   desktop = makeDesktopItem rec {
     name = "FeelUOwn";
     desktopName = name;
-    exec = "feeluown --log-to-file";
+    exec = "env QT_AUTO_SCREEN_SCALE_FACTOR=1 feeluown --log-to-file";
     categories = "AudioVideo;Audio;Player;Qt;";
     terminal = "false";
     icon =
