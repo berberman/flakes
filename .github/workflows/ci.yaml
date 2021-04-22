@@ -24,13 +24,13 @@ jobs:
         signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
 
     - name: Run nvfetcher
-      run: |
-        nix develop --command runghc Update build -j
-        nix develop --command runghc Update README.md
+      run: nix develop --command runghc Update build -j
 
     - name: Run flake check
       run: nix flake check
 
-    - uses: stefanzweifel/git-auto-commit-action@v4
+    - name: Commit changes
+      if: ${{ env.COMMIT_MSG != null }}
+      uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: ${{ env.COMMIT_MSG }}

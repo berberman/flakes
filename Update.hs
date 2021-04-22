@@ -1,3 +1,4 @@
+{-# LANGUAGE LambdaCase #-}
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE QuasiQuotes #-}
 {-# LANGUAGE TypeApplications #-}
@@ -5,6 +6,7 @@
 
 module Update (main) where
 
+import Control.Monad (unless)
 import Control.Monad.IO.Class (liftIO)
 import qualified Data.Aeson as A
 import Data.Coerce (coerce)
@@ -17,7 +19,7 @@ import Development.Shake
 import NeatInterpolation (trimming)
 
 main :: IO ()
-main = defaultMain defaultArgs {argRules = rules} packageSet
+main = defaultMain defaultArgs {argActionAferBuild = generateReadme >> processAutoCommit} packageSet
 
 packageSet :: PackageSet ()
 packageSet = do
@@ -52,25 +54,34 @@ packageSet = do
   -----------------------------------------------------------------------------
   gitHubPackage "fcitx5-material-color" ("hosxy", "fcitx5-material-color")
 
--- | Add a rule to generate README.md in our build system
-rules :: Rules ()
-rules =
-  "README.md" %> \fp -> do
-    -- always rerun is important
-    alwaysRerun
-    (A.decode @(Map Text Text) -> Just (Map.elems -> out)) <-
-      fromStdout
-        <$> command
-          []
-          "nix"
-          [ "eval",
-            "./#packages.x86_64-linux",
-            "--apply",
-            T.unpack [trimming|with builtins; mapAttrs (key: value: "[$${key}](${value.meta.homepage or ""}) - ${value.version}")|],
-            "--json"
-          ]
-    writeFileChanged fp $ T.unpack $ readmeTemplate $ T.unlines $ map ("* " <>) out
-    putInfo $ "Generate " <> fp
+processAutoCommit :: Action ()
+processAutoCommit =
+  getEnv "GITHUB_ENV" >>= \case
+    Just env -> do
+      changes <- getVersionChanges
+      liftIO $
+        unless (null changes) $
+          appendFile env $
+            "COMMIT_MSG<<EOF\nAuto update:\n"
+              <> unlines (show <$> changes)
+              <> "EOF\n"
+    _ -> pure ()
+
+generateReadme :: Action ()
+generateReadme = do
+  (A.decode @(Map Text Text) -> Just (Map.elems -> out)) <-
+    fromStdout
+      <$> command
+        []
+        "nix"
+        [ "eval",
+          "./#packages.x86_64-linux",
+          "--apply",
+          T.unpack [trimming|with builtins; mapAttrs (key: value: "[$${key}](${value.meta.homepage or ""}) - ${value.version}")|],
+          "--json"
+        ]
+  writeFileChanged "README.md" $ T.unpack $ readmeTemplate $ T.unlines $ map ("* " <>) out
+  putInfo "Generate README.md"
   where
     readmeTemplate rendered =
       [trimming|
