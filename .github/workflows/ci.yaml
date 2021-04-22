@@ -23,8 +23,10 @@ jobs:
         name: berberman
         signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
 
-    - name: Run Updater
-      run: nix develop --command runghc ./Updater/Main.hs
+    - name: Run nvfetcher
+      run: |
+        nix develop --command runghc Update build -j
+        nix develop --command runghc Update README.md
 
     - name: Run flake check
       run: nix flake check
