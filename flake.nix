@@ -33,8 +33,8 @@
             sources = sources';
           };
     } // eachSystem
-    (nixpkgs.lib.subtractLists [ "x86_64-darwin" "i686-linux" ] defaultSystems)
-    (system:
+    # TODO blocked by nvfetcher
+    ([ "x86_64-linux" ]) (system:
       let
         pkgs = import nixpkgs {
           inherit system;
