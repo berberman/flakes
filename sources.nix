@@ -50,10 +50,10 @@ in {
   };
   fcitx5-pinyin-zhwiki = {
     pname = "fcitx5-pinyin-zhwiki";
-    version = "20210401";
+    version = "20210420";
     src = fetchurl {
       sha256 = sums.fcitx5-pinyin-zhwiki;
-      url = "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.2/zhwiki-20210401.dict";
+      url = "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.2/zhwiki-20210420.dict";
     };
   };
   feeluown-core = {
