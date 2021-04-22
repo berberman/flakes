@@ -31,10 +31,31 @@
         "type": "github"
       }
     },
+    "nvfetcher": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1619066824,
+        "narHash": "sha256-hqNcCRYoE4NOYqOrf9E7Bewte7BEqrcORO3/kCIlXn4=",
+        "owner": "berberman",
+        "repo": "nvfetcher",
+        "rev": "8f70f729f632b9b81228bb109ea014ee5de07148",
+        "type": "github"
+      },
+      "original": {
+        "owner": "berberman",
+        "repo": "nvfetcher",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nvfetcher": "nvfetcher"
       }
     }
   },

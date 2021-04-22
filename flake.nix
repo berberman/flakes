@@ -3,8 +3,10 @@
 
   inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  inputs.nvfetcher.url = "github:berberman/nvfetcher";
+  inputs.nvfetcher.inputs.nixpkgs.follows = "nixpkgs";
 
-  outputs = { self, nixpkgs, flake-utils }:
+  outputs = { self, nixpkgs, flake-utils, nvfetcher }:
     let
       genPkg = f: name: {
         inherit name;
@@ -19,7 +21,7 @@
     in with flake-utils.lib;
     {
       overlay = final: prev:
-        let sources' = sources { inherit (final) fetchurl fetchFromGitHub; };
+        let sources' = sources { inherit (final) fetchurl fetchgit; };
         in withContents (name:
           let
             pkg = import (pkgDir + "/${name}");
@@ -36,7 +38,7 @@
       let
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [ self.overlay ];
+          overlays = [ self.overlay nvfetcher.overlay ];
         };
       in rec {
         packages = withContents (name: pkgs.${name});
@@ -45,16 +47,9 @@
           mkShell {
             buildInputs = [
               nvchecker
-              nix-prefetch
+              nix-prefetch-git
               haskell-language-server
-              (haskellPackages.ghcWithPackages (p:
-                with p; [
-                  aeson
-                  neat-interpolation
-                  pretty-simple
-                  http-client
-                  http-client-tls
-                ]))
+              (haskellPackages.ghcWithPackages (p: [ p.nvfetcher ]))
             ];
           };
       });

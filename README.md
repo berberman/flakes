@@ -2,11 +2,8 @@
 
 ![CI](https://github.com/berberman/flakes/workflows/Update%20and%20check/badge.svg)
 
-This repo adopts automatic update mechanism, where packages sources are defined in [Config.hs](./Config.hs).
-The update script generates configuration file for [nvchecker](https://github.com/lilydjwg/nvchecker),
-and then consults it to find outdated packages, feeding them to [nix-prefetch](https://github.com/msteen/nix-prefetch)
-to recalculate SHA256 sums. The results will be dumped to [sums.json](./sums.json),
-and corresponding nix exprs will be written to [sources.nix](./sources.nix).
+This repo uses [nvfetcher](https://github.com/berberman/nvfetcher) to update packages automatically.
+See [Update.hs](Update.hs).
 
 ## Usage
 
@@ -57,10 +54,10 @@ so you can also use the CN flakes by following their instructions.
 
 * [apple-emoji](https://github.com/samuelngs/apple-emoji-linux) - 0.0.0.20200413
 * [fastocr](https://github.com/BruceZhang1993/FastOCR) - 0.2.0
-* [fcitx5-material-color](https://github.com/hosxy/Fcitx5-Material-Color) - 0.0.0.20201212
-* [fcitx5-nord](https://github.com/tonyfettes/fcitx5-nord) - 0.0.0.20210116
+* [fcitx5-material-color](https://github.com/hosxy/Fcitx5-Material-Color) - 0.2.1
 * [fcitx5-pinyin-moegirl](https://github.com/outloudvi/mw2fcitx) - 20210415
 * [fcitx5-pinyin-zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) - 20210420
+* [feeluown](https://github.com/feeluown/FeelUOwn) - 3.7.6
 * [feeluown-core](https://github.com/feeluown/FeelUOwn) - 3.7.6
 * [feeluown-kuwo](https://github.com/feeluown/feeluown-kuwo) - 0.1.2
 * [feeluown-local](https://github.com/feeluown/feeluown-local) - 0.2.1
