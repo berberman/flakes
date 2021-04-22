@@ -5,6 +5,7 @@
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   inputs.nvfetcher.url = "github:berberman/nvfetcher";
   inputs.nvfetcher.inputs.nixpkgs.follows = "nixpkgs";
+  inputs.nvfetcher.inputs.flake-utils.follows = "flake-utils";
 
   outputs = { self, nixpkgs, flake-utils, nvfetcher }:
     let
