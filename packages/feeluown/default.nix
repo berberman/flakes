@@ -1,5 +1,5 @@
 { stdenv, lib, makeDesktopItem, feeluown-core, feeluown-netease, feeluown-kuwo
-, feeluown-qqmusic, feeluown-local, feeluown-xiami, pythonPackages, qt5 }:
+, feeluown-qqmusic, feeluown-local, pythonPackages, qt5 }:
 
 let
   inherit (pythonPackages) python wrapPython;
@@ -30,7 +30,6 @@ in stdenv.mkDerivation {
     feeluown-kuwo
     feeluown-qqmusic
     feeluown-local
-    feeluown-xiami
   ];
 
   dontBuild = true;

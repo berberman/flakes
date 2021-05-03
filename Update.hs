@@ -31,7 +31,7 @@ packageSet = do
   -----------------------------------------------------------------------------
   pypiPackage "feeluown-core" "feeluown"
   let fuoPlugins = mapM_ $ \x -> pypiPackage ("feeluown-" <> x) ("fuo_" <> x)
-  fuoPlugins ["kuwo", "netease", "qqmusic", "local", "xiami"]
+  fuoPlugins ["kuwo", "netease", "qqmusic", "local"]
   -----------------------------------------------------------------------------
   pypiPackage "pypinyin" "pypinyin"
   -----------------------------------------------------------------------------
