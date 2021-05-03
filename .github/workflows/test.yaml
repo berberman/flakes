@@ -15,6 +15,9 @@ jobs:
         nix_path: nixpkgs=channel:nixos-unstable
         extra_nix_config: |
           experimental-features = nix-command flakes
-
+          
+    - name: Run nvfetcher
+      run: nix develop --command runghc Update build -j
+          
     - name: Run flake check
       run: nix flake check
