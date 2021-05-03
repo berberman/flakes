@@ -1,4 +1,4 @@
-name: Update and check
+name: Automatically update
 on:
   push:
     branches:
