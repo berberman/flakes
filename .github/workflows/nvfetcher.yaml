@@ -1,0 +1,37 @@
+name: Update and check
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '0 */2 * * *'
+
+jobs:
+  nvfetcher:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+          fetch-depth: 0
+    - uses: cachix/install-nix-action@v12
+      with:
+        install_url: https://github.com/numtide/nix-flakes-installer/releases/download/nix-2.4pre20201221_9fab14a/install
+        nix_path: nixpkgs=channel:nixos-unstable
+        extra_nix_config: |
+          experimental-features = nix-command flakes
+    - uses: cachix/cachix-action@v8
+      with:
+        name: berberman
+        signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
+
+    - name: Run nvfetcher
+      run: nix develop --command runghc Update build -j
+
+    - name: Run flake check
+      run: nix flake check
+
+    - name: Commit changes
+      if: ${{ env.COMMIT_MSG != null }}
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: ${{ env.COMMIT_MSG }}
