@@ -15,6 +15,13 @@ jobs:
         nix_path: nixpkgs=channel:nixos-unstable
         extra_nix_config: |
           experimental-features = nix-command flakes
+    - uses: cachix/cachix-action@v8
+      with:
+        name: berberman
+        signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
 
+    - name: Run nvfetcher
+      run: nix develop --command runghc Update build -j
+          
     - name: Run flake check
       run: nix flake check
