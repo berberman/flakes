@@ -7,52 +7,51 @@
 module Update (main) where
 
 import Control.Monad (unless)
-import Control.Monad.IO.Class (liftIO)
 import qualified Data.Aeson as A
-import Data.Coerce (coerce)
 import Data.Map (Map)
 import qualified Data.Map as Map
 import Data.Text (Text)
 import qualified Data.Text as T
-import Development.NvFetcher
 import Development.Shake
 import NeatInterpolation (trimming)
+import NvFetcher
 
 main :: IO ()
-main = defaultMain defaultArgs {argActionAferBuild = generateReadme >> processAutoCommit} packageSet
+main = defaultMain defaultArgs {argActionAfterBuild = generateReadme >> processAutoCommit} packageSet
 
 packageSet :: PackageSet ()
 packageSet = do
   -----------------------------------------------------------------------------
-  package "apple-emoji" (Manual "0.0.0.20200413") $
-    const $ urlFetcher "https://github.com/samuelngs/apple-emoji-linux/releases/download/latest/AppleColorEmoji.ttf"
+  define $
+    package "apple-emoji"
+      `sourceManual` "0.0.0.20200413"
+        `fetchUrl` const
+          "https://github.com/samuelngs/apple-emoji-linux/releases/download/latest/AppleColorEmoji.ttf"
   -----------------------------------------------------------------------------
-  pypiPackage "fastocr" "fastocr"
+  define $ package "fastocr" `fromPypi` "fastocr"
   -----------------------------------------------------------------------------
-  pypiPackage "feeluown-core" "feeluown"
-  let fuoPlugins = mapM_ $ \x -> pypiPackage ("feeluown-" <> x) ("fuo_" <> x)
+  define $ package "feeluown-core" `fromPypi` "feeluown"
+  let fuoPlugins = mapM_ $ \x -> define $ package ("feeluown-" <> x) `fromPypi` ("fuo_" <> x)
   fuoPlugins ["kuwo", "netease", "qqmusic", "local"]
   -----------------------------------------------------------------------------
-  pypiPackage "pypinyin" "pypinyin"
+  define $ package "pypinyin" `fromPypi` "pypinyin"
   -----------------------------------------------------------------------------
-  pypiPackage "qasync" "qasync"
+  define $ package "qasync" `fromPypi` "qasync"
   -----------------------------------------------------------------------------
-  gitHubPackage "qliveplayer" ("IsoaSFlus", "QLivePlayer")
+  define $ package "qliveplayer" `fromGitHub` ("IsoaSFlus", "QLivePlayer")
   -----------------------------------------------------------------------------
-  package
-    "fcitx5-pinyin-moegirl"
-    (GitHubRelease "outloudvi" "mw2fcitx")
-    (gitHubReleaseFetcher ("outloudvi", "mw2fcitx") "moegirl.dict")
+  define $
+    package "fcitx5-pinyin-moegirl"
+      `sourceGitHub` ("outloudvi", "mw2fcitx")
+      `fetchGitHubRelease` ("outloudvi", "mw2fcitx", "moegirl.dict")
   -----------------------------------------------------------------------------
-  package
-    "fcitx5-pinyin-zhwiki"
-    (Aur "fcitx5-pinyin-zhwiki")
-    ( \(coerce -> v) ->
-        urlFetcher
-          [trimming|https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.2/zhwiki-$v.dict|]
-    )
+  define $
+    package "fcitx5-pinyin-zhwiki"
+      `sourceAur` "fcitx5-pinyin-zhwiki"
+      `fetchUrl` \(coerce -> v) ->
+        [trimming|https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.2/zhwiki-$v.dict|]
   -----------------------------------------------------------------------------
-  gitHubPackage "fcitx5-material-color" ("hosxy", "fcitx5-material-color")
+  define $ package "fcitx5-material-color" `fromGitHub` ("hosxy", "fcitx5-material-color")
 
 processAutoCommit :: Action ()
 processAutoCommit =
