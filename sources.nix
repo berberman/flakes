@@ -85,14 +85,6 @@
       url = "https://pypi.io/packages/source/f/fuo_qqmusic/fuo_qqmusic-0.3.2.tar.gz";
     };
   };
-  feeluown-xiami = {
-    pname = "feeluown-xiami";
-    version = "0.2.4";
-    src = fetchurl {
-      sha256 = "0w4z5xy62xrv5vr67nx1gscdm7nd3f711hz4c2p7i1li18klcgj7";
-      url = "https://pypi.io/packages/source/f/fuo_xiami/fuo_xiami-0.2.4.tar.gz";
-    };
-  };
   pypinyin = {
     pname = "pypinyin";
     version = "0.41.0";
