@@ -17,7 +17,7 @@ import NeatInterpolation (trimming)
 import NvFetcher
 
 main :: IO ()
-main = defaultMain defaultArgs {argActionAfterBuild = generateReadme >> processAutoCommit} packageSet
+main = runNvFetcher defaultArgs {argActionAfterBuild = generateReadme >> processAutoCommit} packageSet
 
 packageSet :: PackageSet ()
 packageSet = do
