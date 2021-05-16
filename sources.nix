@@ -3,10 +3,10 @@
 {
   qasync = {
     pname = "qasync";
-    version = "0.15.0";
+    version = "0.16.0";
     src = fetchurl {
-      sha256 = "1mkzkg3zxrika2zm8q2da23p6d8xy9djld43pfgsr50xlx02ksfa";
-      url = "https://pypi.io/packages/source/q/qasync/qasync-0.15.0.tar.gz";
+      sha256 = "1c9058j2l4jg46zicm7n3pc9jdnd617lwg60kv6lmqrlfyv1zfv5";
+      url = "https://pypi.io/packages/source/q/qasync/qasync-0.16.0.tar.gz";
     };
   };
   feeluown-core = {
