@@ -61,8 +61,10 @@ processAutoCommit =
       liftIO $
         unless (null changes) $
           appendFile env $
-            "COMMIT_MSG<<EOF\nAuto update:\n"
-              <> unlines (show <$> changes)
+            "COMMIT_MSG<<EOF\n"
+              <> case show <$> changes of
+                [x] -> x <> "\n"
+                xs -> "Auto update:\n" <> unlines xs
               <> "EOF\n"
     _ -> pure ()
 
