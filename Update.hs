@@ -81,66 +81,6 @@ generateReadme = do
           T.unpack [trimming|with builtins; mapAttrs (key: value: "[$${key}](${value.meta.homepage or ""}) - ${value.version}")|],
           "--json"
         ]
-  writeFileChanged "README.md" $ T.unpack $ readmeTemplate $ T.unlines $ map ("* " <>) out
+  template <- T.pack <$> readFile' "READNE_template.md"
+  writeFileChanged "README.md" $ T.unpack $ T.replace "$qwq$" (T.unlines $ map ("* " <>) out) template
   putInfo "Generate README.md"
-  where
-    readmeTemplate rendered =
-      [trimming|
-
-          # flakes
-
-          ![CI](https://github.com/berberman/flakes/workflows/Update%20and%20check/badge.svg)
-
-          This repo uses [nvfetcher](https://github.com/berberman/nvfetcher) to update packages automatically.
-          See [Update.hs](Update.hs).
-
-          ## Usage
-
-          Use binary cache from cachix:
-
-          ```
-          $ cachix use berberman
-          ```
-
-          ### Run a package immediately
-
-          ```
-          $ nix run github:berberman/flakes#feeluown
-          ```
-
-          ### Add the overlay to your system
-
-          In your [NixOS configuration flake](https://www.tweag.io/blog/2020-07-31-nixos-flakes/):
-
-          ```nix
-          {
-          
-            inputs = {
-              nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-              berberman = {
-                url = "github:berberman/flakes";
-                inputs.nixpkgs.follows = "nixpkgs";
-              };
-            };
-
-            outputs = { self, nixpkgs, berberman }: {
-            
-              overlays = [ berberman.overlay ];
-
-              # ... rest config
-            };
-          }
-          ```
-
-          ### NixOS CN
-
-          Packages provided by this flake are re-exported to [NixOS CN Flakes](https://github.com/nixos-cn/flakes),
-          so you can also use the CN flakes by following their instructions.
-
-          ## Packages available
-
-          #### This part was generated automatically.
-
-          $rendered
-
-    |]
