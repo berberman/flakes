@@ -57,11 +57,11 @@ so you can also use the CN flakes by following their instructions.
 * [fcitx5-material-color](https://github.com/hosxy/Fcitx5-Material-Color) - 0.2.1
 * [fcitx5-pinyin-moegirl](https://github.com/outloudvi/mw2fcitx) - 20210415
 * [fcitx5-pinyin-zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) - 20210520
-* [feeluown](https://github.com/feeluown/FeelUOwn) - 3.7.7
-* [feeluown-core](https://github.com/feeluown/FeelUOwn) - 3.7.7
+* [feeluown](https://github.com/feeluown/FeelUOwn) - 3.7.8
+* [feeluown-core](https://github.com/feeluown/FeelUOwn) - 3.7.8
 * [feeluown-kuwo](https://github.com/feeluown/feeluown-kuwo) - 0.1.4
 * [feeluown-local](https://github.com/feeluown/feeluown-local) - 0.2.1
-* [feeluown-netease](https://github.com/feeluown/feeluown-netease) - 0.6
+* [feeluown-netease](https://github.com/feeluown/feeluown-netease) - 0.7
 * [feeluown-qqmusic](https://github.com/feeluown/feeluown-qqmusic) - 0.3.2
 * [pypinyin](https://github.com/mozillazg/python-pinyin) - 0.41.0
 * [qasync](https://github.com/CabbageDevelopment/qasync) - 0.16.0
