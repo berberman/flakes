@@ -72,7 +72,7 @@ processAutoCommit =
 generateReadme :: Action ()
 generateReadme = do
   -- we need use generated files in flakes
-  cmd "git add ."
+  command [] "git" ["add", "."] :: Action ()
   (A.decode @(Map Text Text) -> Just (Map.elems -> out)) <-
     fromStdout
       <$> command
