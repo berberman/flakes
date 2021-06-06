@@ -39,7 +39,7 @@
       in rec {
         packages.x86_64-linux = withContents (name: pkgs.${name});
         checks.x86_64-linux = packages.x86_64-linux;
-        devShell.x86_64-linux = pkgs.ghcWithNvfetcher;
+        devShell.x86_64-linux = nvfetcher.x86_64-linux.ghcWithNvfetcher;
       });
 
 }
