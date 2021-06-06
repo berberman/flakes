@@ -47,9 +47,10 @@ packageSet = do
   -----------------------------------------------------------------------------
   define $
     package "fcitx5-pinyin-zhwiki"
-      `sourceAur` "fcitx5-pinyin-zhwiki"
-      `fetchUrl` \(coerce -> v) ->
-        [trimming|https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.2/zhwiki-$v.dict|]
+      `sourceArchLinux` "fcitx5-pinyin-zhwiki"
+      -- drop "0.2.3."
+      `fetchUrl` \(T.drop 6 . coerce -> v) ->
+        [trimming|https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.3/zhwiki-$v.dict|]
   -----------------------------------------------------------------------------
   define $ package "fcitx5-material-color" `fromGitHub` ("hosxy", "fcitx5-material-color")
 
@@ -70,6 +71,8 @@ processAutoCommit =
 
 generateReadme :: Action ()
 generateReadme = do
+  -- we need use generated files in flakes
+  command [] "git" ["add", "."] :: Action ()
   (A.decode @(Map Text Text) -> Just (Map.elems -> out)) <-
     fromStdout
       <$> command

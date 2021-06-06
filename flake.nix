@@ -39,15 +39,7 @@
       in rec {
         packages.x86_64-linux = withContents (name: pkgs.${name});
         checks.x86_64-linux = packages.x86_64-linux;
-        devShell.x86_64-linux = with pkgs;
-          mkShell {
-            buildInputs = [
-              nvchecker
-              nix-prefetch-git
-              haskell-language-server
-              (haskellPackages.ghcWithPackages (p: [ p.nvfetcher ]))
-            ];
-          };
+        devShell.x86_64-linux = nvfetcher.packages.x86_64-linux.ghcWithNvfetcher;
       });
 
 }

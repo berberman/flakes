@@ -26,7 +26,7 @@ jobs:
 
     - name: Run nvfetcher
       run: |
-        nix develop --command runghc Update build -j
+        nix develop --command runghc Update
         nix develop --profile dev && cachix push berberman dev
 
     - name: Run flake check
