@@ -19,6 +19,7 @@ in buildPythonApplication rec {
     requests
     tomlkit
     pydantic
+    packaging
   ]) ++ [ mpv qasync ];
 
   postUnpack = ''
