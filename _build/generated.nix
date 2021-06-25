@@ -43,19 +43,19 @@
   };
   fcitx5-pinyin-zhwiki = {
     pname = "fcitx5-pinyin-zhwiki";
-    version = "0.2.3.20210605";
+    version = "0.2.3.20210625";
     src = fetchurl {
-      sha256 = "1d1wpmja64wz19a4fd5yc07ygcmipi4jkrpj1xjjkr2h5m9acidc";
-      url = "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.3/zhwiki-20210605.dict";
+      sha256 = "1yl6nfi7jk3q5dl9digx77d37j7f6ggqsrbz07bcw0h8xyk0w21j";
+      url = "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.3/zhwiki-20210625.dict";
     };
     
   };
   feeluown-core = {
     pname = "feeluown-core";
-    version = "3.7.8";
+    version = "3.7.9";
     src = fetchurl {
-      sha256 = "176ji45473f9z69n72ismbmc4p2bnpx5vwwwnmb5xh8spcb7gb93";
-      url = "https://pypi.io/packages/source/f/feeluown/feeluown-3.7.8.tar.gz";
+      sha256 = "1j87x3gig0am4b9igkwka4rymhkg154wdv83c8p99b1l7bk0wrh9";
+      url = "https://pypi.io/packages/source/f/feeluown/feeluown-3.7.9.tar.gz";
     };
     
   };
@@ -79,10 +79,10 @@
   };
   feeluown-netease = {
     pname = "feeluown-netease";
-    version = "0.7";
+    version = "0.7.1";
     src = fetchurl {
-      sha256 = "1ppcndqrmwypbvn062zh45yw194ci85zi18vrbwvq5al35yrfmr6";
-      url = "https://pypi.io/packages/source/f/fuo_netease/fuo_netease-0.7.tar.gz";
+      sha256 = "0yzhbpwlsg3n8q21xfd8hfnf7fc9pcv69kqdypij3xpdrfadvcpg";
+      url = "https://pypi.io/packages/source/f/fuo_netease/fuo_netease-0.7.1.tar.gz";
     };
     
   };
