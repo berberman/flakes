@@ -106,10 +106,10 @@
   };
   qasync = {
     pname = "qasync";
-    version = "0.16.0";
+    version = "0.17.0";
     src = fetchurl {
-      sha256 = "1c9058j2l4jg46zicm7n3pc9jdnd617lwg60kv6lmqrlfyv1zfv5";
-      url = "https://pypi.io/packages/source/q/qasync/qasync-0.16.0.tar.gz";
+      sha256 = "11x7qdcldxlq1fw9aza2fqijbdf6yxl7kyjf674164kkg2acf5ky";
+      url = "https://pypi.io/packages/source/q/qasync/qasync-0.17.0.tar.gz";
     };
     
   };
