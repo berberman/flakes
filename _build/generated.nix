@@ -115,14 +115,14 @@
   };
   qliveplayer = {
     pname = "qliveplayer";
-    version = "3.22.3";
+    version = "3.22.4";
     src = fetchgit {
       url = "https://github.com/IsoaSFlus/QLivePlayer";
-      rev = "3.22.3";
+      rev = "3.22.4";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "1qajarsxmmd39ryk3218av12y0zkasap8j7lpnic1frhb26p7m9r";
+      sha256 = "0nd8f7ixwrpdkwq3dz8891xnbm4ss2scmkz5v29s2gfk2kgdmilq";
     };
     
   };
