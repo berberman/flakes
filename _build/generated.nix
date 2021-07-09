@@ -12,10 +12,10 @@
   };
   fastocr = {
     pname = "fastocr";
-    version = "0.2.0";
+    version = "0.3.0";
     src = fetchurl {
-      sha256 = "1s0cgfknjrws8c1mfj656gd9cjbwh3cspf14p2qvs10hlf7jvbh2";
-      url = "https://pypi.io/packages/source/f/fastocr/fastocr-0.2.0.tar.gz";
+      sha256 = "0j7n6q7b9q4gyzr68a54i21kzmz0xsivmnqs5i9ny6w4gdz0favc";
+      url = "https://pypi.io/packages/source/f/fastocr/fastocr-0.3.0.tar.gz";
     };
     
   };
