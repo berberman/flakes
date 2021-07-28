@@ -30,16 +30,22 @@
           in final.callPackage pkg override) // {
             sources = sources';
           };
-    } // (
-      let
-        pkgs = import nixpkgs {
-          system = "x86_64-linux";
-          overlays = [ self.overlay nvfetcher.overlay ];
-        };
-      in rec {
-        packages.x86_64-linux = withContents (name: pkgs.${name});
-        checks.x86_64-linux = packages.x86_64-linux;
-        devShell.x86_64-linux = nvfetcher.packages.x86_64-linux.ghcWithNvfetcher;
-      });
+    } // (let
+      pkgs = import nixpkgs {
+        system = "x86_64-linux";
+        overlays = [ self.overlay nvfetcher.overlay ];
+      };
+    in rec {
+      packages.x86_64-linux = withContents (name: pkgs.${name});
+      apps.x86_64-linux = withContents (name:
+        let drv = pkgs.${name};
+        in if drv.passthru.runnable or false then {
+          type = "app";
+          program = "${drv}/bin/${drv.passthru.program or name}";
+        } else
+          builtins.throw "${name} is not a runnable application!");
+      checks.x86_64-linux = packages.x86_64-linux;
+      devShell.x86_64-linux = nvfetcher.packages.x86_64-linux.ghcWithNvfetcher;
+    });
 
 }

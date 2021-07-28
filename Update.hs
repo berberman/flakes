@@ -42,6 +42,8 @@ packageSet = do
   -----------------------------------------------------------------------------
   define $ package "qasync" `fromPypi` "qasync"
   -----------------------------------------------------------------------------
+  define $ package "qbittorrent-enhanced" `fromGitHub` ("c0re100", "qBittorrent-Enhanced-Edition")
+  -----------------------------------------------------------------------------
   define $ package "qliveplayer"
     -- core libs of the v4 is rewritten in rust
     `sourceManual` "3.22.4"
