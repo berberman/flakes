@@ -49,7 +49,7 @@ in stdenv.mkDerivation {
     wrapQtApp $out/bin/feeluown
   '';
 
-  passthru = { runnable = true; };
+  passthru.runnable = true;
 
   meta = with lib; {
     homepage = "https://github.com/feeluown/FeelUOwn";

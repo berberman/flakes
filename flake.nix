@@ -43,7 +43,7 @@
           type = "app";
           program = "${drv}/bin/${drv.passthru.program or name}";
         } else
-          { });
+          builtins.throw "${name} is not a runnable application!");
       checks.x86_64-linux = packages.x86_64-linux;
       devShell.x86_64-linux = nvfetcher.packages.x86_64-linux.ghcWithNvfetcher;
     });

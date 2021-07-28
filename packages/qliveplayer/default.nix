@@ -30,7 +30,7 @@ stdenv.mkDerivation rec {
 
   '';
 
-  passthru = { runnable = true; };
+  passthru.runnable = true;
 
   meta = with lib; {
     description = "A cute and useful Live Stream Player with danmaku support.";
