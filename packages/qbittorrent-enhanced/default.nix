@@ -5,7 +5,8 @@
 
 with lib;
 stdenv.mkDerivation rec {
-  inherit (mySource) pname version src;
+  inherit (mySource) pname src;
+  version = removePrefix "release-" mySource.version;
 
   enableParallelBuilding = true;
 
