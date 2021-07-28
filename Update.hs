@@ -42,6 +42,8 @@ packageSet = do
   -----------------------------------------------------------------------------
   define $ package "qasync" `fromPypi` "qasync"
   -----------------------------------------------------------------------------
+  define $ package "qbittorrent-enhanced" `fromGitHub` ("c0re100", "qBittorrent-Enhanced-Edition")
+  -----------------------------------------------------------------------------
   define $ package "qliveplayer" `fromGitHub` ("IsoaSFlus", "QLivePlayer")
   -----------------------------------------------------------------------------
   define $

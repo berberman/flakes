@@ -40,6 +40,8 @@ in buildPythonApplication rec {
     wrapQtApp $out/bin/fastocr
   '';
 
+  passthru = { runnable = true; };
+
   meta = with lib; {
     homepage = "https://github.com/BruceZhang1993/FastOCR";
     description = "FastOCR is a desktop application for OCR API.";

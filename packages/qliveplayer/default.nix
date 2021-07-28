@@ -30,6 +30,8 @@ stdenv.mkDerivation rec {
 
   '';
 
+  passthru = { runnable = true; };
+
   meta = with lib; {
     description = "A cute and useful Live Stream Player with danmaku support.";
     homepage = "https://github.com/IsoaSFlus/QLivePlayer";

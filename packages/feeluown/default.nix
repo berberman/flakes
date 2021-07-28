@@ -49,6 +49,8 @@ in stdenv.mkDerivation {
     wrapQtApp $out/bin/feeluown
   '';
 
+  passthru = { runnable = true; };
+
   meta = with lib; {
     homepage = "https://github.com/feeluown/FeelUOwn";
     description = "FeelUOwn Music Player";
