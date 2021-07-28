@@ -42,7 +42,10 @@ packageSet = do
   -----------------------------------------------------------------------------
   define $ package "qasync" `fromPypi` "qasync"
   -----------------------------------------------------------------------------
-  define $ package "qliveplayer" `fromGitHub` ("IsoaSFlus", "QLivePlayer")
+  define $ package "qliveplayer"
+    -- core libs of the v4 is rewritten in rust
+    `sourceManual` "3.22.4"
+    `fetchGitHub` ("IsoaSFlus", "QLivePlayer")
   -----------------------------------------------------------------------------
   define $
     package "fcitx5-pinyin-moegirl"
