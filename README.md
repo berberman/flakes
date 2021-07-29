@@ -65,6 +65,6 @@ so you can also use the CN flakes by following their instructions.
 * [feeluown-qqmusic](https://github.com/feeluown/feeluown-qqmusic) - 0.3.3
 * [pypinyin](https://github.com/mozillazg/python-pinyin) - 0.42.0
 * [qasync](https://github.com/CabbageDevelopment/qasync) - 0.17.0
-* [qbittorrent-enhanced](https://github.com/c0re100/qBittorrent-Enhanced-Edition) - release-4.3.6.10
+* [qbittorrent-enhanced](https://github.com/c0re100/qBittorrent-Enhanced-Edition) - 4.3.6.10
 * [qliveplayer](https://github.com/IsoaSFlus/QLivePlayer) - 3.22.4
 
