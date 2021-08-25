@@ -95,10 +95,10 @@
   };
   qasync = {
     pname = "qasync";
-    version = "0.18.1";
+    version = "0.19.0";
     src = fetchurl {
-      url = "https://pypi.io/packages/source/q/qasync/qasync-0.18.1.tar.gz";
-      sha256 = "0h0ww1mcinj53p4pjkh6vd0c3c85y530jjgya0myn07gr3967yq8";
+      url = "https://pypi.io/packages/source/q/qasync/qasync-0.19.0.tar.gz";
+      sha256 = "0vaffxv0wsxrgm327hdb4akv44nh9bpwa4jkp82bvq92f8wn9k7b";
     };
   };
   qbittorrent-enhanced = {
