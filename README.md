@@ -57,8 +57,8 @@ so you can also use the CN flakes by following their instructions.
 * [fcitx5-material-color](https://github.com/hosxy/Fcitx5-Material-Color) - 0.2.1
 * [fcitx5-pinyin-moegirl](https://github.com/outloudvi/mw2fcitx) - 20210815
 * [fcitx5-pinyin-zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) - 0.2.3.20210823
-* [feeluown](https://github.com/feeluown/FeelUOwn) - 3.7.10
-* [feeluown-core](https://github.com/feeluown/FeelUOwn) - 3.7.10
+* [feeluown](https://github.com/feeluown/FeelUOwn) - 3.7.11
+* [feeluown-core](https://github.com/feeluown/FeelUOwn) - 3.7.11
 * [feeluown-kuwo](https://github.com/feeluown/feeluown-kuwo) - 0.1.4
 * [feeluown-local](https://github.com/feeluown/feeluown-local) - 0.2.1
 * [feeluown-netease](https://github.com/feeluown/feeluown-netease) - 0.7.1
