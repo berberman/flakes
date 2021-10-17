@@ -56,7 +56,7 @@ so you can also use the CN flakes by following their instructions.
 * [fastocr](https://github.com/BruceZhang1993/FastOCR) - 0.3.0
 * [fcitx5-material-color](https://github.com/hosxy/Fcitx5-Material-Color) - 0.2.1
 * [fcitx5-pinyin-moegirl](https://github.com/outloudvi/mw2fcitx) - 20211014
-* [fcitx5-pinyin-zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) - 0.2.3.20210923
+* [fcitx5-pinyin-zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) - 0.2.3.20211016
 * [feeluown](https://github.com/feeluown/FeelUOwn) - 3.7.11
 * [feeluown-core](https://github.com/feeluown/FeelUOwn) - 3.7.11
 * [feeluown-kuwo](https://github.com/feeluown/feeluown-kuwo) - 0.1.4
