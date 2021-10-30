@@ -47,10 +47,10 @@
   };
   feeluown-core = {
     pname = "feeluown-core";
-    version = "3.7.11";
+    version = "3.7.12";
     src = fetchurl {
-      url = "https://pypi.io/packages/source/f/feeluown/feeluown-3.7.11.tar.gz";
-      sha256 = "0y4hwwsvx4qxh9xx0l90i3fhpy30sy5ibi04h79hklfml9dplwvi";
+      url = "https://pypi.io/packages/source/f/feeluown/feeluown-3.7.12.tar.gz";
+      sha256 = "1spq5s2xmdacryps49c73x7ak1f1w2zpiz925cz5vw2pcjd9c2hk";
     };
   };
   feeluown-kuwo = {
