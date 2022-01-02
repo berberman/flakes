@@ -66,5 +66,5 @@ so you can also use the CN flakes by following their instructions.
 * [pypinyin](https://github.com/mozillazg/python-pinyin) - 0.44.0
 * [qasync](https://github.com/CabbageDevelopment/qasync) - 0.22.0
 * [qbittorrent-enhanced](https://github.com/c0re100/qBittorrent-Enhanced-Edition) - 4.3.9.10
-* [qliveplayer](https://github.com/IsoaSFlus/QLivePlayer) - 3.22.4
+* [qliveplayer](https://github.com/THMonster/QLivePlayer) - 4.1.1
 
