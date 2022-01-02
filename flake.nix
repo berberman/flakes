@@ -13,13 +13,15 @@
       };
       pkgDir = ./packages;
       broken = (import ./broken.nix).broken;
-      sources = import ./sources.nix;
+      sources = import ./_sources/generated.nix;
       names = with builtins;
         nixpkgs.lib.subtractLists broken (attrNames (readDir pkgDir));
       withContents = f: with builtins; listToAttrs (map (genPkg f) names);
     in {
       overlay = final: prev:
-        let sources' = sources { inherit (final) fetchurl fetchgit; };
+        let
+          sources' =
+            sources { inherit (final) fetchurl fetchgit fetchFromGitHub; };
         in withContents (name:
           let
             pkg = import (pkgDir + "/${name}");

@@ -17,7 +17,7 @@ import NeatInterpolation (trimming)
 import NvFetcher
 
 main :: IO ()
-main = runNvFetcherNoCLI defaultArgs {argActionAfterBuild = generateReadme >> processAutoCommit} packageSet
+main = runNvFetcher' defaultArgs {argActionAfterBuild = generateReadme >> processAutoCommit} packageSet
 
 packageSet :: PackageSet ()
 packageSet = do
@@ -28,7 +28,7 @@ packageSet = do
         `fetchUrl` const
           "https://github.com/samuelngs/apple-emoji-linux/releases/download/latest/AppleColorEmoji.ttf"
   -----------------------------------------------------------------------------
-  define $ 
+  define $
     package "fastocr"
       -- no idea with 'Could not find a version that satisfies the requirement PyQt5-Qt5' in version 0.3.1
       `sourceManual` "0.3.0"
@@ -44,10 +44,7 @@ packageSet = do
   -----------------------------------------------------------------------------
   define $ package "qbittorrent-enhanced" `fromGitHub` ("c0re100", "qBittorrent-Enhanced-Edition")
   -----------------------------------------------------------------------------
-  define $ package "qliveplayer"
-    -- core libs of the v4 is rewritten in rust
-    `sourceManual` "3.22.4"
-    `fetchGitHub` ("IsoaSFlus", "QLivePlayer")
+  define $ package "qliveplayer" `fromGitHub'` ("THMonster", "QLivePlayer", fetchSubmodules .~ True) `hasCargoLock` "src/QLivePlayer-Lib/Cargo.lock"
   -----------------------------------------------------------------------------
   define $
     package "fcitx5-pinyin-moegirl"
