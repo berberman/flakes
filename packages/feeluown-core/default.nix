@@ -26,7 +26,7 @@ in buildPythonApplication rec {
     substituteInPlace ./${pname}-${version}/mpv.py \
       --replace "_dll = ctypes.util.find_library(_default_mpv_dylib)" \
                 '_dll = "${mpv}/lib/libmpv${stdenv.targetPlatform.extensions.sharedLibrary}"'
-    substituteInPlace ./${pname}-${version}/feeluown/linux/__init__.py \
+    substituteInPlace ./${pname}-${version}/feeluown/nowplaying/__init__.py \
       --replace dbus.mainloop.pyqt5 dbus.mainloop.glib \
       --replace DBusQtMainLoop DBusGMainLoop
   '';
