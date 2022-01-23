@@ -57,13 +57,13 @@ so you can also use the CN flakes by following their instructions.
 * [fcitx5-material-color](https://github.com/hosxy/Fcitx5-Material-Color) - 0.2.1
 * [fcitx5-pinyin-moegirl](https://github.com/outloudvi/mw2fcitx) - 20220114
 * [fcitx5-pinyin-zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) - 0.2.3.20220101
-* [feeluown](https://github.com/feeluown/FeelUOwn) - 3.8
-* [feeluown-core](https://github.com/feeluown/FeelUOwn) - 3.8
+* [feeluown](https://github.com/feeluown/FeelUOwn) - 3.8.1
+* [feeluown-core](https://github.com/feeluown/FeelUOwn) - 3.8.1
 * [feeluown-kuwo](https://github.com/feeluown/feeluown-kuwo) - 0.1.5
-* [feeluown-local](https://github.com/feeluown/feeluown-local) - 0.2.1
+* [feeluown-local](https://github.com/feeluown/feeluown-local) - 0.3
 * [feeluown-netease](https://github.com/feeluown/feeluown-netease) - 0.8
 * [feeluown-qqmusic](https://github.com/feeluown/feeluown-qqmusic) - 0.3.3
-* [pypinyin](https://github.com/mozillazg/python-pinyin) - 0.44.0
+* [pypinyin](https://github.com/mozillazg/python-pinyin) - 0.45.0
 * [qasync](https://github.com/CabbageDevelopment/qasync) - 0.22.0
 * [qbittorrent-enhanced](https://github.com/c0re100/qBittorrent-Enhanced-Edition) - 4.4.0.10
 * [qliveplayer](https://github.com/THMonster/QLivePlayer) - 4.1.1

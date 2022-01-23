@@ -46,10 +46,10 @@
   };
   feeluown-core = {
     pname = "feeluown-core";
-    version = "3.8";
+    version = "3.8.1";
     src = fetchurl {
-      url = "https://pypi.io/packages/source/f/feeluown/feeluown-3.8.tar.gz";
-      sha256 = "sha256-0/Aon/hSnl1ULHF+7kF6YG/JFHgRaGdlDPVtgLvLlfE=";
+      url = "https://pypi.io/packages/source/f/feeluown/feeluown-3.8.1.tar.gz";
+      sha256 = "sha256-BaI892LW0XklnMIM/rdH3iQFYVEO5oGcd5uxeJBAtuc=";
     };
   };
   feeluown-kuwo = {
@@ -62,10 +62,10 @@
   };
   feeluown-local = {
     pname = "feeluown-local";
-    version = "0.2.1";
+    version = "0.3";
     src = fetchurl {
-      url = "https://pypi.io/packages/source/f/fuo_local/fuo_local-0.2.1.tar.gz";
-      sha256 = "sha256-p5mkKOXDz4aW6N2hJNfnrH3OGxUlsRAN9Ax0jksT1EU=";
+      url = "https://pypi.io/packages/source/f/fuo_local/fuo_local-0.3.tar.gz";
+      sha256 = "sha256-7Qgi9nGxmic3nq6icWUC7pQjyF6Gj91TAH5RyrvMI7Y=";
     };
   };
   feeluown-netease = {
@@ -86,10 +86,10 @@
   };
   pypinyin = {
     pname = "pypinyin";
-    version = "0.44.0";
+    version = "0.45.0";
     src = fetchurl {
-      url = "https://pypi.io/packages/source/p/pypinyin/pypinyin-0.44.0.tar.gz";
-      sha256 = "sha256-AHsmy5Rblt5BBB4VpIFhQH3sNt4TLwjiPfpux+NiQDM=";
+      url = "https://pypi.io/packages/source/p/pypinyin/pypinyin-0.45.0.tar.gz";
+      sha256 = "sha256-d2Q5JEogxzhkJc6ze1pps24cRpygVQ9EI8mQD0T1E0s=";
     };
   };
   qasync = {
