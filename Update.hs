@@ -8,6 +8,7 @@ module Update (main) where
 
 import Control.Monad (unless)
 import qualified Data.Aeson as A
+import Data.Default (def)
 import Data.Map (Map)
 import qualified Data.Map as Map
 import Data.Text (Text)
@@ -15,9 +16,10 @@ import qualified Data.Text as T
 import Development.Shake
 import NeatInterpolation (trimming)
 import NvFetcher
+import NvFetcher.Config (Config (actionAfterBuild))
 
 main :: IO ()
-main = runNvFetcher' defaultArgs {argActionAfterBuild = generateReadme >> processAutoCommit} packageSet
+main = runNvFetcher' def {actionAfterBuild = generateReadme >> processAutoCommit} packageSet
 
 packageSet :: PackageSet ()
 packageSet = do
@@ -25,8 +27,8 @@ packageSet = do
   define $
     package "apple-emoji"
       `sourceManual` "0.0.0.20200413"
-        `fetchUrl` const
-          "https://github.com/samuelngs/apple-emoji-linux/releases/download/latest/AppleColorEmoji.ttf"
+      `fetchUrl` const
+        "https://github.com/samuelngs/apple-emoji-linux/releases/download/alpha-release-v1.0.0/AppleColorEmoji.ttf"
   -----------------------------------------------------------------------------
   define $
     package "fastocr"

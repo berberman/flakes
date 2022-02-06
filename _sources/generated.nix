@@ -5,7 +5,7 @@
     pname = "apple-emoji";
     version = "0.0.0.20200413";
     src = fetchurl {
-      url = "https://github.com/samuelngs/apple-emoji-linux/releases/download/latest/AppleColorEmoji.ttf";
+      url = "https://github.com/samuelngs/apple-emoji-linux/releases/download/alpha-release-v1.0.0/AppleColorEmoji.ttf";
       sha256 = "sha256-j1xml01ucZi7f9aRhAKo4doval5q/ohsxK+flYSkTHU=";
     };
   };
