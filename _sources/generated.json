@@ -24,12 +24,12 @@
             "name": null,
             "repo": "qBittorrent-Enhanced-Edition",
             "type": "github",
-            "sha256": "sha256-XAH2KS+fkRe+c23calgfNWBygWlMBgx5U8RA+ZfxNqQ=",
-            "rev": "release-4.4.0.10",
+            "sha256": "sha256-oBRmnpg8j0RML0WJhCyWJp5liHZ1mO23oA/9TPx+UDs=",
+            "rev": "release-4.4.1.10",
             "leaveDotGit": false,
             "fetchSubmodules": false
         },
-        "version": "release-4.4.0.10",
+        "version": "release-4.4.1.10",
         "passthru": null,
         "extract": null,
         "rustGitDeps": null
