@@ -139,12 +139,12 @@
         "cargoLock": null,
         "name": "fcitx5-pinyin-moegirl",
         "src": {
-            "url": "https://github.com/outloudvi/mw2fcitx/releases/download/20220114/moegirl.dict",
+            "url": "https://github.com/outloudvi/mw2fcitx/releases/download/20220218/moegirl.dict",
             "name": null,
             "type": "url",
-            "sha256": "sha256-8aXieXe4DwTsW1SeCIG3JO4NA4s6kziO1kShTXkv108="
+            "sha256": "sha256-14jyCwoX2xMCYwimppPI4F0rQvVM7ysy3ARwI5tw0OQ="
         },
-        "version": "20220114",
+        "version": "20220218",
         "passthru": null,
         "extract": null,
         "rustGitDeps": null
