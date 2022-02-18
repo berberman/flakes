@@ -89,12 +89,12 @@
         "cargoLock": null,
         "name": "feeluown-core",
         "src": {
-            "url": "https://pypi.io/packages/source/f/feeluown/feeluown-3.8.2.tar.gz",
+            "url": "https://pypi.io/packages/source/f/feeluown/feeluown-3.8.3.tar.gz",
             "name": null,
             "type": "url",
-            "sha256": "sha256-V2yzpkmjRkipZOvQGB2mYRhiiEly6QPrTOMJ7BmyWBQ="
+            "sha256": "sha256-q2htKDM6B8xQqkH4KIyNyTJL8/ew8K5fbI9f+qwqE0c="
         },
-        "version": "3.8.2",
+        "version": "3.8.3",
         "passthru": null,
         "extract": null,
         "rustGitDeps": null
