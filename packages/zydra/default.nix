@@ -14,6 +14,7 @@ in stdenv.mkDerivation rec {
     pyfiglet
     py-term
     termcolor
+    setuptools
   ];
 
   dontBuild = true;
