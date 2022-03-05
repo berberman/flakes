@@ -61,6 +61,12 @@ packageSet = do
         [trimming|https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.3/zhwiki-$v.dict|]
   -----------------------------------------------------------------------------
   define $ package "fcitx5-material-color" `fromGitHub` ("hosxy", "fcitx5-material-color")
+  -----------------------------------------------------------------------------
+  define $ package "zydra"
+    `sourceGit` "https://github.com/hamedA2/Zydra"
+    `fetchGitHub` ("hamedA2", "Zydra")
+  -----------------------------------------------------------------------------
+  define $ package "py-term" `fromPypi` "py-term"
 
 processAutoCommit :: Action ()
 processAutoCommit =
