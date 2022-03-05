@@ -1,4 +1,24 @@
 {
+    "zydra": {
+        "pinned": false,
+        "cargoLock": null,
+        "name": "zydra",
+        "src": {
+            "deepClone": false,
+            "owner": "hamedA2",
+            "name": null,
+            "repo": "Zydra",
+            "type": "github",
+            "sha256": "sha256-6yHPlinmbg3M7Yun+fn34LJY1xggZy9mAgwRDgRZf9Y=",
+            "rev": "791fabd188adcb1fd1cd8c53288b424740114cf9",
+            "leaveDotGit": false,
+            "fetchSubmodules": false
+        },
+        "version": "791fabd188adcb1fd1cd8c53288b424740114cf9",
+        "passthru": null,
+        "extract": null,
+        "rustGitDeps": null
+    },
     "fastocr": {
         "pinned": false,
         "cargoLock": null,
@@ -53,6 +73,21 @@
         "passthru": null,
         "extract": null,
         "rustGitDeps": {}
+    },
+    "py-term": {
+        "pinned": false,
+        "cargoLock": null,
+        "name": "py-term",
+        "src": {
+            "url": "https://pypi.io/packages/source/p/py-term/py-term-0.7.tar.gz",
+            "name": null,
+            "type": "url",
+            "sha256": "sha256-q6pNGsEnzMbdUNGTensDD1on6jvZOvNr7COu79BdUMk="
+        },
+        "version": "0.7",
+        "passthru": null,
+        "extract": null,
+        "rustGitDeps": null
     },
     "fcitx5-pinyin-zhwiki": {
         "pinned": false,

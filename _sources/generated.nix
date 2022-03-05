@@ -84,6 +84,14 @@
       sha256 = "sha256-gnBKk+X0ejP+qo5FLG60Tv8wv3VxoJqDgb9ghMBipLc=";
     };
   };
+  py-term = {
+    pname = "py-term";
+    version = "0.7";
+    src = fetchurl {
+      url = "https://pypi.io/packages/source/p/py-term/py-term-0.7.tar.gz";
+      sha256 = "sha256-q6pNGsEnzMbdUNGTensDD1on6jvZOvNr7COu79BdUMk=";
+    };
+  };
   pypinyin = {
     pname = "pypinyin";
     version = "0.46.0";
@@ -127,5 +135,16 @@
         
       };
     };
+  };
+  zydra = {
+    pname = "zydra";
+    version = "791fabd188adcb1fd1cd8c53288b424740114cf9";
+    src = fetchFromGitHub ({
+      owner = "hamedA2";
+      repo = "Zydra";
+      rev = "791fabd188adcb1fd1cd8c53288b424740114cf9";
+      fetchSubmodules = false;
+      sha256 = "sha256-6yHPlinmbg3M7Yun+fn34LJY1xggZy9mAgwRDgRZf9Y=";
+    });
   };
 }
