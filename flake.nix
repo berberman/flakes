@@ -36,6 +36,7 @@
       pkgs = import nixpkgs {
         system = "x86_64-linux";
         overlays = [ self.overlay nvfetcher.overlay ];
+        config.allowUnfree = true;
       };
     in rec {
       packages.x86_64-linux = withContents (name: pkgs.${name});
