@@ -1,28 +1,40 @@
-{ stdenv, lib, makeDesktopItem, feeluown-core, feeluown-netease, feeluown-kuwo
-, feeluown-qqmusic, feeluown-local, pythonPackages, qt5 }:
+{ stdenv
+, lib
+, makeDesktopItem
+, copyDesktopItems
+, feeluown-core
+, feeluown-netease
+, feeluown-kuwo
+, feeluown-qqmusic
+, feeluown-local
+, pythonPackages
+, qt5
+}:
 
 let
   inherit (pythonPackages) python wrapPython;
-  desktop = makeDesktopItem rec {
-    name = "FeelUOwn";
-    desktopName = name;
-    exec = "feeluown --log-to-file";
-    categories = "AudioVideo;Audio;Player;Qt;";
-    terminal = "false";
-    icon =
-      "${feeluown-core}/lib/${python.executable}/site-packages/feeluown/icons/feeluown.png";
-    comment = "FeelUOwn Launcher";
-    startupNotify = "true";
-    extraEntries = ''
-      StartupWMClass=${name}
-    '';
-  };
-in stdenv.mkDerivation {
+  desktopItems = [
+    (makeDesktopItem {
+      name = "FeelUOwn";
+      desktopName = "FeelUOwn";
+      exec = "feeluown --log-to-file";
+      categories = [ "AudioVideo" "Audio" "Player" "Qt" ];
+      terminal = false;
+      icon =
+        "${feeluown-core}/lib/${python.executable}/site-packages/feeluown/icons/feeluown.png";
+      comment = "FeelUOwn Launcher";
+      startupNotify = true;
+      startupWMClass = "FeelUOwn";
+    })
+  ];
+in
+stdenv.mkDerivation {
 
   pname = "feeluown";
   inherit (feeluown-core) version src;
+  inherit desktopItems;
 
-  nativeBuildInputs = [ wrapPython qt5.wrapQtAppsHook ];
+  nativeBuildInputs = [ wrapPython qt5.wrapQtAppsHook copyDesktopItems ];
 
   buildInputs = [
     feeluown-core
@@ -40,7 +52,6 @@ in stdenv.mkDerivation {
     mkdir -p $out/bin
     cp ${feeluown-core}/bin/* $out/bin
     rm $out/bin/feeluown-genicon
-    install -D ${desktop}/share/applications/FeelUOwn.desktop $out/share/applications/FeelUOwn.desktop
     runHook postInstall
   '';
 
