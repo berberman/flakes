@@ -1,26 +1,30 @@
-{ lib, pythonPackages, mySource, makeDesktopItem, qasync, qt5 }:
+{ lib, pythonPackages, mySource, makeDesktopItem, copyDesktopItems, qasync, qt5 }:
 
 let
   inherit (pythonPackages) buildPythonApplication;
 
-  desktop = makeDesktopItem rec {
-    name = "FastOCR";
-    desktopName = name;
-    exec = "fastocr";
-    categories = "Graphics;";
-    terminal = "false";
-    comment = "A OCR tool for Linux desktop";
-    startupNotify = "false";
-    genericName = "OCR Tool";
-    extraEntries = ''
-      GenericName[zh_CN]=OCR 识别工具
-      X-DBUS-StartupType=Unique
-      X-KDE-DBUS-Restricted-Interfaces=org.kde.kwin.Screenshot
-    '';
-  };
+  desktopItems = [
+    (makeDesktopItem {
+      name = "FastOCR";
+      desktopName = "FastOCR";
+      exec = "fastocr";
+      categories = [ "Graphics" ];
+      terminal = false;
+      comment = "A OCR tool for Linux desktop";
+      startupNotify = false;
+      genericName = "OCR Tool";
+      extraConfig = {
+        "GenericName[zh_CN]" = "OCR 识别工具";
+        "X-DBUS-StartupType" = "Unique";
+        "X-KDE-DBUS-Restricted-Interfaces" = "org.kde.kwin.Screenshot";
+      };
+    })
+  ];
 
-in buildPythonApplication rec {
+in
+buildPythonApplication rec {
   inherit (mySource) pname version src;
+  inherit desktopItems;
 
   doCheck = false;
 
@@ -28,11 +32,7 @@ in buildPythonApplication rec {
     (with pythonPackages; [ dbus-python setuptools pyqt5 click aiohttp ])
     ++ [ qasync ];
 
-  nativeBuildInputs = [ qt5.wrapQtAppsHook ];
-
-  postInstall = ''
-    install -D ${desktop}/share/applications/FastOCR.desktop $out/share/applications/FastOCR.desktop
-  '';
+  nativeBuildInputs = [ qt5.wrapQtAppsHook copyDesktopItems ];
 
   postFixup = ''
     qtWrapperArgs+=(--prefix QML2_IMPORT_PATH : "${qt5.qtquickcontrols2.bin}/lib/qt-${qt5.qtbase.version}/qml")
