@@ -139,12 +139,12 @@
         "cargoLock": null,
         "name": "feeluown-qqmusic",
         "src": {
-            "url": "https://pypi.io/packages/source/f/fuo_qqmusic/fuo_qqmusic-0.4.tar.gz",
+            "url": "https://pypi.io/packages/source/f/fuo_qqmusic/fuo_qqmusic-0.4.1.tar.gz",
             "name": null,
             "type": "url",
-            "sha256": "sha256-gnBKk+X0ejP+qo5FLG60Tv8wv3VxoJqDgb9ghMBipLc="
+            "sha256": "sha256-IBCw5o5VYUyJbioWNgSML2ZVculhHBLXAhZA7qlZKH4="
         },
-        "version": "0.4",
+        "version": "0.4.1",
         "passthru": null,
         "extract": null,
         "rustGitDeps": null

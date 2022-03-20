@@ -62,7 +62,7 @@ so you can also use the CN flakes by following their instructions.
 * [feeluown-kuwo](https://github.com/feeluown/feeluown-kuwo) - 0.1.5
 * [feeluown-local](https://github.com/feeluown/feeluown-local) - 0.3
 * [feeluown-netease](https://github.com/feeluown/feeluown-netease) - 0.8
-* [feeluown-qqmusic](https://github.com/feeluown/feeluown-qqmusic) - 0.4
+* [feeluown-qqmusic](https://github.com/feeluown/feeluown-qqmusic) - 0.4.1
 * [py-term](https://github.com/gravmatt/py-term) - 0.7
 * [pypinyin](https://github.com/mozillazg/python-pinyin) - 0.46.0
 * [qasync](https://github.com/CabbageDevelopment/qasync) - 0.23.0
