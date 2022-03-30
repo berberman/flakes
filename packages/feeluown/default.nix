@@ -14,14 +14,13 @@
 let
   inherit (pythonPackages) python wrapPython;
   desktopItems = [
-    (makeDesktopItem {
+    (makeDesktopItem rec {
       name = "FeelUOwn";
-      desktopName = "FeelUOwn";
+      desktopName = name;
       exec = "feeluown --log-to-file";
       categories = [ "AudioVideo" "Audio" "Player" "Qt" ];
       terminal = false;
-      icon =
-        "${feeluown-core}/lib/${python.executable}/site-packages/feeluown/icons/feeluown.png";
+      icon = "${feeluown-core}/lib/${python.executable}/site-packages/feeluown/gui/assets/icons/feeluown.png";
       comment = "FeelUOwn Launcher";
       startupNotify = true;
       startupWMClass = "FeelUOwn";
