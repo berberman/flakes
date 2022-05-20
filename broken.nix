@@ -1,1 +1,1 @@
-{ broken = [ "python-opencc" ]; }
+{ broken = [ "python-opencc", "qliveplayer" ]; }
