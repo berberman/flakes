@@ -1,262 +1,227 @@
 {
-    "zydra": {
-        "pinned": false,
-        "cargoLock": null,
-        "name": "zydra",
-        "src": {
-            "deepClone": false,
-            "owner": "hamedA2",
-            "name": null,
-            "repo": "Zydra",
-            "type": "github",
-            "sha256": "sha256-6yHPlinmbg3M7Yun+fn34LJY1xggZy9mAgwRDgRZf9Y=",
-            "rev": "791fabd188adcb1fd1cd8c53288b424740114cf9",
-            "leaveDotGit": false,
-            "fetchSubmodules": false
-        },
-        "version": "791fabd188adcb1fd1cd8c53288b424740114cf9",
-        "passthru": null,
+    "apple-emoji": {
+        "cargoLocks": null,
         "extract": null,
-        "rustGitDeps": null
+        "name": "apple-emoji",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-j1xml01ucZi7f9aRhAKo4doval5q/ohsxK+flYSkTHU=",
+            "type": "url",
+            "url": "https://github.com/samuelngs/apple-emoji-linux/releases/download/alpha-release-v1.0.0/AppleColorEmoji.ttf"
+        },
+        "version": "0.0.0.20200413"
     },
     "fastocr": {
-        "pinned": false,
-        "cargoLock": null,
+        "cargoLocks": null,
+        "extract": null,
         "name": "fastocr",
+        "passthru": null,
+        "pinned": false,
         "src": {
-            "url": "https://pypi.io/packages/source/f/fastocr/fastocr-0.3.0.tar.gz",
             "name": null,
+            "sha256": "sha256-bCsHfnuEG29TLBrbuqPu4Nc/g4ikKGTy94/gtA429kg=",
             "type": "url",
-            "sha256": "sha256-bCsHfnuEG29TLBrbuqPu4Nc/g4ikKGTy94/gtA429kg="
+            "url": "https://pypi.io/packages/source/f/fastocr/fastocr-0.3.0.tar.gz"
         },
-        "version": "0.3.0",
-        "passthru": null,
-        "extract": null,
-        "rustGitDeps": null
-    },
-    "qbittorrent-enhanced": {
-        "pinned": false,
-        "cargoLock": null,
-        "name": "qbittorrent-enhanced",
-        "src": {
-            "deepClone": false,
-            "owner": "c0re100",
-            "name": null,
-            "repo": "qBittorrent-Enhanced-Edition",
-            "type": "github",
-            "sha256": "sha256-EY3jbqvqXWGGh45t73WPcjR2pwHDU8z0bJtoGvc8pQE=",
-            "rev": "release-4.4.2.10",
-            "leaveDotGit": false,
-            "fetchSubmodules": false
-        },
-        "version": "release-4.4.2.10",
-        "passthru": null,
-        "extract": null,
-        "rustGitDeps": null
-    },
-    "qliveplayer": {
-        "pinned": false,
-        "cargoLock": "./qliveplayer-4.1.1/src/QLivePlayer-Lib/Cargo.lock",
-        "name": "qliveplayer",
-        "src": {
-            "deepClone": false,
-            "owner": "THMonster",
-            "name": null,
-            "repo": "QLivePlayer",
-            "type": "github",
-            "sha256": "sha256-qhFcUzTV4F6UVP14XuEYp4KWalQwnMBItA7J8rzyHNY=",
-            "rev": "4.1.1",
-            "leaveDotGit": false,
-            "fetchSubmodules": true
-        },
-        "version": "4.1.1",
-        "passthru": null,
-        "extract": null,
-        "rustGitDeps": {}
-    },
-    "py-term": {
-        "pinned": false,
-        "cargoLock": null,
-        "name": "py-term",
-        "src": {
-            "url": "https://pypi.io/packages/source/p/py-term/py-term-0.7.tar.gz",
-            "name": null,
-            "type": "url",
-            "sha256": "sha256-q6pNGsEnzMbdUNGTensDD1on6jvZOvNr7COu79BdUMk="
-        },
-        "version": "0.7",
-        "passthru": null,
-        "extract": null,
-        "rustGitDeps": null
-    },
-    "fcitx5-pinyin-zhwiki": {
-        "pinned": false,
-        "cargoLock": null,
-        "name": "fcitx5-pinyin-zhwiki",
-        "src": {
-            "url": "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.3/zhwiki-20220312.dict",
-            "name": null,
-            "type": "url",
-            "sha256": "sha256-gzBm0OuHRo+d5AkVXP+/EGvXmq0N/3EXVSWcqN73J8Y="
-        },
-        "version": "0.2.3.20220312",
-        "passthru": null,
-        "extract": null,
-        "rustGitDeps": null
-    },
-    "qasync": {
-        "pinned": false,
-        "cargoLock": null,
-        "name": "qasync",
-        "src": {
-            "url": "https://pypi.io/packages/source/q/qasync/qasync-0.23.0.tar.gz",
-            "name": null,
-            "type": "url",
-            "sha256": "sha256-iWXsMT4BBxSNmOisHnenfc503jzZcFWhqmLVE6N5OhQ="
-        },
-        "version": "0.23.0",
-        "passthru": null,
-        "extract": null,
-        "rustGitDeps": null
-    },
-    "feeluown-core": {
-        "pinned": false,
-        "cargoLock": null,
-        "name": "feeluown-core",
-        "src": {
-            "url": "https://pypi.io/packages/source/f/feeluown/feeluown-3.8.3.tar.gz",
-            "name": null,
-            "type": "url",
-            "sha256": "sha256-q2htKDM6B8xQqkH4KIyNyTJL8/ew8K5fbI9f+qwqE0c="
-        },
-        "version": "3.8.3",
-        "passthru": null,
-        "extract": null,
-        "rustGitDeps": null
-    },
-    "feeluown-qqmusic": {
-        "pinned": false,
-        "cargoLock": null,
-        "name": "feeluown-qqmusic",
-        "src": {
-            "url": "https://pypi.io/packages/source/f/fuo_qqmusic/fuo_qqmusic-0.4.1.tar.gz",
-            "name": null,
-            "type": "url",
-            "sha256": "sha256-IBCw5o5VYUyJbioWNgSML2ZVculhHBLXAhZA7qlZKH4="
-        },
-        "version": "0.4.1",
-        "passthru": null,
-        "extract": null,
-        "rustGitDeps": null
+        "version": "0.3.0"
     },
     "fcitx5-material-color": {
-        "pinned": false,
-        "cargoLock": null,
+        "cargoLocks": null,
+        "extract": null,
         "name": "fcitx5-material-color",
+        "passthru": null,
+        "pinned": false,
         "src": {
             "deepClone": false,
-            "owner": "hosxy",
-            "name": null,
-            "repo": "fcitx5-material-color",
-            "type": "github",
-            "sha256": "sha256-i9JHIJ+cHLTBZUNzj9Ujl3LIdkCllTWpO1Ta4OT1LTc=",
-            "rev": "0.2.1",
+            "fetchSubmodules": false,
             "leaveDotGit": false,
-            "fetchSubmodules": false
+            "name": null,
+            "owner": "hosxy",
+            "repo": "fcitx5-material-color",
+            "rev": "0.2.1",
+            "sha256": "sha256-i9JHIJ+cHLTBZUNzj9Ujl3LIdkCllTWpO1Ta4OT1LTc=",
+            "type": "github"
         },
-        "version": "0.2.1",
-        "passthru": null,
-        "extract": null,
-        "rustGitDeps": null
+        "version": "0.2.1"
     },
     "fcitx5-pinyin-moegirl": {
-        "pinned": false,
-        "cargoLock": null,
+        "cargoLocks": null,
+        "extract": null,
         "name": "fcitx5-pinyin-moegirl",
-        "src": {
-            "url": "https://github.com/outloudvi/mw2fcitx/releases/download/20220218/moegirl.dict",
-            "name": null,
-            "type": "url",
-            "sha256": "sha256-14jyCwoX2xMCYwimppPI4F0rQvVM7ysy3ARwI5tw0OQ="
-        },
-        "version": "20220218",
         "passthru": null,
-        "extract": null,
-        "rustGitDeps": null
-    },
-    "apple-emoji": {
         "pinned": false,
-        "cargoLock": null,
-        "name": "apple-emoji",
         "src": {
-            "url": "https://github.com/samuelngs/apple-emoji-linux/releases/download/alpha-release-v1.0.0/AppleColorEmoji.ttf",
             "name": null,
+            "sha256": "sha256-14jyCwoX2xMCYwimppPI4F0rQvVM7ysy3ARwI5tw0OQ=",
             "type": "url",
-            "sha256": "sha256-j1xml01ucZi7f9aRhAKo4doval5q/ohsxK+flYSkTHU="
+            "url": "https://github.com/outloudvi/mw2fcitx/releases/download/20220218/moegirl.dict"
         },
-        "version": "0.0.0.20200413",
-        "passthru": null,
-        "extract": null,
-        "rustGitDeps": null
+        "version": "20220218"
     },
-    "feeluown-netease": {
-        "pinned": false,
-        "cargoLock": null,
-        "name": "feeluown-netease",
-        "src": {
-            "url": "https://pypi.io/packages/source/f/fuo_netease/fuo_netease-0.8.tar.gz",
-            "name": null,
-            "type": "url",
-            "sha256": "sha256-C1eHG2V+qe+ub4OUfLVrumO31kQugr8xb8WBMmsg9LU="
-        },
-        "version": "0.8",
-        "passthru": null,
+    "fcitx5-pinyin-zhwiki": {
+        "cargoLocks": null,
         "extract": null,
-        "rustGitDeps": null
+        "name": "fcitx5-pinyin-zhwiki",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-vyvsychfpRMSQWgxQfCxD3QllmKBjDdcbIvJiEDfz+8=",
+            "type": "url",
+            "url": "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.4/zhwiki-20220416.dict"
+        },
+        "version": "0.2.4.20220416"
+    },
+    "feeluown-core": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "feeluown-core",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-cO30pYxBctVh5FYZ+m45YBx2P/SpROGLM7iN02mVoxA=",
+            "type": "url",
+            "url": "https://pypi.io/packages/source/f/feeluown/feeluown-3.8.5.tar.gz"
+        },
+        "version": "3.8.5"
     },
     "feeluown-kuwo": {
-        "pinned": false,
-        "cargoLock": null,
+        "cargoLocks": null,
+        "extract": null,
         "name": "feeluown-kuwo",
-        "src": {
-            "url": "https://pypi.io/packages/source/f/fuo_kuwo/fuo_kuwo-0.1.5.tar.gz",
-            "name": null,
-            "type": "url",
-            "sha256": "sha256-1Umad7glnyO7l+Pu0dfPQkIkM8lT4Q5Z4JQqPUxge1M="
-        },
-        "version": "0.1.5",
         "passthru": null,
-        "extract": null,
-        "rustGitDeps": null
-    },
-    "pypinyin": {
         "pinned": false,
-        "cargoLock": null,
-        "name": "pypinyin",
         "src": {
-            "url": "https://pypi.io/packages/source/p/pypinyin/pypinyin-0.46.0.tar.gz",
             "name": null,
+            "sha256": "sha256-1Umad7glnyO7l+Pu0dfPQkIkM8lT4Q5Z4JQqPUxge1M=",
             "type": "url",
-            "sha256": "sha256-DS5B6V28IKIywPXThQZU7rv8ujA9ljWNLEZZJyW7mJw="
+            "url": "https://pypi.io/packages/source/f/fuo_kuwo/fuo_kuwo-0.1.5.tar.gz"
         },
-        "version": "0.46.0",
-        "passthru": null,
-        "extract": null,
-        "rustGitDeps": null
+        "version": "0.1.5"
     },
     "feeluown-local": {
-        "pinned": false,
-        "cargoLock": null,
-        "name": "feeluown-local",
-        "src": {
-            "url": "https://pypi.io/packages/source/f/fuo_local/fuo_local-0.3.tar.gz",
-            "name": null,
-            "type": "url",
-            "sha256": "sha256-7Qgi9nGxmic3nq6icWUC7pQjyF6Gj91TAH5RyrvMI7Y="
-        },
-        "version": "0.3",
-        "passthru": null,
+        "cargoLocks": null,
         "extract": null,
-        "rustGitDeps": null
+        "name": "feeluown-local",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-7Qgi9nGxmic3nq6icWUC7pQjyF6Gj91TAH5RyrvMI7Y=",
+            "type": "url",
+            "url": "https://pypi.io/packages/source/f/fuo_local/fuo_local-0.3.tar.gz"
+        },
+        "version": "0.3"
+    },
+    "feeluown-netease": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "feeluown-netease",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-hXjDkekVIYQdLu+8qEp8LDXePmLLeEqTvu1vOmCgZEk=",
+            "type": "url",
+            "url": "https://pypi.io/packages/source/f/fuo_netease/fuo_netease-0.9.1.tar.gz"
+        },
+        "version": "0.9.1"
+    },
+    "feeluown-qqmusic": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "feeluown-qqmusic",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-IBCw5o5VYUyJbioWNgSML2ZVculhHBLXAhZA7qlZKH4=",
+            "type": "url",
+            "url": "https://pypi.io/packages/source/f/fuo_qqmusic/fuo_qqmusic-0.4.1.tar.gz"
+        },
+        "version": "0.4.1"
+    },
+    "py-term": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "py-term",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-q6pNGsEnzMbdUNGTensDD1on6jvZOvNr7COu79BdUMk=",
+            "type": "url",
+            "url": "https://pypi.io/packages/source/p/py-term/py-term-0.7.tar.gz"
+        },
+        "version": "0.7"
+    },
+    "pypinyin": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "pypinyin",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-DS5B6V28IKIywPXThQZU7rv8ujA9ljWNLEZZJyW7mJw=",
+            "type": "url",
+            "url": "https://pypi.io/packages/source/p/pypinyin/pypinyin-0.46.0.tar.gz"
+        },
+        "version": "0.46.0"
+    },
+    "qasync": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "qasync",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-iWXsMT4BBxSNmOisHnenfc503jzZcFWhqmLVE6N5OhQ=",
+            "type": "url",
+            "url": "https://pypi.io/packages/source/q/qasync/qasync-0.23.0.tar.gz"
+        },
+        "version": "0.23.0"
+    },
+    "qbittorrent-enhanced": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "qbittorrent-enhanced",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "c0re100",
+            "repo": "qBittorrent-Enhanced-Edition",
+            "rev": "release-4.4.2.10",
+            "sha256": "sha256-EY3jbqvqXWGGh45t73WPcjR2pwHDU8z0bJtoGvc8pQE=",
+            "type": "github"
+        },
+        "version": "release-4.4.2.10"
+    },
+    "zydra": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "zydra",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "hamedA2",
+            "repo": "Zydra",
+            "rev": "791fabd188adcb1fd1cd8c53288b424740114cf9",
+            "sha256": "sha256-6yHPlinmbg3M7Yun+fn34LJY1xggZy9mAgwRDgRZf9Y=",
+            "type": "github"
+        },
+        "version": "791fabd188adcb1fd1cd8c53288b424740114cf9"
     }
 }

@@ -38,18 +38,18 @@
   };
   fcitx5-pinyin-zhwiki = {
     pname = "fcitx5-pinyin-zhwiki";
-    version = "0.2.3.20220312";
+    version = "0.2.4.20220416";
     src = fetchurl {
-      url = "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.3/zhwiki-20220312.dict";
-      sha256 = "sha256-gzBm0OuHRo+d5AkVXP+/EGvXmq0N/3EXVSWcqN73J8Y=";
+      url = "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.4/zhwiki-20220416.dict";
+      sha256 = "sha256-vyvsychfpRMSQWgxQfCxD3QllmKBjDdcbIvJiEDfz+8=";
     };
   };
   feeluown-core = {
     pname = "feeluown-core";
-    version = "3.8.3";
+    version = "3.8.5";
     src = fetchurl {
-      url = "https://pypi.io/packages/source/f/feeluown/feeluown-3.8.3.tar.gz";
-      sha256 = "sha256-q2htKDM6B8xQqkH4KIyNyTJL8/ew8K5fbI9f+qwqE0c=";
+      url = "https://pypi.io/packages/source/f/feeluown/feeluown-3.8.5.tar.gz";
+      sha256 = "sha256-cO30pYxBctVh5FYZ+m45YBx2P/SpROGLM7iN02mVoxA=";
     };
   };
   feeluown-kuwo = {
@@ -70,10 +70,10 @@
   };
   feeluown-netease = {
     pname = "feeluown-netease";
-    version = "0.8";
+    version = "0.9.1";
     src = fetchurl {
-      url = "https://pypi.io/packages/source/f/fuo_netease/fuo_netease-0.8.tar.gz";
-      sha256 = "sha256-C1eHG2V+qe+ub4OUfLVrumO31kQugr8xb8WBMmsg9LU=";
+      url = "https://pypi.io/packages/source/f/fuo_netease/fuo_netease-0.9.1.tar.gz";
+      sha256 = "sha256-hXjDkekVIYQdLu+8qEp8LDXePmLLeEqTvu1vOmCgZEk=";
     };
   };
   feeluown-qqmusic = {
@@ -118,23 +118,6 @@
       fetchSubmodules = false;
       sha256 = "sha256-EY3jbqvqXWGGh45t73WPcjR2pwHDU8z0bJtoGvc8pQE=";
     });
-  };
-  qliveplayer = {
-    pname = "qliveplayer";
-    version = "4.1.1";
-    src = fetchFromGitHub ({
-      owner = "THMonster";
-      repo = "QLivePlayer";
-      rev = "4.1.1";
-      fetchSubmodules = true;
-      sha256 = "sha256-qhFcUzTV4F6UVP14XuEYp4KWalQwnMBItA7J8rzyHNY=";
-    });
-    cargoLock = {
-      lockFile = ./qliveplayer-4.1.1/src/QLivePlayer-Lib/Cargo.lock;
-      outputHashes = {
-        
-      };
-    };
   };
   zydra = {
     pname = "zydra";

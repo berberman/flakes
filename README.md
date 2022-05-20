@@ -56,17 +56,16 @@ so you can also use the CN flakes by following their instructions.
 * [fastocr](https://github.com/BruceZhang1993/FastOCR) - 0.3.0
 * [fcitx5-material-color](https://github.com/hosxy/Fcitx5-Material-Color) - 0.2.1
 * [fcitx5-pinyin-moegirl](https://github.com/outloudvi/mw2fcitx) - 20220218
-* [fcitx5-pinyin-zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) - 0.2.3.20220312
-* [feeluown](https://github.com/feeluown/FeelUOwn) - 3.8.3
-* [feeluown-core](https://github.com/feeluown/FeelUOwn) - 3.8.3
+* [fcitx5-pinyin-zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) - 0.2.4.20220416
+* [feeluown](https://github.com/feeluown/FeelUOwn) - 3.8.5
+* [feeluown-core](https://github.com/feeluown/FeelUOwn) - 3.8.5
 * [feeluown-kuwo](https://github.com/feeluown/feeluown-kuwo) - 0.1.5
 * [feeluown-local](https://github.com/feeluown/feeluown-local) - 0.3
-* [feeluown-netease](https://github.com/feeluown/feeluown-netease) - 0.8
+* [feeluown-netease](https://github.com/feeluown/feeluown-netease) - 0.9.1
 * [feeluown-qqmusic](https://github.com/feeluown/feeluown-qqmusic) - 0.4.1
 * [py-term](https://github.com/gravmatt/py-term) - 0.7
 * [pypinyin](https://github.com/mozillazg/python-pinyin) - 0.46.0
 * [qasync](https://github.com/CabbageDevelopment/qasync) - 0.23.0
 * [qbittorrent-enhanced](https://github.com/c0re100/qBittorrent-Enhanced-Edition) - 4.4.2.10
-* [qliveplayer](https://github.com/THMonster/QLivePlayer) - 4.1.1
 * [zydra](https://github.com/hamedA2/Zydra) - 791fabd188adcb1fd1cd8c53288b424740114cf9
 
