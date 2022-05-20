@@ -13,6 +13,7 @@ in buildPythonPackage rec {
     beautifulsoup4
     marshmallow
     requests
+    mutagen
   ]) ++ [ feeluown-core ];
 
   meta = with lib; {
