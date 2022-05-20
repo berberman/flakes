@@ -56,9 +56,9 @@ packageSet = do
   define $
     package "fcitx5-pinyin-zhwiki"
       `sourceArchLinux` "fcitx5-pinyin-zhwiki"
-      -- drop "0.2.3."
+      -- drop "0.2.4."
       `fetchUrl` \(T.drop 6 . coerce -> v) ->
-        [trimming|https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.3/zhwiki-$v.dict|]
+        [trimming|https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.4/zhwiki-$v.dict|]
   -----------------------------------------------------------------------------
   define $ package "fcitx5-material-color" `fromGitHub` ("hosxy", "fcitx5-material-color")
   -----------------------------------------------------------------------------
