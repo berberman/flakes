@@ -66,6 +66,6 @@ so you can also use the CN flakes by following their instructions.
 * [py-term](https://github.com/gravmatt/py-term) - 0.7
 * [pypinyin](https://github.com/mozillazg/python-pinyin) - 0.46.0
 * [qasync](https://github.com/CabbageDevelopment/qasync) - 0.23.0
-* [qbittorrent-enhanced](https://github.com/c0re100/qBittorrent-Enhanced-Edition) - 4.4.2.10
+* [qbittorrent-enhanced](https://github.com/c0re100/qBittorrent-Enhanced-Edition) - 4.4.3.10
 * [zydra](https://github.com/hamedA2/Zydra) - 791fabd188adcb1fd1cd8c53288b424740114cf9
 
