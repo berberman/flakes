@@ -59,7 +59,7 @@ so you can also use the CN flakes by following their instructions.
 * [fcitx5-pinyin-zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) - 0.2.4.20220529
 * [feeluown](https://github.com/feeluown/FeelUOwn) - 3.8.6
 * [feeluown-core](https://github.com/feeluown/FeelUOwn) - 3.8.6
-* [feeluown-kuwo](https://github.com/feeluown/feeluown-kuwo) - 0.1.5
+* [feeluown-kuwo](https://github.com/feeluown/feeluown-kuwo) - 0.1.6
 * [feeluown-local](https://github.com/feeluown/feeluown-local) - 0.3
 * [feeluown-netease](https://github.com/feeluown/feeluown-netease) - 0.9.1
 * [feeluown-qqmusic](https://github.com/feeluown/feeluown-qqmusic) - 0.4.1

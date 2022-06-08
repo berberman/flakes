@@ -96,11 +96,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-1Umad7glnyO7l+Pu0dfPQkIkM8lT4Q5Z4JQqPUxge1M=",
+            "sha256": "sha256-V7Y6OXv9xJNde+Ynu8I4uv9G3F9pBS+Z3IiSVIkwsOU=",
             "type": "url",
-            "url": "https://pypi.io/packages/source/f/fuo_kuwo/fuo_kuwo-0.1.5.tar.gz"
+            "url": "https://pypi.io/packages/source/f/fuo_kuwo/fuo_kuwo-0.1.6.tar.gz"
         },
-        "version": "0.1.5"
+        "version": "0.1.6"
     },
     "feeluown-local": {
         "cargoLocks": null,
