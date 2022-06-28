@@ -57,6 +57,7 @@ stdenv.mkDerivation {
   preFixup = ''
     wrapPythonProgramsIn "$out/bin" "$buildInputs"
     wrapQtApp $out/bin/feeluown
+    wrapQtApp $out/bin/fuo
   '';
 
   passthru.runnable = true;
