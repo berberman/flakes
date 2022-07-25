@@ -33,8 +33,7 @@ packageSet = do
   define $
     package "fastocr"
       -- no idea with 'Could not find a version that satisfies the requirement PyQt5-Qt5' in version 0.3.1
-      `sourceManual` "0.3.0"
-      `fetchPypi` "fastocr"
+      `fromPypi` "fastocr"
   -----------------------------------------------------------------------------
   define $ package "feeluown-core" `fromPypi` "feeluown"
   let fuoPlugins = mapM_ $ \x -> define $ package ("feeluown-" <> x) `fromPypi` ("fuo_" <> x)

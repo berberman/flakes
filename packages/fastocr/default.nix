@@ -29,7 +29,7 @@ buildPythonApplication rec {
   doCheck = false;
 
   propagatedBuildInputs =
-    (with pythonPackages; [ dbus-python setuptools pyqt5 click aiohttp ])
+    (with pythonPackages; [ dbus-python setuptools pyqt5 click aiohttp dbus-next ])
     ++ [ qasync ];
 
   nativeBuildInputs = [ qt5.wrapQtAppsHook copyDesktopItems ];
