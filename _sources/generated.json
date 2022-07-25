@@ -21,11 +21,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-bCsHfnuEG29TLBrbuqPu4Nc/g4ikKGTy94/gtA429kg=",
+            "sha256": "sha256-jOvWmKWwrBfq/2+XqKaaeavfNn7OAcsn6bB6ZCfNukM=",
             "type": "url",
-            "url": "https://pypi.io/packages/source/f/fastocr/fastocr-0.3.0.tar.gz"
+            "url": "https://pypi.io/packages/source/f/fastocr/fastocr-0.3.7.tar.gz"
         },
-        "version": "0.3.0"
+        "version": "0.3.7"
     },
     "fcitx5-material-color": {
         "cargoLocks": null,
