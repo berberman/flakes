@@ -166,11 +166,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-DS5B6V28IKIywPXThQZU7rv8ujA9ljWNLEZZJyW7mJw=",
+            "sha256": "sha256-Ah1Qutlhv2gHiBsVbDihf+ToO+35xQbpfB3BvlhnjuA=",
             "type": "url",
-            "url": "https://pypi.io/packages/source/p/pypinyin/pypinyin-0.46.0.tar.gz"
+            "url": "https://pypi.io/packages/source/p/pypinyin/pypinyin-0.47.0.tar.gz"
         },
-        "version": "0.46.0"
+        "version": "0.47.0"
     },
     "qasync": {
         "cargoLocks": null,
