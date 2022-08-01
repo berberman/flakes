@@ -82,11 +82,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-lb8HbjrRUn0rmjdhqupn92kJc7WUODT3h9p5TO0PNrE=",
+            "sha256": "sha256-t5JmE45tZAM31ssHZq8gB+0e9A9Zi7FLWA3INoPEACE=",
             "type": "url",
-            "url": "https://pypi.io/packages/source/f/feeluown/feeluown-3.8.6.tar.gz"
+            "url": "https://pypi.io/packages/source/f/feeluown/feeluown-3.8.7.tar.gz"
         },
-        "version": "3.8.6"
+        "version": "3.8.7"
     },
     "feeluown-kuwo": {
         "cargoLocks": null,
