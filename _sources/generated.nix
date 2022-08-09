@@ -44,6 +44,14 @@
       sha256 = "sha256-/wypD33L6tMSadtYAaN2pbj3DKBok0FZZgGKPtvw5sQ=";
     };
   };
+  feeluown-bilibili = {
+    pname = "feeluown-bilibili";
+    version = "0.1.2";
+    src = fetchurl {
+      url = "https://pypi.io/packages/source/f/feeluown-bilibili/feeluown-bilibili-0.1.2.tar.gz";
+      sha256 = "sha256-Hzg5B+AIqWhYalK0wWVreP+wR0VAzl7hpFNDz4dCeOk=";
+    };
+  };
   feeluown-core = {
     pname = "feeluown-core";
     version = "3.8.8";

@@ -74,6 +74,20 @@
         },
         "version": "0.2.4.20220722"
     },
+    "feeluown-bilibili": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "feeluown-bilibili",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-Hzg5B+AIqWhYalK0wWVreP+wR0VAzl7hpFNDz4dCeOk=",
+            "type": "url",
+            "url": "https://pypi.io/packages/source/f/feeluown-bilibili/feeluown-bilibili-0.1.2.tar.gz"
+        },
+        "version": "0.1.2"
+    },
     "feeluown-core": {
         "cargoLocks": null,
         "extract": null,
