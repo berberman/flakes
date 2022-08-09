@@ -7,6 +7,7 @@
 , feeluown-kuwo
 , feeluown-qqmusic
 , feeluown-local
+, feeluown-bilibili
 , pythonPackages
 , qt5
 }:
@@ -41,6 +42,7 @@ stdenv.mkDerivation {
     feeluown-kuwo
     feeluown-qqmusic
     feeluown-local
+    feeluown-bilibili
   ];
 
   dontBuild = true;
