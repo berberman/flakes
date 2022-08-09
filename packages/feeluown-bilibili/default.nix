@@ -8,6 +8,7 @@ in buildPythonPackage rec {
   doCheck = false;
 
   propagatedBuildInputs = (with pythonPackages; [
+    aiohttp
     pycryptodome
     setuptools
     beautifulsoup4
