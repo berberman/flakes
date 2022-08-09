@@ -30,14 +30,12 @@ packageSet = do
       `fetchUrl` const
         "https://github.com/samuelngs/apple-emoji-linux/releases/download/alpha-release-v1.0.0/AppleColorEmoji.ttf"
   -----------------------------------------------------------------------------
-  define $
-    package "fastocr"
-      -- no idea with 'Could not find a version that satisfies the requirement PyQt5-Qt5' in version 0.3.1
-      `fromPypi` "fastocr"
+  define $ package "fastocr" `fromPypi` "fastocr"
   -----------------------------------------------------------------------------
   define $ package "feeluown-core" `fromPypi` "feeluown"
   let fuoPlugins = mapM_ $ \x -> define $ package ("feeluown-" <> x) `fromPypi` ("fuo_" <> x)
-  fuoPlugins ["kuwo", "netease", "qqmusic", "local", "bilibili"]
+  fuoPlugins ["kuwo", "netease", "qqmusic", "local"]
+  define $ package "feeluown-bilibili" `fromPypi` "feeluown-bilibili"
   -----------------------------------------------------------------------------
   define $ package "pypinyin" `fromPypi` "pypinyin"
   -----------------------------------------------------------------------------
