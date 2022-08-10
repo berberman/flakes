@@ -35,10 +35,17 @@ In your [NixOS configuration flake](https://www.tweag.io/blog/2020-07-31-nixos-f
   };
 
   outputs = { self, nixpkgs, berberman }: {
-  
-    overlays = [ berberman.overlay ];
-
-    # ... rest config
+    nixosConfigurations.my-machine = nixpkgs.lib.nixosSystem {
+      # ...
+      modules = [
+        # ...
+        { nixpkgs.overlays = [ 
+            # ...
+            berberman.overlays
+          ]; 
+        };
+      ];
+    };
   };
 }
 ```
