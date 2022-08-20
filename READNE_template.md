@@ -43,7 +43,7 @@ In your [NixOS configuration flake](https://www.tweag.io/blog/2020-07-31-nixos-f
             # ...
             berberman.overlays
           ]; 
-        };
+        }
       ];
     };
   };
