@@ -43,7 +43,7 @@ In your [NixOS configuration flake](https://www.tweag.io/blog/2020-07-31-nixos-f
             # ...
             berberman.overlays
           ]; 
-        };
+        }
       ];
     };
   };
@@ -72,7 +72,7 @@ so you can also use the CN flakes by following their instructions.
 * [feeluown-netease](https://github.com/feeluown/feeluown-netease) - 0.9.2
 * [feeluown-qqmusic](https://github.com/feeluown/feeluown-qqmusic) - 0.4.1
 * [py-term](https://github.com/gravmatt/py-term) - 0.7
-* [pypinyin](https://github.com/mozillazg/python-pinyin) - 0.47.0
+* [pypinyin](https://github.com/mozillazg/python-pinyin) - 0.47.1
 * [qasync](https://github.com/CabbageDevelopment/qasync) - 0.23.0
 * [qbittorrent-enhanced](https://github.com/c0re100/qBittorrent-Enhanced-Edition) - 4.4.3.12
 * [zydra](https://github.com/hamedA2/Zydra) - 791fabd188adcb1fd1cd8c53288b424740114cf9

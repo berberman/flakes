@@ -180,11 +180,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-Ah1Qutlhv2gHiBsVbDihf+ToO+35xQbpfB3BvlhnjuA=",
+            "sha256": "sha256-QkTuyJgpT9CZwC1Z+vjokQbYPXThwEp69ZCUZk2JY2s=",
             "type": "url",
-            "url": "https://pypi.io/packages/source/p/pypinyin/pypinyin-0.47.0.tar.gz"
+            "url": "https://pypi.io/packages/source/p/pypinyin/pypinyin-0.47.1.tar.gz"
         },
-        "version": "0.47.0"
+        "version": "0.47.1"
     },
     "qasync": {
         "cargoLocks": null,
