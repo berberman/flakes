@@ -1,6 +1,7 @@
 {
     "apple-emoji": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "apple-emoji",
         "passthru": null,
@@ -15,6 +16,7 @@
     },
     "fastocr": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "fastocr",
         "passthru": null,
@@ -29,6 +31,7 @@
     },
     "fcitx5-material-color": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "fcitx5-material-color",
         "passthru": null,
@@ -48,6 +51,7 @@
     },
     "fcitx5-pinyin-moegirl": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "fcitx5-pinyin-moegirl",
         "passthru": null,
@@ -62,6 +66,7 @@
     },
     "fcitx5-pinyin-zhwiki": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "fcitx5-pinyin-zhwiki",
         "passthru": null,
@@ -76,6 +81,7 @@
     },
     "feeluown-bilibili": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "feeluown-bilibili",
         "passthru": null,
@@ -90,6 +96,7 @@
     },
     "feeluown-core": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "feeluown-core",
         "passthru": null,
@@ -104,6 +111,7 @@
     },
     "feeluown-kuwo": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "feeluown-kuwo",
         "passthru": null,
@@ -118,6 +126,7 @@
     },
     "feeluown-local": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "feeluown-local",
         "passthru": null,
@@ -132,6 +141,7 @@
     },
     "feeluown-netease": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "feeluown-netease",
         "passthru": null,
@@ -146,6 +156,7 @@
     },
     "feeluown-qqmusic": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "feeluown-qqmusic",
         "passthru": null,
@@ -160,6 +171,7 @@
     },
     "py-term": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "py-term",
         "passthru": null,
@@ -174,6 +186,7 @@
     },
     "pypinyin": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "pypinyin",
         "passthru": null,
@@ -188,6 +201,7 @@
     },
     "qasync": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "qasync",
         "passthru": null,
@@ -202,6 +216,7 @@
     },
     "qbittorrent-enhanced": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "qbittorrent-enhanced",
         "passthru": null,
@@ -213,14 +228,15 @@
             "name": null,
             "owner": "c0re100",
             "repo": "qBittorrent-Enhanced-Edition",
-            "rev": "release-4.4.5.10",
-            "sha256": "sha256-3kJEMLUThABAkDBbErrwEKz9bAg/Gd9/ZsWzmFmLLFg=",
+            "rev": "release-4.5.0.10",
+            "sha256": "sha256-sC1MklSypIpZ0LR4/NdpowABKIutfYkzUb39Kgty9Lc=",
             "type": "github"
         },
-        "version": "release-4.4.5.10"
+        "version": "release-4.5.0.10"
     },
     "zydra": {
         "cargoLocks": null,
+        "date": "2020-07-22",
         "extract": null,
         "name": "zydra",
         "passthru": null,
