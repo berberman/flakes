@@ -18,10 +18,10 @@
         nixpkgs.lib.subtractLists broken (attrNames (readDir pkgDir));
       withContents = f: with builtins; listToAttrs (map (genPkg f) names);
     in {
-      overlay = final: prev:
+      overlays.default = final: prev:
         let
           sources' =
-            sources { inherit (final) fetchurl fetchgit fetchFromGitHub; };
+            sources { inherit (final) fetchurl fetchgit fetchFromGitHub dockerTools; };
         in withContents (name:
           let
             pkg = import (pkgDir + "/${name}");
@@ -35,7 +35,7 @@
     } // (let
       pkgs = import nixpkgs {
         system = "x86_64-linux";
-        overlays = [ self.overlay nvfetcher.overlay ];
+        overlays = [ self.overlays.default nvfetcher.overlay ];
         config.allowUnfree = true;
       };
     in rec {
@@ -48,7 +48,7 @@
         } else
           builtins.throw "${name} is not a runnable application!");
       checks.x86_64-linux = packages.x86_64-linux;
-      devShell.x86_64-linux = nvfetcher.packages.x86_64-linux.ghcWithNvfetcher;
+      devShells.x86_64-linux.default = nvfetcher.packages.x86_64-linux.ghcWithNvfetcher;
     });
 
 }
