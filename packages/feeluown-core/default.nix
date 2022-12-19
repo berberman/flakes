@@ -21,6 +21,7 @@ in buildPythonApplication rec {
     tomlkit
     pydantic
     packaging
+    mutagen
   ]) ++ [ mpv qasync ];
 
   postUnpack = ''
