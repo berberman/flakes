@@ -38,10 +38,10 @@
   };
   fcitx5-pinyin-zhwiki = {
     pname = "fcitx5-pinyin-zhwiki";
-    version = "0.2.4.20221128";
+    version = "0.2.4.20221230";
     src = fetchurl {
-      url = "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.4/zhwiki-20221128.dict";
-      sha256 = "sha256-zP1jVvpcgoUrkLTUACzl0uMYSp7ybAacSVcBAPIyii4=";
+      url = "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.4/zhwiki-20221230.dict";
+      sha256 = "sha256-Mu06WNiL73YWVLbFyZNoDBJONvRB3H0PNeAZb09gx0o=";
     };
   };
   feeluown-bilibili = {
