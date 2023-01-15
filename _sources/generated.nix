@@ -102,10 +102,10 @@
   };
   pypinyin = {
     pname = "pypinyin";
-    version = "0.47.1";
+    version = "0.48.0";
     src = fetchurl {
-      url = "https://pypi.io/packages/source/p/pypinyin/pypinyin-0.47.1.tar.gz";
-      sha256 = "sha256-QkTuyJgpT9CZwC1Z+vjokQbYPXThwEp69ZCUZk2JY2s=";
+      url = "https://pypi.io/packages/source/p/pypinyin/pypinyin-0.48.0.tar.gz";
+      sha256 = "sha256-Y9GLjxDdOKPlfya2gzqYPZF28unEpTFXwj4TQ9Cz2/g=";
     };
   };
   qasync = {

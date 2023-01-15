@@ -193,11 +193,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-QkTuyJgpT9CZwC1Z+vjokQbYPXThwEp69ZCUZk2JY2s=",
+            "sha256": "sha256-Y9GLjxDdOKPlfya2gzqYPZF28unEpTFXwj4TQ9Cz2/g=",
             "type": "url",
-            "url": "https://pypi.io/packages/source/p/pypinyin/pypinyin-0.47.1.tar.gz"
+            "url": "https://pypi.io/packages/source/p/pypinyin/pypinyin-0.48.0.tar.gz"
         },
-        "version": "0.47.1"
+        "version": "0.48.0"
     },
     "qasync": {
         "cargoLocks": null,
