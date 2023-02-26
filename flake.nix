@@ -35,7 +35,7 @@
     } // (let
       pkgs = import nixpkgs {
         system = "x86_64-linux";
-        overlays = [ self.overlays.default nvfetcher.overlay ];
+        overlays = [ self.overlays.default nvfetcher.overlays.default ];
         config.allowUnfree = true;
       };
     in rec {
