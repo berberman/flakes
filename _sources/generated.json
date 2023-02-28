@@ -228,11 +228,11 @@
             "name": null,
             "owner": "c0re100",
             "repo": "qBittorrent-Enhanced-Edition",
-            "rev": "release-4.5.1.10",
-            "sha256": "sha256-egx9d76lLWbzgmPqA5Z+JBdU5j1uNTXUAzC3S9zKTBw=",
+            "rev": "release-4.5.2.10",
+            "sha256": "sha256-MuVwqUaPQij6Kox9BLjxkOqPLz/B+hALX7AurKy65KM=",
             "type": "github"
         },
-        "version": "release-4.5.1.10"
+        "version": "release-4.5.2.10"
     },
     "zydra": {
         "cargoLocks": null,
