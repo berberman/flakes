@@ -38,26 +38,26 @@
   };
   fcitx5-pinyin-zhwiki = {
     pname = "fcitx5-pinyin-zhwiki";
-    version = "0.2.4.20230128";
+    version = "0.2.4.20230329";
     src = fetchurl {
-      url = "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.4/zhwiki-20230128.dict";
-      sha256 = "sha256-SFSNwsyE9W9pCIKlu+8pGVVNdNn6MITA4x7meicbUyQ=";
+      url = "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.4/zhwiki-20230329.dict";
+      sha256 = "sha256-w0GvAJMnC71AlUs2T3HJkXz6Kj1+fg+VBghV8LmjI0g=";
     };
   };
   feeluown-bilibili = {
     pname = "feeluown-bilibili";
-    version = "0.1.4";
+    version = "0.1.5";
     src = fetchurl {
-      url = "https://pypi.io/packages/source/f/feeluown-bilibili/feeluown-bilibili-0.1.4.tar.gz";
-      sha256 = "sha256-4Dy9fPU5jBaqc5LlF3gGbndESWSUfFtolgiN7w8eKMs=";
+      url = "https://pypi.io/packages/source/f/feeluown_bilibili/feeluown_bilibili-0.1.5.tar.gz";
+      sha256 = "sha256-g7N3QnRLXC1MOMQAbxGLqwMMcUdxmIEL9vX5OKsxMg4=";
     };
   };
   feeluown-core = {
     pname = "feeluown-core";
-    version = "3.8.9";
+    version = "3.8.10";
     src = fetchurl {
-      url = "https://pypi.io/packages/source/f/feeluown/feeluown-3.8.9.tar.gz";
-      sha256 = "sha256-gc4muo89iuALyn1XpaJAnymR/R6rBl85r2ZxxhRTRP8=";
+      url = "https://pypi.io/packages/source/f/feeluown/feeluown-3.8.10.tar.gz";
+      sha256 = "sha256-01KrjNvhF0WSNqJK5MtNGc0hCe7Z8leDZE8pkgAnL98=";
     };
   };
   feeluown-kuwo = {
@@ -78,10 +78,10 @@
   };
   feeluown-netease = {
     pname = "feeluown-netease";
-    version = "0.9.2";
+    version = "0.9.4";
     src = fetchurl {
-      url = "https://pypi.io/packages/source/f/fuo_netease/fuo_netease-0.9.2.tar.gz";
-      sha256 = "sha256-dDwMmH+BBJdGAGalp+WiEQoeq9BkhgE3sV0Oe4CHPwo=";
+      url = "https://pypi.io/packages/source/f/fuo_netease/fuo_netease-0.9.4.tar.gz";
+      sha256 = "sha256-oLmYpZvbBJIUkd19qdVDhyVBAowHNlDiQxbsKEHoZm4=";
     };
   };
   feeluown-qqmusic = {
