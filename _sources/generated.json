@@ -208,11 +208,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-iWXsMT4BBxSNmOisHnenfc503jzZcFWhqmLVE6N5OhQ=",
+            "sha256": "sha256-5YPRw64g/RLpCN7jWMUncJtIDnjVf7cu5XqUCXMH2Vk=",
             "type": "url",
-            "url": "https://pypi.io/packages/source/q/qasync/qasync-0.23.0.tar.gz"
+            "url": "https://pypi.io/packages/source/q/qasync/qasync-0.24.0.tar.gz"
         },
-        "version": "0.23.0"
+        "version": "0.24.0"
     },
     "qbittorrent-enhanced": {
         "cargoLocks": null,
