@@ -72,7 +72,7 @@ so you can also use the CN flakes by following their instructions.
 * [feeluown-netease](https://github.com/feeluown/feeluown-netease) - 0.9.5
 * [feeluown-qqmusic](https://github.com/feeluown/feeluown-qqmusic) - 0.4.1
 * [py-term](https://github.com/gravmatt/py-term) - 0.7
-* [pypinyin](https://github.com/mozillazg/python-pinyin) - 0.48.0
+* [pypinyin](https://github.com/mozillazg/python-pinyin) - 0.49.0
 * [qasync](https://github.com/CabbageDevelopment/qasync) - 0.24.0
 * [qbittorrent-enhanced](https://github.com/c0re100/qBittorrent-Enhanced-Edition) - 4.5.2.10
 * [zydra](https://github.com/hamedA2/Zydra) - 791fabd188adcb1fd1cd8c53288b424740114cf9
