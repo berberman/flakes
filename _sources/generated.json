@@ -58,11 +58,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-NaQbS/JlO1JbfLpM93KaYuwYVSwQkwrDL6WttgTKToM=",
+            "sha256": "sha256-Ozr9EBPoaSj17RTDC2fPMfMu0p2Mu/D9Wkxtddw3Myk=",
             "type": "url",
-            "url": "https://github.com/outloudvi/mw2fcitx/releases/download/20230414/moegirl.dict"
+            "url": "https://github.com/outloudvi/mw2fcitx/releases/download/20230514/moegirl.dict"
         },
-        "version": "20230414"
+        "version": "20230514"
     },
     "fcitx5-pinyin-zhwiki": {
         "cargoLocks": null,
