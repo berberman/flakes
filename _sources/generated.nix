@@ -54,10 +54,10 @@
   };
   feeluown-core = {
     pname = "feeluown-core";
-    version = "3.8.11";
+    version = "3.8.12";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/feeluown/feeluown-3.8.11.tar.gz";
-      sha256 = "sha256-+bJ+vsim5kIx4rnSVEHlw+4HWm9IPbuo9dBvHqEQ7wg=";
+      url = "https://pypi.org/packages/source/f/feeluown/feeluown-3.8.12.tar.gz";
+      sha256 = "sha256-KP0mIAgYY86XRR7z+uYATB0NeKwHXNUgK09xQ0xyPoo=";
     };
   };
   feeluown-kuwo = {
@@ -78,10 +78,10 @@
   };
   feeluown-netease = {
     pname = "feeluown-netease";
-    version = "0.9.5";
+    version = "0.9.6";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/fuo_netease/fuo_netease-0.9.5.tar.gz";
-      sha256 = "sha256-tdmdR2WaXpieAR4TT8QplymDtAUGtm22U+QCOCeMdco=";
+      url = "https://pypi.org/packages/source/f/fuo_netease/fuo_netease-0.9.6.tar.gz";
+      sha256 = "sha256-w0GSJcaOYHcV49tUwf1MMky+nJpEnpzJy1Zxj2T2rnU=";
     };
   };
   feeluown-qqmusic = {
