@@ -68,14 +68,6 @@
       sha256 = "sha256-V7Y6OXv9xJNde+Ynu8I4uv9G3F9pBS+Z3IiSVIkwsOU=";
     };
   };
-  feeluown-local = {
-    pname = "feeluown-local";
-    version = "0.3";
-    src = fetchurl {
-      url = "https://pypi.org/packages/source/f/fuo_local/fuo_local-0.3.tar.gz";
-      sha256 = "sha256-7Qgi9nGxmic3nq6icWUC7pQjyF6Gj91TAH5RyrvMI7Y=";
-    };
-  };
   feeluown-netease = {
     pname = "feeluown-netease";
     version = "0.9.6";
@@ -90,6 +82,14 @@
     src = fetchurl {
       url = "https://pypi.org/packages/source/f/fuo_qqmusic/fuo_qqmusic-0.4.1.tar.gz";
       sha256 = "sha256-IBCw5o5VYUyJbioWNgSML2ZVculhHBLXAhZA7qlZKH4=";
+    };
+  };
+  feeluown-ytmusic = {
+    pname = "feeluown-ytmusic";
+    version = "0.2.0";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/f/fuo-ytmusic/fuo-ytmusic-0.2.0.tar.gz";
+      sha256 = "sha256-sNpjtWOl4pEbvvJCtmkl3hu8OQcyp62aRgcEvdDPZdY=";
     };
   };
   py-term = {

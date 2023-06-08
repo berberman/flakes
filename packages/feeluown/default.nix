@@ -1,16 +1,6 @@
-{ stdenv
-, lib
-, makeDesktopItem
-, copyDesktopItems
-, feeluown-core
-, feeluown-netease
-, feeluown-kuwo
-, feeluown-qqmusic
-, feeluown-local
-, feeluown-bilibili
-, pythonPackages
-, qt5
-}:
+{ stdenv, lib, makeDesktopItem, copyDesktopItems, feeluown-core
+, feeluown-netease, feeluown-kuwo, feeluown-qqmusic, feeluown-ytmusic
+, feeluown-bilibili, pythonPackages, qt5, }:
 
 let
   inherit (pythonPackages) python wrapPython;
@@ -21,14 +11,14 @@ let
       exec = "feeluown --log-to-file";
       categories = [ "AudioVideo" "Audio" "Player" "Qt" ];
       terminal = false;
-      icon = "${feeluown-core}/lib/${python.executable}/site-packages/feeluown/gui/assets/icons/feeluown.png";
+      icon =
+        "${feeluown-core}/lib/${python.executable}/site-packages/feeluown/gui/assets/icons/feeluown.png";
       comment = "FeelUOwn Launcher";
       startupNotify = true;
       startupWMClass = "FeelUOwn";
     })
   ];
-in
-stdenv.mkDerivation {
+in stdenv.mkDerivation {
 
   pname = "feeluown";
   inherit (feeluown-core) version src;
@@ -41,8 +31,8 @@ stdenv.mkDerivation {
     feeluown-netease
     feeluown-kuwo
     feeluown-qqmusic
-    feeluown-local
     feeluown-bilibili
+    feeluown-ytmusic
   ];
 
   dontBuild = true;

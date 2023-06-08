@@ -124,21 +124,6 @@
         },
         "version": "0.1.6"
     },
-    "feeluown-local": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "feeluown-local",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-7Qgi9nGxmic3nq6icWUC7pQjyF6Gj91TAH5RyrvMI7Y=",
-            "type": "url",
-            "url": "https://pypi.org/packages/source/f/fuo_local/fuo_local-0.3.tar.gz"
-        },
-        "version": "0.3"
-    },
     "feeluown-netease": {
         "cargoLocks": null,
         "date": null,
@@ -168,6 +153,21 @@
             "url": "https://pypi.org/packages/source/f/fuo_qqmusic/fuo_qqmusic-0.4.1.tar.gz"
         },
         "version": "0.4.1"
+    },
+    "feeluown-ytmusic": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "feeluown-ytmusic",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-sNpjtWOl4pEbvvJCtmkl3hu8OQcyp62aRgcEvdDPZdY=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/f/fuo-ytmusic/fuo-ytmusic-0.2.0.tar.gz"
+        },
+        "version": "0.2.0"
     },
     "py-term": {
         "cargoLocks": null,
