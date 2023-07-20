@@ -58,11 +58,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-eUn/2YYHeRb1g2ObywckmNx+8AB1I34nYhTYPpZMRfo=",
+            "sha256": "sha256-E8K25uRIwZEN8iX8o7Sy9lNBm8WfqJYYSs50ReeiMFk=",
             "type": "url",
-            "url": "https://github.com/outloudvi/mw2fcitx/releases/download/20230617/moegirl.dict"
+            "url": "https://github.com/outloudvi/mw2fcitx/releases/download/20230714/moegirl.dict"
         },
-        "version": "20230617"
+        "version": "20230714"
     },
     "fcitx5-pinyin-zhwiki": {
         "cargoLocks": null,
@@ -88,11 +88,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-g7N3QnRLXC1MOMQAbxGLqwMMcUdxmIEL9vX5OKsxMg4=",
+            "sha256": "sha256-yknHFfcKP7Y4BtLReLmxCROaTIEtWKWg8euHgze4Om0=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/f/feeluown_bilibili/feeluown_bilibili-0.1.5.tar.gz"
+            "url": "https://pypi.org/packages/source/f/feeluown_bilibili/feeluown_bilibili-0.2.0.tar.gz"
         },
-        "version": "0.1.5"
+        "version": "0.2.0"
     },
     "feeluown-core": {
         "cargoLocks": null,
@@ -118,11 +118,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-V7Y6OXv9xJNde+Ynu8I4uv9G3F9pBS+Z3IiSVIkwsOU=",
+            "sha256": "sha256-WrpYlvDeFdDXQZ3Qx6XuG7t9Rkg08u4AiMM24B7gRR8=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/f/fuo_kuwo/fuo_kuwo-0.1.6.tar.gz"
+            "url": "https://pypi.org/packages/source/f/fuo-kuwo/fuo-kuwo-0.2.1.tar.gz"
         },
-        "version": "0.1.6"
+        "version": "0.2.1"
     },
     "feeluown-netease": {
         "cargoLocks": null,
@@ -148,11 +148,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-IBCw5o5VYUyJbioWNgSML2ZVculhHBLXAhZA7qlZKH4=",
+            "sha256": "sha256-angjPGzJqVvvS3He5ql+8lvuUPwxnJ1NmLA/6byEMTE=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/f/fuo_qqmusic/fuo_qqmusic-0.4.1.tar.gz"
+            "url": "https://pypi.org/packages/source/f/fuo_qqmusic/fuo_qqmusic-0.5.0.tar.gz"
         },
-        "version": "0.4.1"
+        "version": "0.5.0"
     },
     "feeluown-ytmusic": {
         "cargoLocks": null,
@@ -163,11 +163,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-sNpjtWOl4pEbvvJCtmkl3hu8OQcyp62aRgcEvdDPZdY=",
+            "sha256": "sha256-nAP5jyKM7DNFsQ0+VVYXcM1fsi91XH2NjUmRyit3HCI=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/f/fuo-ytmusic/fuo-ytmusic-0.2.0.tar.gz"
+            "url": "https://pypi.org/packages/source/f/fuo-ytmusic/fuo-ytmusic-0.3.0.tar.gz"
         },
-        "version": "0.2.0"
+        "version": "0.3.0"
     },
     "py-term": {
         "cargoLocks": null,
