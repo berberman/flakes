@@ -8,7 +8,7 @@ in buildPythonPackage rec {
   doCheck = false;
 
   propagatedBuildInputs = (with pythonPackages; [
-    pycryptodomex
+    pycryptodome
     setuptools
     beautifulsoup4
     cachetools
