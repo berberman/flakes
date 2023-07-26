@@ -92,6 +92,23 @@
       sha256 = "sha256-nAP5jyKM7DNFsQ0+VVYXcM1fsi91XH2NjUmRyit3HCI=";
     };
   };
+  luoxu = {
+    pname = "luoxu";
+    version = "a46c8435428f94116d6164d8fcd6226c5126c0a5";
+    src = fetchFromGitHub {
+      owner = "lilydjwg";
+      repo = "luoxu";
+      rev = "a46c8435428f94116d6164d8fcd6226c5126c0a5";
+      fetchSubmodules = false;
+      sha256 = "sha256-lNmXnORDjcCecpz/16ggamVF/8RHjsoz37kKTxjMYkU=";
+    };
+    cargoLock."querytrans/Cargo.lock" = {
+      lockFile = ./luoxu-a46c8435428f94116d6164d8fcd6226c5126c0a5/querytrans/Cargo.lock;
+      outputHashes = {
+        
+      };
+    };
+  };
   py-term = {
     pname = "py-term";
     version = "0.7";

@@ -169,6 +169,31 @@
         },
         "version": "0.3.0"
     },
+    "luoxu": {
+        "cargoLocks": {
+            "querytrans/Cargo.lock": [
+                "./luoxu-a46c8435428f94116d6164d8fcd6226c5126c0a5/querytrans/Cargo.lock",
+                {}
+            ]
+        },
+        "date": null,
+        "extract": null,
+        "name": "luoxu",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "lilydjwg",
+            "repo": "luoxu",
+            "rev": "a46c8435428f94116d6164d8fcd6226c5126c0a5",
+            "sha256": "sha256-lNmXnORDjcCecpz/16ggamVF/8RHjsoz37kKTxjMYkU=",
+            "type": "github"
+        },
+        "version": "a46c8435428f94116d6164d8fcd6226c5126c0a5"
+    },
     "py-term": {
         "cargoLocks": null,
         "date": null,
