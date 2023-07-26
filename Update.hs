@@ -66,6 +66,12 @@ packageSet = do
     `fetchGitHub` ("hamedA2", "Zydra")
   -----------------------------------------------------------------------------
   define $ package "py-term" `fromPypi` "py-term"
+  -----------------------------------------------------------------------------
+  define $
+    package "luoxu" 
+      `sourceManual` "a46c8435428f94116d6164d8fcd6226c5126c0a5"
+      `fetchGitHub` ("lilydjwg", "luoxu")
+      `hasCargoLocks` ["querytrans/Cargo.lock"]
 
 processAutoCommit :: Action ()
 processAutoCommit =
