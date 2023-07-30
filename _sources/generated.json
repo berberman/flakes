@@ -103,11 +103,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-KP0mIAgYY86XRR7z+uYATB0NeKwHXNUgK09xQ0xyPoo=",
+            "sha256": "sha256-fTF2Ge95bu833HKDQWqzxOqG4tfBKHo0n87yZH0oFE4=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/f/feeluown/feeluown-3.8.12.tar.gz"
+            "url": "https://pypi.org/packages/source/f/feeluown/feeluown-3.8.13.tar.gz"
         },
-        "version": "3.8.12"
+        "version": "3.8.13"
     },
     "feeluown-kuwo": {
         "cargoLocks": null,
