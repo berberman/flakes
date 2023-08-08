@@ -42,4 +42,14 @@ buildPythonApplication rec {
   # to use unstable features
   RUSTC_BOOTSTRAP = 1;
 
+  postInstall = ''
+    install -Dm644 nobody.jpg ghost.jpg dbsetup.sql -t $out/share/${pname}/
+  '';
+
+  meta = with lib; {
+    homepage = "https://github.com/lilydjwg/luoxu";
+    description =
+      "A Telegram userbot to index Chinese and Japanese group contents.";
+    license = licenses.gpl3Only;
+  };
 }

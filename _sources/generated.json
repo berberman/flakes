@@ -171,6 +171,10 @@
     },
     "luoxu": {
         "cargoLocks": {
+            "luoxu-cutwords/Cargo.lock": [
+                "./luoxu-a46c8435428f94116d6164d8fcd6226c5126c0a5/luoxu-cutwords/Cargo.lock",
+                {}
+            ],
             "querytrans/Cargo.lock": [
                 "./luoxu-a46c8435428f94116d6164d8fcd6226c5126c0a5/querytrans/Cargo.lock",
                 {}
