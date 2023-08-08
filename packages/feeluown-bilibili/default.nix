@@ -15,8 +15,8 @@ in buildPythonPackage rec {
   ]) ++ [ feeluown-core ];
 
   meta = with lib; {
-    homepage = "https://github.com/BruceZhang1993/feeluown-bilibili";
-    description = "Bilibili provider for FeelUOwn";
+    homepage = "https://github.com/feeluown/feeluown-bilibili";
+    description = "Yet another bilibili plugin for FeelUOwn player";
     license = licenses.gpl3Only;
   };
 }

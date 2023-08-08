@@ -102,6 +102,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-lNmXnORDjcCecpz/16ggamVF/8RHjsoz37kKTxjMYkU=";
     };
+    cargoLock."luoxu-cutwords/Cargo.lock" = {
+      lockFile = ./luoxu-a46c8435428f94116d6164d8fcd6226c5126c0a5/luoxu-cutwords/Cargo.lock;
+      outputHashes = {
+        
+      };
+    };
     cargoLock."querytrans/Cargo.lock" = {
       lockFile = ./luoxu-a46c8435428f94116d6164d8fcd6226c5126c0a5/querytrans/Cargo.lock;
       outputHashes = {
