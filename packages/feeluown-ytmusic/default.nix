@@ -8,7 +8,7 @@ in buildPythonPackage rec {
   doCheck = false;
 
   propagatedBuildInputs =
-    (with pythonPackages; [ pytube setuptools ytmusicapi cachetools pydantic ])
+    (with pythonPackages; [ setuptools ytmusicapi cachetools pydantic ])
     ++ [ feeluown-core feeluown-netease ];
 
   meta = with lib; {
