@@ -35,7 +35,7 @@ packageSet = do
   define $ package "feeluown-core" `fromPypi` "feeluown"
   let fuoPlugins = mapM_ $ \x -> define $ package ("feeluown-" <> x) `fromPypi` ("fuo_" <> x)
   fuoPlugins ["netease", "qqmusic"]
-  define $ package "feeluown-bilibili" `fromPypi` "feeluown_bilibili"
+  define $ package "feeluown-bilibili" `fromPypi` "feeluown-bilibili"
   define $ package "feeluown-ytmusic" `fromPypi` "fuo-ytmusic"
   define $ package "feeluown-kuwo" `fromPypi` "fuo-kuwo"
   -----------------------------------------------------------------------------
