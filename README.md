@@ -65,13 +65,14 @@ so you can also use the CN flakes by following their instructions.
 * [fcitx5-pinyin-moegirl](https://github.com/outloudvi/mw2fcitx) - 20230814
 * [fcitx5-pinyin-zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) - 0.2.4.20230728
 * [feeluown](https://github.com/feeluown/FeelUOwn) - 3.8.14
-* [feeluown-bilibili](https://github.com/BruceZhang1993/feeluown-bilibili) - 0.2.0
+* [feeluown-bilibili](https://github.com/feeluown/feeluown-bilibili) - 0.3
 * [feeluown-core](https://github.com/feeluown/FeelUOwn) - 3.8.14
 * [feeluown-kuwo](https://github.com/feeluown/feeluown-kuwo) - 0.2.1
 * [feeluown-netease](https://github.com/feeluown/feeluown-netease) - 0.9.7
 * [feeluown-qqmusic](https://github.com/feeluown/feeluown-qqmusic) - 0.5.1
 * [feeluown-ytmusic](https://github.com/feeluown/feeluown-ytmusic) - 0.3.1
-* [luoxu]() - a46c8435428f94116d6164d8fcd6226c5126c0a5
+* [luoxu](https://github.com/lilydjwg/luoxu) - a46c8435428f94116d6164d8fcd6226c5126c0a5
+* [luoxu-cutwords](https://github.com/lilydjwg/luoxu) - a46c8435428f94116d6164d8fcd6226c5126c0a5
 * [py-term](https://github.com/gravmatt/py-term) - 0.7
 * [pypinyin](https://github.com/mozillazg/python-pinyin) - 0.49.0
 * [qasync](https://github.com/CabbageDevelopment/qasync) - 0.24.0
