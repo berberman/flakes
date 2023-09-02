@@ -103,6 +103,6 @@ generateReadme = do
           T.unpack [trimming|with builtins; mapAttrs (key: value: "[$${key}](${value.meta.homepage or ""}) - ${value.version}")|],
           "--json"
         ]
-  template <- T.pack <$> readFile' "READNE_template.md"
-  writeFileChanged "README.md" $ T.unpack $ T.replace "$qwq$" (T.unlines $ map ("* " <>) out) template
+  template <- T.pack <$> readFile' "README_template.md"
+  writeFileChanged "README.md" $ T.unpack $ template <> "\n" <> (T.unlines $ map ("* " <>) out) 
   putInfo "Generate README.md"

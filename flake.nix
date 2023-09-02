@@ -48,13 +48,16 @@
       nixosModules.default = ./modules;
       legacyPackages.x86_64-linux = pkgs;
       packages.x86_64-linux = withContents (name: pkgs.${name});
-      apps.x86_64-linux = withContents (name:
-        let drv = pkgs.${name};
-        in if drv.passthru.runnable or false then {
-          type = "app";
-          program = "${drv}/bin/${drv.passthru.program or name}";
-        } else
-          builtins.throw "${name} is not a runnable application!");
+      apps.x86_64-linux = pkgs.lib.filterAttrs (_: x: x.program != null)
+        (withContents (name:
+          let drv = pkgs.${name};
+          in {
+            type = "app";
+            program = if drv.passthru.runnable or false then
+              "${drv}/bin/${drv.passthru.program or name}"
+            else
+              null;
+          }));
       checks.x86_64-linux = packages.x86_64-linux;
       devShells.x86_64-linux.default =
         nvfetcher.packages.x86_64-linux.ghcWithNvfetcher;

@@ -46,6 +46,8 @@ buildPythonApplication rec {
     install -Dm644 nobody.jpg ghost.jpg dbsetup.sql -t $out/share/${pname}/
   '';
 
+  passthru.runnable = true;
+
   meta = with lib; {
     homepage = "https://github.com/lilydjwg/luoxu";
     description =
