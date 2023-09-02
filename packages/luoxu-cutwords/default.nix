@@ -9,6 +9,8 @@ rustPlatform.buildRustPackage {
 
   cargoLock = sources.luoxu.cargoLock."luoxu-cutwords/Cargo.lock";
 
+  passthru.runnable = true;
+
   meta = with lib; {
     homepage = "https://github.com/lilydjwg/luoxu";
     description = "Cut words for luoxu wordcloud plugin";
