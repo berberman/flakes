@@ -43,11 +43,11 @@
             "name": null,
             "owner": "hosxy",
             "repo": "fcitx5-material-color",
-            "rev": "0.2",
-            "sha256": "sha256-Ts9W2wCkNUzusm/9u8ARjwjLg1pu50U4vCooeDl/qKk=",
+            "rev": "0.2.1",
+            "sha256": "sha256-i9JHIJ+cHLTBZUNzj9Ujl3LIdkCllTWpO1Ta4OT1LTc=",
             "type": "github"
         },
-        "version": "0.2"
+        "version": "0.2.1"
     },
     "fcitx5-pinyin-moegirl": {
         "cargoLocks": null,
