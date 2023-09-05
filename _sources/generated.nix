@@ -19,13 +19,13 @@
   };
   fcitx5-material-color = {
     pname = "fcitx5-material-color";
-    version = "0.2.1";
+    version = "0.2";
     src = fetchFromGitHub {
       owner = "hosxy";
       repo = "fcitx5-material-color";
-      rev = "0.2.1";
+      rev = "0.2";
       fetchSubmodules = false;
-      sha256 = "sha256-i9JHIJ+cHLTBZUNzj9Ujl3LIdkCllTWpO1Ta4OT1LTc=";
+      sha256 = "sha256-Ts9W2wCkNUzusm/9u8ARjwjLg1pu50U4vCooeDl/qKk=";
     };
   };
   fcitx5-pinyin-moegirl = {

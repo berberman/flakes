@@ -28,6 +28,7 @@ In your [NixOS configuration flake](https://www.tweag.io/blog/2020-07-31-nixos-f
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    # Add as an input
     berberman = {
       url = "github:berberman/flakes";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -41,7 +42,8 @@ In your [NixOS configuration flake](https://www.tweag.io/blog/2020-07-31-nixos-f
         # ...
         { nixpkgs.overlays = [ 
             # ...
-            berberman.overlays
+            # Add to nixpkgs overlays
+            berberman.overlays.default
           ]; 
         }
       ];
@@ -50,18 +52,11 @@ In your [NixOS configuration flake](https://www.tweag.io/blog/2020-07-31-nixos-f
 }
 ```
 
-### NixOS CN
-
-Packages provided by this flake are re-exported to [NixOS CN Flakes](https://github.com/nixos-cn/flakes),
-so you can also use the CN flakes by following their instructions.
-
 ## Packages available
-
-#### This part was generated automatically.
 
 * [apple-emoji](https://github.com/samuelngs/apple-emoji-linux) - 0.0.0.20200413
 * [fastocr](https://github.com/BruceZhang1993/FastOCR) - 0.3.7
-* [fcitx5-material-color](https://github.com/hosxy/Fcitx5-Material-Color) - 0.2.1
+* [fcitx5-material-color](https://github.com/hosxy/Fcitx5-Material-Color) - 0.2
 * [fcitx5-pinyin-moegirl](https://github.com/outloudvi/mw2fcitx) - 20230814
 * [fcitx5-pinyin-zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) - 0.2.4.20230823
 * [feeluown](https://github.com/feeluown/FeelUOwn) - 3.8.14
@@ -78,4 +73,3 @@ so you can also use the CN flakes by following their instructions.
 * [qasync](https://github.com/CabbageDevelopment/qasync) - 0.24.0
 * [qbittorrent-enhanced](https://github.com/c0re100/qBittorrent-Enhanced-Edition) - 4.5.5.10
 * [zydra](https://github.com/hamedA2/Zydra) - 791fabd188adcb1fd1cd8c53288b424740114cf9
-
