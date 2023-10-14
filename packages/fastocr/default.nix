@@ -1,4 +1,5 @@
-{ lib, pythonPackages, mySource, makeDesktopItem, copyDesktopItems, qasync, qt5 }:
+{ lib, pythonPackages, mySource, makeDesktopItem, copyDesktopItems, qt5
+}:
 
 let
   inherit (pythonPackages) buildPythonApplication;
@@ -21,16 +22,21 @@ let
     })
   ];
 
-in
-buildPythonApplication rec {
+in buildPythonApplication rec {
   inherit (mySource) pname version src;
   inherit desktopItems;
 
   doCheck = false;
 
-  propagatedBuildInputs =
-    (with pythonPackages; [ dbus-python setuptools pyqt5 click aiohttp dbus-next ])
-    ++ [ qasync ];
+  propagatedBuildInputs = (with pythonPackages; [
+    dbus-python
+    setuptools
+    pyqt5
+    click
+    aiohttp
+    dbus-next
+    qasync
+  ]);
 
   nativeBuildInputs = [ qt5.wrapQtAppsHook copyDesktopItems ];
 
