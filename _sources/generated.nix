@@ -30,10 +30,10 @@
   };
   fcitx5-pinyin-moegirl = {
     pname = "fcitx5-pinyin-moegirl";
-    version = "20230914";
+    version = "20231014";
     src = fetchurl {
-      url = "https://github.com/outloudvi/mw2fcitx/releases/download/20230914/moegirl.dict";
-      sha256 = "sha256-5IiZwZsGERYMrnMwf9znYAtYSiWaMNFxyAB6c727NY8=";
+      url = "https://github.com/outloudvi/mw2fcitx/releases/download/20231014/moegirl.dict";
+      sha256 = "sha256-NJB8YnoX28ONolrFXqUxn8jEIRo5VwEUyFJVbahMqGY=";
     };
   };
   fcitx5-pinyin-zhwiki = {
