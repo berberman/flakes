@@ -1,4 +1,4 @@
-{ stdenv, lib, pythonPackages, qasync, mpv, mySource }:
+{ stdenv, lib, pythonPackages, mpv, mySource }:
 
 let inherit (pythonPackages) buildPythonApplication;
 
@@ -22,7 +22,8 @@ in buildPythonApplication rec {
     pydantic
     packaging
     mutagen
-  ]) ++ [ mpv qasync ];
+    qasync
+  ]) ++ [ mpv ];
 
   postUnpack = ''
     substituteInPlace ./${pname}-${version}/mpv.py \

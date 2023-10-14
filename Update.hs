@@ -41,8 +41,6 @@ packageSet = do
   -----------------------------------------------------------------------------
   define $ package "pypinyin" `fromPypi` "pypinyin"
   -----------------------------------------------------------------------------
-  define $ package "qasync" `fromPypi` "qasync"
-  -----------------------------------------------------------------------------
   define $ package "qbittorrent-enhanced" `fromGitHub` ("c0re100", "qBittorrent-Enhanced-Edition")
   -----------------------------------------------------------------------------
   -- define $ package "qliveplayer" `fromGitHub'` ("THMonster", "QLivePlayer", fetchSubmodules .~ True) `hasCargoLock` "src/QLivePlayer-Lib/Cargo.lock"
