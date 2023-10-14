@@ -102,14 +102,14 @@
       fetchSubmodules = false;
       sha256 = "sha256-lNmXnORDjcCecpz/16ggamVF/8RHjsoz37kKTxjMYkU=";
     };
-    cargoLock."luoxu-cutwords/Cargo.lock" = {
-      lockFile = ./luoxu-a46c8435428f94116d6164d8fcd6226c5126c0a5/luoxu-cutwords/Cargo.lock;
+    cargoLock."querytrans/Cargo.lock" = {
+      lockFile = ./luoxu-a46c8435428f94116d6164d8fcd6226c5126c0a5/querytrans/Cargo.lock;
       outputHashes = {
         
       };
     };
-    cargoLock."querytrans/Cargo.lock" = {
-      lockFile = ./luoxu-a46c8435428f94116d6164d8fcd6226c5126c0a5/querytrans/Cargo.lock;
+    cargoLock."luoxu-cutwords/Cargo.lock" = {
+      lockFile = ./luoxu-a46c8435428f94116d6164d8fcd6226c5126c0a5/luoxu-cutwords/Cargo.lock;
       outputHashes = {
         
       };
@@ -129,14 +129,6 @@
     src = fetchurl {
       url = "https://pypi.org/packages/source/p/pypinyin/pypinyin-0.49.0.tar.gz";
       sha256 = "sha256-pdYaecX0j2tKQi8BDCDUj81TxwV4TfSqgOMpSTIZpL4=";
-    };
-  };
-  qasync = {
-    pname = "qasync";
-    version = "0.25.0";
-    src = fetchurl {
-      url = "https://pypi.org/packages/source/q/qasync/qasync-0.25.0.tar.gz";
-      sha256 = "sha256-9EeflvSNCJnE4364cfvVCEwgZr8hpFE/Ge0pk7l1ovM=";
     };
   };
   qbittorrent-enhanced = {

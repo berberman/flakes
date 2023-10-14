@@ -228,21 +228,6 @@
         },
         "version": "0.49.0"
     },
-    "qasync": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "qasync",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-9EeflvSNCJnE4364cfvVCEwgZr8hpFE/Ge0pk7l1ovM=",
-            "type": "url",
-            "url": "https://pypi.org/packages/source/q/qasync/qasync-0.25.0.tar.gz"
-        },
-        "version": "0.25.0"
-    },
     "qbittorrent-enhanced": {
         "cargoLocks": null,
         "date": null,
