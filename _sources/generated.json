@@ -103,11 +103,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-v4YOxbAiMn/kFvGx/Fuwm/smP+y/bxG70K1WN6knjSY=",
+            "sha256": "sha256-wE1xenled7gOmkuU65DETLzwxPW1OE/rJm11D/8yukU=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/f/feeluown/feeluown-3.8.14.tar.gz"
+            "url": "https://pypi.org/packages/source/f/feeluown/feeluown-3.8.15.tar.gz"
         },
-        "version": "3.8.14"
+        "version": "3.8.15"
     },
     "feeluown-kuwo": {
         "cargoLocks": null,
@@ -133,11 +133,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-CU14UsGFp0Ux4sgvQXQSAs5CDsRf2nmmp4Zwjan1SHw=",
+            "sha256": "sha256-yWq8Q71fbZLDQ/n4P1f7noV5ehawnoCnb9Nmbw0rC00=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/f/fuo_netease/fuo_netease-0.9.7.tar.gz"
+            "url": "https://pypi.org/packages/source/f/fuo_netease/fuo_netease-0.9.8.tar.gz"
         },
-        "version": "0.9.7"
+        "version": "0.9.8"
     },
     "feeluown-qqmusic": {
         "cargoLocks": null,
