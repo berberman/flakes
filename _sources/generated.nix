@@ -3,10 +3,10 @@
 {
   apple-emoji = {
     pname = "apple-emoji";
-    version = "0.0.0.20200413";
+    version = "v16.4-patch.1";
     src = fetchurl {
-      url = "https://github.com/samuelngs/apple-emoji-linux/releases/download/alpha-release-v1.0.0/AppleColorEmoji.ttf";
-      sha256 = "sha256-j1xml01ucZi7f9aRhAKo4doval5q/ohsxK+flYSkTHU=";
+      url = "https://github.com/samuelngs/apple-emoji-linux/releases/download/v16.4-patch.1/AppleColorEmoji.ttf";
+      sha256 = "sha256-1e1Xz7wF1NhCe0zUdJWXE6hPGmkylAeggsN01T3WWpU=";
     };
   };
   fastocr = {
