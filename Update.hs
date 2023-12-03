@@ -24,7 +24,9 @@ main = runNvFetcher' def {actionAfterBuild = generateReadme >> processAutoCommit
 packageSet :: PackageSet ()
 packageSet = do
   -----------------------------------------------------------------------------
-  define $ package "apple-emoji" `fromGitHub` ("samuelngs", "apple-emoji-linux")
+  define $ package "apple-emoji"
+             `sourceGitHub` ("samuelngs", "apple-emoji-linux")
+             `fetchGitHubRelease` ("samuelngs", "apple-emoji-linux", "AppleColorEmoji.ttf")
   -----------------------------------------------------------------------------
   define $ package "fastocr" `fromPypi` "fastocr"
   -----------------------------------------------------------------------------
