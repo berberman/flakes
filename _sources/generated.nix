@@ -62,10 +62,10 @@
   };
   feeluown-kuwo = {
     pname = "feeluown-kuwo";
-    version = "0.2.1";
+    version = "0.2.2";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/fuo-kuwo/fuo-kuwo-0.2.1.tar.gz";
-      sha256 = "sha256-WrpYlvDeFdDXQZ3Qx6XuG7t9Rkg08u4AiMM24B7gRR8=";
+      url = "https://pypi.org/packages/source/f/fuo-kuwo/fuo-kuwo-0.2.2.tar.gz";
+      sha256 = "sha256-hUcW9nVl5z00FpAF9x5qLn7NWjSQURCmDZWQBTXglpU=";
     };
   };
   feeluown-netease = {
