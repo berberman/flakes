@@ -133,11 +133,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-yWq8Q71fbZLDQ/n4P1f7noV5ehawnoCnb9Nmbw0rC00=",
+            "sha256": "sha256-ZtQC9LuTdN3S7uBFuSqhp+7KNyPxDvfYwW1eDlRKAlY=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/f/fuo_netease/fuo_netease-0.9.8.tar.gz"
+            "url": "https://pypi.org/packages/source/f/fuo_netease/fuo_netease-1.0.tar.gz"
         },
-        "version": "0.9.8"
+        "version": "1.0"
     },
     "feeluown-qqmusic": {
         "cargoLocks": null,
@@ -148,11 +148,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-/Y23gXMop/WX5w0SsK22IBbpSB5290onE8M1b1TSKhs=",
+            "sha256": "sha256-oeEyWIi6wk5MOHVMrcwHjT9astXhdYBikpypafjcVWQ=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/f/fuo_qqmusic/fuo_qqmusic-0.5.1.tar.gz"
+            "url": "https://pypi.org/packages/source/f/fuo_qqmusic/fuo_qqmusic-1.0.tar.gz"
         },
-        "version": "0.5.1"
+        "version": "1.0"
     },
     "feeluown-ytmusic": {
         "cargoLocks": null,

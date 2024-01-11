@@ -63,8 +63,8 @@ In your [NixOS configuration flake](https://www.tweag.io/blog/2020-07-31-nixos-f
 * [feeluown-bilibili](https://github.com/feeluown/feeluown-bilibili) - 0.3
 * [feeluown-core](https://github.com/feeluown/FeelUOwn) - 3.8.15
 * [feeluown-kuwo](https://github.com/feeluown/feeluown-kuwo) - 0.2.2
-* [feeluown-netease](https://github.com/feeluown/feeluown-netease) - 0.9.8
-* [feeluown-qqmusic](https://github.com/feeluown/feeluown-qqmusic) - 0.5.1
+* [feeluown-netease](https://github.com/feeluown/feeluown-netease) - 1.0
+* [feeluown-qqmusic](https://github.com/feeluown/feeluown-qqmusic) - 1.0
 * [feeluown-ytmusic](https://github.com/feeluown/feeluown-ytmusic) - 0.3.2
 * [luoxu](https://github.com/lilydjwg/luoxu) - a46c8435428f94116d6164d8fcd6226c5126c0a5
 * [luoxu-cutwords](https://github.com/lilydjwg/luoxu) - a46c8435428f94116d6164d8fcd6226c5126c0a5
