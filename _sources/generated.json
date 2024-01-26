@@ -88,11 +88,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-PparL86aSfP2f3KzIeH/3ilqDyzuzcwAJLlRR7mMM7M=",
+            "sha256": "sha256-RnAaGH54CkYQMM4W6q4hTnMgzjWgDqMwKV4LS7sjkLA=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/f/feeluown-bilibili/feeluown-bilibili-0.3.2.tar.gz"
+            "url": "https://pypi.org/packages/source/f/feeluown-bilibili/feeluown-bilibili-0.3.3.tar.gz"
         },
-        "version": "0.3.2"
+        "version": "0.3.3"
     },
     "feeluown-core": {
         "cargoLocks": null,
