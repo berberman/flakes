@@ -70,10 +70,10 @@
   };
   feeluown-netease = {
     pname = "feeluown-netease";
-    version = "1.0";
+    version = "1.0.1";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/fuo_netease/fuo_netease-1.0.tar.gz";
-      sha256 = "sha256-ZtQC9LuTdN3S7uBFuSqhp+7KNyPxDvfYwW1eDlRKAlY=";
+      url = "https://pypi.org/packages/source/f/fuo_netease/fuo_netease-1.0.1.tar.gz";
+      sha256 = "sha256-tpGeP0EiPpu1WHDb2OCqE3YeKJQCWZeEirFR+4Sz5fk=";
     };
   };
   feeluown-qqmusic = {
