@@ -222,11 +222,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-cud8S5t4utECrKX+/M69sjQ5sCcXxiYDm+FKeGQ5gPs=",
+            "sha256": "sha256-zt40/DWnnvbHmfFh4sKA57Z1XuBy+3QcrlzipgxK4MU=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pypinyin/pypinyin-0.50.0.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pypinyin/pypinyin-0.51.0.tar.gz"
         },
-        "version": "0.50.0"
+        "version": "0.51.0"
     },
     "qbittorrent-enhanced": {
         "cargoLocks": null,
