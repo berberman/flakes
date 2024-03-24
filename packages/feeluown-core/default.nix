@@ -26,7 +26,7 @@ in buildPythonApplication rec {
   ]) ++ [ mpv ];
 
   postUnpack = ''
-    substituteInPlace ./${pname}-${version}/mpv.py \
+    substituteInPlace ./${pname}-${version}/feeluown/mpv.py \
       --replace "_dll = ctypes.util.find_library(_default_mpv_dylib)" \
                 '_dll = "${mpv}/lib/libmpv${stdenv.targetPlatform.extensions.sharedLibrary}"'
     substituteInPlace ./${pname}-${version}/feeluown/nowplaying/linux/__init__.py \
