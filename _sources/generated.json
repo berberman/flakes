@@ -133,11 +133,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-tpGeP0EiPpu1WHDb2OCqE3YeKJQCWZeEirFR+4Sz5fk=",
+            "sha256": "sha256-rNS4dsp2meIRfl2n44ekMDY44kSrpIGiaj/Ij8LxzJg=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/f/fuo_netease/fuo_netease-1.0.1.tar.gz"
+            "url": "https://pypi.org/packages/source/f/fuo_netease/fuo_netease-1.0.2.tar.gz"
         },
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "feeluown-qqmusic": {
         "cargoLocks": null,
