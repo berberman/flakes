@@ -38,10 +38,10 @@
   };
   fcitx5-pinyin-zhwiki = {
     pname = "fcitx5-pinyin-zhwiki";
-    version = "0.2.4.20240426";
+    version = "0.2.5.20240509";
     src = fetchurl {
-      url = "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.4/zhwiki-20240426.dict";
-      sha256 = "sha256-SiiF4kvQpgjAFd3122WYy0ReJkVLUc93JVeFHIqc+jg=";
+      url = "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.5/zhwiki-20240509.dict";
+      sha256 = "sha256-uRpKPq+/xJ8akKB8ol/JRF79VfDIQ8L4SxLDXzpfPxg=";
     };
   };
   feeluown-bilibili = {
@@ -70,10 +70,10 @@
   };
   feeluown-netease = {
     pname = "feeluown-netease";
-    version = "1.0.2";
+    version = "1.0.3";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/fuo_netease/fuo_netease-1.0.2.tar.gz";
-      sha256 = "sha256-rNS4dsp2meIRfl2n44ekMDY44kSrpIGiaj/Ij8LxzJg=";
+      url = "https://pypi.org/packages/source/f/fuo_netease/fuo_netease-1.0.3.tar.gz";
+      sha256 = "sha256-ISmAewcBijl29YSojmA7aO+P6HUy2/1wu0OE8BgoLBg=";
     };
   };
   feeluown-qqmusic = {

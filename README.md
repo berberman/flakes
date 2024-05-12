@@ -58,12 +58,12 @@ In your [NixOS configuration flake](https://www.tweag.io/blog/2020-07-31-nixos-f
 * [fastocr](https://github.com/BruceZhang1993/FastOCR) - 0.3.7
 * [fcitx5-material-color](https://github.com/hosxy/Fcitx5-Material-Color) - 0.2.1
 * [fcitx5-pinyin-moegirl](https://github.com/outloudvi/mw2fcitx) - 20240509
-* [fcitx5-pinyin-zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) - 0.2.4.20240426
+* [fcitx5-pinyin-zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) - 0.2.5.20240509
 * [feeluown](https://github.com/feeluown/FeelUOwn) - 4.1.3
 * [feeluown-bilibili](https://github.com/feeluown/feeluown-bilibili) - 0.3.3
 * [feeluown-core](https://github.com/feeluown/FeelUOwn) - 4.1.3
 * [feeluown-kuwo](https://github.com/feeluown/feeluown-kuwo) - 0.2.2
-* [feeluown-netease](https://github.com/feeluown/feeluown-netease) - 1.0.2
+* [feeluown-netease](https://github.com/feeluown/feeluown-netease) - 1.0.3
 * [feeluown-qqmusic](https://github.com/feeluown/feeluown-qqmusic) - 1.0.3
 * [feeluown-ytmusic](https://github.com/feeluown/feeluown-ytmusic) - 0.3.4
 * [luoxu](https://github.com/lilydjwg/luoxu) - a46c8435428f94116d6164d8fcd6226c5126c0a5
