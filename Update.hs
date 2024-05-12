@@ -10,6 +10,7 @@ import Control.Monad (unless)
 import qualified Data.Aeson as A
 import Data.Default (def)
 import Data.Map (Map)
+import Data.Maybe (fromJust)
 import qualified Data.Map as Map
 import Data.Text (Text)
 import qualified Data.Text as T
@@ -51,9 +52,11 @@ packageSet = do
   define $
     package "fcitx5-pinyin-zhwiki"
       `sourceArchLinux` "fcitx5-pinyin-zhwiki"
-      -- drop "0.2.4."
-      `fetchUrl` \(T.drop 6 . coerce -> v) ->
-        [trimming|https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.4/zhwiki-$v.dict|]
+      `fetchUrl` \(coerce -> v) ->
+        let dictVer =  T.takeWhileEnd (/= '.') v
+            converterVer = fromJust $ T.stripSuffix ("." <> dictVer) v
+        in
+        [trimming|https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/$converterVer/zhwiki-$dictVer.dict|]
   -----------------------------------------------------------------------------
   define $ package "fcitx5-material-color" `fromGitHub` ("hosxy", "fcitx5-material-color")
   -----------------------------------------------------------------------------
