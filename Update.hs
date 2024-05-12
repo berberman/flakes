@@ -10,6 +10,7 @@ import Control.Monad (unless)
 import qualified Data.Aeson as A
 import Data.Default (def)
 import Data.Map (Map)
+import Data.Maybe (fromJust)
 import qualified Data.Map as Map
 import Data.Text (Text)
 import qualified Data.Text as T
@@ -53,7 +54,7 @@ packageSet = do
       `sourceArchLinux` "fcitx5-pinyin-zhwiki"
       `fetchUrl` \(coerce -> v) ->
         let dictVer =  T.takeWhileEnd (/= '.') v
-            converterVer = T.stripSuffix ("." <> dictVer) v
+            converterVer = fromJust $ T.stripSuffix ("." <> dictVer) v
         in
         [trimming|https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/$converterVer/zhwiki-$dictVer.dict|]
   -----------------------------------------------------------------------------
