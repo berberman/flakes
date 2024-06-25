@@ -163,11 +163,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-ZPaKvYkct90iRE/o/eFbNverQH1LFW5tliOz/nW6/3g=",
+            "sha256": "sha256-sl3Tli0y4vgZeaxct5vtPnvmsLebl0HmgEh0+JsC8WY=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/f/fuo-ytmusic/fuo-ytmusic-0.4.0.tar.gz"
+            "url": "https://pypi.org/packages/source/f/fuo-ytmusic/fuo-ytmusic-0.4.1.tar.gz"
         },
-        "version": "0.4.0"
+        "version": "0.4.1"
     },
     "luoxu": {
         "cargoLocks": {
