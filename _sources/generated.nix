@@ -125,10 +125,10 @@
   };
   pypinyin = {
     pname = "pypinyin";
-    version = "0.51.0";
+    version = "0.52.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pypinyin/pypinyin-0.51.0.tar.gz";
-      sha256 = "sha256-zt40/DWnnvbHmfFh4sKA57Z1XuBy+3QcrlzipgxK4MU=";
+      url = "https://pypi.org/packages/source/p/pypinyin/pypinyin-0.52.0.tar.gz";
+      sha256 = "sha256-LnzAkRJ44NszTJfwKKp8ytU14Cj1e8U5KWsE9HXgTs0=";
     };
   };
   qbittorrent-enhanced = {
