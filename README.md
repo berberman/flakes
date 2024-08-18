@@ -59,13 +59,13 @@ In your [NixOS configuration flake](https://www.tweag.io/blog/2020-07-31-nixos-f
 * [fcitx5-material-color](https://github.com/hosxy/Fcitx5-Material-Color) - 0.2.1
 * [fcitx5-pinyin-moegirl](https://github.com/outloudvi/mw2fcitx) - 20240809
 * [fcitx5-pinyin-zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) - 0.2.5.20240722
-* [feeluown](https://github.com/feeluown/FeelUOwn) - 4.1.6
-* [feeluown-bilibili](https://github.com/feeluown/feeluown-bilibili) - 0.4.0
-* [feeluown-core](https://github.com/feeluown/FeelUOwn) - 4.1.6
+* [feeluown](https://github.com/feeluown/FeelUOwn) - 4.1.7
+* [feeluown-bilibili](https://github.com/feeluown/feeluown-bilibili) - 0.4.1
+* [feeluown-core](https://github.com/feeluown/FeelUOwn) - 4.1.7
 * [feeluown-kuwo](https://github.com/feeluown/feeluown-kuwo) - 0.2.2
 * [feeluown-netease](https://github.com/feeluown/feeluown-netease) - 1.0.3
 * [feeluown-qqmusic](https://github.com/feeluown/feeluown-qqmusic) - 1.0.5
-* [feeluown-ytmusic](https://github.com/feeluown/feeluown-ytmusic) - 0.4.3
+* [feeluown-ytmusic](https://github.com/feeluown/feeluown-ytmusic) - 0.4.4
 * [luoxu](https://github.com/lilydjwg/luoxu) - a46c8435428f94116d6164d8fcd6226c5126c0a5
 * [luoxu-cutwords](https://github.com/lilydjwg/luoxu) - a46c8435428f94116d6164d8fcd6226c5126c0a5
 * [py-term](https://github.com/gravmatt/py-term) - 0.7

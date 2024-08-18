@@ -46,18 +46,18 @@
   };
   feeluown-bilibili = {
     pname = "feeluown-bilibili";
-    version = "0.4.0";
+    version = "0.4.1";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/feeluown-bilibili/feeluown-bilibili-0.4.0.tar.gz";
-      sha256 = "sha256-P+q2vBqh2O/DDQ/Doac+l3vINVhxAjeEwE39PkgNzB0=";
+      url = "https://pypi.org/packages/source/f/feeluown-bilibili/feeluown-bilibili-0.4.1.tar.gz";
+      sha256 = "sha256-3Esn6SPc0A+2ClqNPdGH6lq0iE3t/T61wZy6+dRM4Sg=";
     };
   };
   feeluown-core = {
     pname = "feeluown-core";
-    version = "4.1.6";
+    version = "4.1.7";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/feeluown/feeluown-4.1.6.tar.gz";
-      sha256 = "sha256-GRy9wzdWURCKo88YrsaYZk9m5+46E8DPLdUS+a3nLfU=";
+      url = "https://pypi.org/packages/source/f/feeluown/feeluown-4.1.7.tar.gz";
+      sha256 = "sha256-g0aicGc8uue82hV+iRTBv2LHSsErphb3aQ2bfIBEXOo=";
     };
   };
   feeluown-kuwo = {
@@ -86,10 +86,10 @@
   };
   feeluown-ytmusic = {
     pname = "feeluown-ytmusic";
-    version = "0.4.3";
+    version = "0.4.4";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/fuo-ytmusic/fuo-ytmusic-0.4.3.tar.gz";
-      sha256 = "sha256-LZXPJXWtrZCafCp9c0yw2//8VNO+6ijoqZMNiZ4rwDg=";
+      url = "https://pypi.org/packages/source/f/fuo-ytmusic/fuo-ytmusic-0.4.4.tar.gz";
+      sha256 = "sha256-Sm3FI7wWHNJWyJWkJlB3U9bX5L/FkxiwaBVclGr5uws=";
     };
   };
   luoxu = {
