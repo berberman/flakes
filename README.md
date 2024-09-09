@@ -57,7 +57,7 @@ In your [NixOS configuration flake](https://www.tweag.io/blog/2020-07-31-nixos-f
 * [apple-emoji](https://github.com/samuelngs/apple-emoji-linux) - v17.4
 * [fastocr](https://github.com/BruceZhang1993/FastOCR) - 0.3.7
 * [fcitx5-material-color](https://github.com/hosxy/Fcitx5-Material-Color) - 0.2.1
-* [fcitx5-pinyin-moegirl](https://github.com/outloudvi/mw2fcitx) - 20240809
+* [fcitx5-pinyin-moegirl](https://github.com/outloudvi/mw2fcitx) - 20240909
 * [fcitx5-pinyin-zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) - 0.2.5.20240722
 * [feeluown](https://github.com/feeluown/FeelUOwn) - 4.1.7
 * [feeluown-bilibili](https://github.com/feeluown/feeluown-bilibili) - 0.4.1
