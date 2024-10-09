@@ -45,6 +45,7 @@
             "repo": "fcitx5-material-color",
             "rev": "0.2.1",
             "sha256": "sha256-i9JHIJ+cHLTBZUNzj9Ujl3LIdkCllTWpO1Ta4OT1LTc=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "0.2.1"
@@ -58,11 +59,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-+e4azEWHYSh3Gy9Xa+Y8E7f7rAA8YlWlbvbva9kNXCI=",
+            "sha256": "sha256-tb+Z7ja6yG7n6DcxSvdFhMq2xTNs6mJ6pdPfEKeRUww=",
             "type": "url",
-            "url": "https://github.com/outloudvi/mw2fcitx/releases/download/20240909/moegirl.dict"
+            "url": "https://github.com/outloudvi/mw2fcitx/releases/download/20241009/moegirl.dict"
         },
-        "version": "20240909"
+        "version": "20241009"
     },
     "fcitx5-pinyin-zhwiki": {
         "cargoLocks": null,
@@ -194,6 +195,7 @@
             "repo": "luoxu",
             "rev": "a46c8435428f94116d6164d8fcd6226c5126c0a5",
             "sha256": "sha256-lNmXnORDjcCecpz/16ggamVF/8RHjsoz37kKTxjMYkU=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "a46c8435428f94116d6164d8fcd6226c5126c0a5"
@@ -244,6 +246,7 @@
             "repo": "qBittorrent-Enhanced-Edition",
             "rev": "release-4.6.7.10",
             "sha256": "sha256-Mr376nH2pE6NMF9IdDhZULwqkRr7472OZnKO86hb6ZI=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "release-4.6.7.10"
@@ -264,6 +267,7 @@
             "repo": "Zydra",
             "rev": "791fabd188adcb1fd1cd8c53288b424740114cf9",
             "sha256": "sha256-6yHPlinmbg3M7Yun+fn34LJY1xggZy9mAgwRDgRZf9Y=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "791fabd188adcb1fd1cd8c53288b424740114cf9"
