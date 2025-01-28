@@ -29,6 +29,7 @@ jobs:
 
     - name: Run nvfetcher
       run: |
+        export LANG=en_US.UTF-8
         nix develop --command runghc Update
         nix develop --profile dev && cachix push berberman dev
 
