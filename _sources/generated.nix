@@ -30,34 +30,34 @@
   };
   fcitx5-pinyin-moegirl = {
     pname = "fcitx5-pinyin-moegirl";
-    version = "20241009";
+    version = "20250113";
     src = fetchurl {
-      url = "https://github.com/outloudvi/mw2fcitx/releases/download/20241009/moegirl.dict";
-      sha256 = "sha256-tb+Z7ja6yG7n6DcxSvdFhMq2xTNs6mJ6pdPfEKeRUww=";
+      url = "https://github.com/outloudvi/mw2fcitx/releases/download/20250113/moegirl.dict";
+      sha256 = "sha256-Z6MqYZMpvTGcz61NnzZQy63GXfcaTWE8dezPoYht6q0=";
     };
   };
   fcitx5-pinyin-zhwiki = {
     pname = "fcitx5-pinyin-zhwiki";
-    version = "0.2.5.20240909";
+    version = "0.2.5.20241218";
     src = fetchurl {
-      url = "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.5/zhwiki-20240909.dict";
-      sha256 = "sha256-djXrwl1MmiAf0U5Xvm4S7Fk2fKNRm5jtc94KUYIrcm8=";
+      url = "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.5/zhwiki-20241218.dict";
+      sha256 = "sha256-9Z+dgicQQdsySn1/xn6w4Q4hOqMv7Rngol615/JxtRk=";
     };
   };
   feeluown-bilibili = {
     pname = "feeluown-bilibili";
-    version = "0.4.1";
+    version = "0.5.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/feeluown-bilibili/feeluown-bilibili-0.4.1.tar.gz";
-      sha256 = "sha256-3Esn6SPc0A+2ClqNPdGH6lq0iE3t/T61wZy6+dRM4Sg=";
+      url = "https://pypi.org/packages/source/f/feeluown-bilibili/feeluown-bilibili-0.5.0.tar.gz";
+      sha256 = "sha256-Xgm8q16hs38mdqtAf5aGxZ3N+ExyvIJRb80J9kUleZk=";
     };
   };
   feeluown-core = {
     pname = "feeluown-core";
-    version = "4.1.7";
+    version = "4.1.8";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/feeluown/feeluown-4.1.7.tar.gz";
-      sha256 = "sha256-g0aicGc8uue82hV+iRTBv2LHSsErphb3aQ2bfIBEXOo=";
+      url = "https://pypi.org/packages/source/f/feeluown/feeluown-4.1.8.tar.gz";
+      sha256 = "sha256-cSJVJT62qZInO4DNiC0d7zlGLQ97BQBIxPttpkzk4sY=";
     };
   };
   feeluown-kuwo = {
@@ -86,10 +86,10 @@
   };
   feeluown-ytmusic = {
     pname = "feeluown-ytmusic";
-    version = "0.4.4";
+    version = "0.4.6";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/fuo-ytmusic/fuo-ytmusic-0.4.4.tar.gz";
-      sha256 = "sha256-Sm3FI7wWHNJWyJWkJlB3U9bX5L/FkxiwaBVclGr5uws=";
+      url = "https://pypi.org/packages/source/f/fuo-ytmusic/fuo-ytmusic-0.4.6.tar.gz";
+      sha256 = "sha256-6PKYIeu1YBb0Y95VoC/DBBCXTf6qSyh5B4LFKfbXGrQ=";
     };
   };
   luoxu = {
@@ -133,13 +133,13 @@
   };
   qbittorrent-enhanced = {
     pname = "qbittorrent-enhanced";
-    version = "release-4.6.7.10";
+    version = "release-5.0.3.10";
     src = fetchFromGitHub {
       owner = "c0re100";
       repo = "qBittorrent-Enhanced-Edition";
-      rev = "release-4.6.7.10";
+      rev = "release-5.0.3.10";
       fetchSubmodules = false;
-      sha256 = "sha256-Mr376nH2pE6NMF9IdDhZULwqkRr7472OZnKO86hb6ZI=";
+      sha256 = "sha256-efQFjdJeVMrPvCQ5aYtUb65hozKc73MnP0/Kheti9BI=";
     };
   };
   zydra = {
