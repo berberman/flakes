@@ -104,11 +104,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-cSJVJT62qZInO4DNiC0d7zlGLQ97BQBIxPttpkzk4sY=",
+            "sha256": "sha256-ieFjYKg5u1U6rgOeI022ZW0TTo3fSKH/KEj2xf/Tp1w=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/f/feeluown/feeluown-4.1.8.tar.gz"
+            "url": "https://pypi.org/packages/source/f/feeluown/feeluown-4.1.9.tar.gz"
         },
-        "version": "4.1.8"
+        "version": "4.1.9"
     },
     "feeluown-kuwo": {
         "cargoLocks": null,
