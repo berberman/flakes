@@ -86,10 +86,10 @@
   };
   feeluown-ytmusic = {
     pname = "feeluown-ytmusic";
-    version = "0.4.6";
+    version = "0.4.9";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/fuo-ytmusic/fuo-ytmusic-0.4.6.tar.gz";
-      sha256 = "sha256-6PKYIeu1YBb0Y95VoC/DBBCXTf6qSyh5B4LFKfbXGrQ=";
+      url = "https://pypi.org/packages/source/f/fuo-ytmusic/fuo-ytmusic-0.4.9.tar.gz";
+      sha256 = "sha256-LqCzGBA00DuCwC1pch9mVU9V0rqrHWDHKuLa5Sh7ov0=";
     };
   };
   luoxu = {
