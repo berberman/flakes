@@ -11,10 +11,10 @@
   };
   fastocr = {
     pname = "fastocr";
-    version = "0.3.7";
+    version = "0.3.8";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/fastocr/fastocr-0.3.7.tar.gz";
-      sha256 = "sha256-jOvWmKWwrBfq/2+XqKaaeavfNn7OAcsn6bB6ZCfNukM=";
+      url = "https://pypi.org/packages/source/f/fastocr/fastocr-0.3.8.tar.gz";
+      sha256 = "sha256-8+R+Eq7N8hR9e/1vRwFB8LK+BS+ZLH1K48onWJxMfBM=";
     };
   };
   fcitx5-material-color = {
