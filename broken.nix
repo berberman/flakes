@@ -1,1 +1,1 @@
-[ "python-opencc" "qliveplayer" ]
+[ "python-opencc" "qliveplayer" "fastocr" ]
