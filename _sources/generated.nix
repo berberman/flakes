@@ -30,10 +30,10 @@
   };
   fcitx5-pinyin-moegirl = {
     pname = "fcitx5-pinyin-moegirl";
-    version = "20250209";
+    version = "20250309";
     src = fetchurl {
-      url = "https://github.com/outloudvi/mw2fcitx/releases/download/20250209/moegirl.dict";
-      sha256 = "sha256-+EIXBIu3OE59VpnAWalmiNqD4FsvuSgRr79OQCqrgMA=";
+      url = "https://github.com/outloudvi/mw2fcitx/releases/download/20250309/moegirl.dict";
+      sha256 = "sha256-0ZXlPpeaxXK3dI2uGBmISpCGM9isQdPxJRTcoIa75fg=";
     };
   };
   fcitx5-pinyin-zhwiki = {
@@ -70,10 +70,10 @@
   };
   feeluown-netease = {
     pname = "feeluown-netease";
-    version = "1.0.3";
+    version = "1.0.4";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/fuo_netease/fuo_netease-1.0.3.tar.gz";
-      sha256 = "sha256-ISmAewcBijl29YSojmA7aO+P6HUy2/1wu0OE8BgoLBg=";
+      url = "https://pypi.org/packages/source/f/fuo_netease/fuo_netease-1.0.4.tar.gz";
+      sha256 = "sha256-DTSHPFPO6vL/Kvo9Y8dcTfBSyXCSXNO1LLbUo30WcP0=";
     };
   };
   feeluown-qqmusic = {
