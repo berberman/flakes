@@ -46,18 +46,18 @@
   };
   feeluown-bilibili = {
     pname = "feeluown-bilibili";
-    version = "0.5.0";
+    version = "0.5.1";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/feeluown-bilibili/feeluown-bilibili-0.5.0.tar.gz";
-      sha256 = "sha256-Xgm8q16hs38mdqtAf5aGxZ3N+ExyvIJRb80J9kUleZk=";
+      url = "https://pypi.org/packages/source/f/feeluown-bilibili/feeluown-bilibili-0.5.1.tar.gz";
+      sha256 = "sha256-iq+g9Ie4b7pz+LvopKTrwRmP4qY7ZMkfy+Q62Mzxm9E=";
     };
   };
   feeluown-core = {
     pname = "feeluown-core";
-    version = "4.1.10";
+    version = "4.1.11";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/feeluown/feeluown-4.1.10.tar.gz";
-      sha256 = "sha256-yMoL42v9xOsnj5gBnKFXo0nz0NNwsG/GSB52GYnP8UA=";
+      url = "https://pypi.org/packages/source/f/feeluown/feeluown-4.1.11.tar.gz";
+      sha256 = "sha256-NfU7Y+X0E9JSGurbfG+FRTXF4MIYHQMzPp86sD9lZ90=";
     };
   };
   feeluown-kuwo = {
