@@ -104,11 +104,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-NfU7Y+X0E9JSGurbfG+FRTXF4MIYHQMzPp86sD9lZ90=",
+            "sha256": "sha256-r2Uy2gmPMbPKxRhikovWKTndLsRvixFHyOlxtUFLl44=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/f/feeluown/feeluown-4.1.11.tar.gz"
+            "url": "https://pypi.org/packages/source/f/feeluown/feeluown-4.1.12.tar.gz"
         },
-        "version": "4.1.11"
+        "version": "4.1.12"
     },
     "feeluown-kuwo": {
         "cargoLocks": null,
@@ -244,12 +244,12 @@
             "name": null,
             "owner": "c0re100",
             "repo": "qBittorrent-Enhanced-Edition",
-            "rev": "release-5.1.0.10",
-            "sha256": "sha256-wMPzasrWmPG+iOwUBkbswSMQQBJxq03GVlQg5ck54vQ=",
+            "rev": "release-5.1.0.11",
+            "sha256": "sha256-LY79Y7sG6EHGOh1hRujAOMRK3MKSAblJ+FFuGlj13iQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "release-5.1.0.10"
+        "version": "release-5.1.0.11"
     },
     "zydra": {
         "cargoLocks": null,

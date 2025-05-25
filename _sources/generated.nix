@@ -54,10 +54,10 @@
   };
   feeluown-core = {
     pname = "feeluown-core";
-    version = "4.1.11";
+    version = "4.1.12";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/feeluown/feeluown-4.1.11.tar.gz";
-      sha256 = "sha256-NfU7Y+X0E9JSGurbfG+FRTXF4MIYHQMzPp86sD9lZ90=";
+      url = "https://pypi.org/packages/source/f/feeluown/feeluown-4.1.12.tar.gz";
+      sha256 = "sha256-r2Uy2gmPMbPKxRhikovWKTndLsRvixFHyOlxtUFLl44=";
     };
   };
   feeluown-kuwo = {
@@ -133,13 +133,13 @@
   };
   qbittorrent-enhanced = {
     pname = "qbittorrent-enhanced";
-    version = "release-5.1.0.10";
+    version = "release-5.1.0.11";
     src = fetchFromGitHub {
       owner = "c0re100";
       repo = "qBittorrent-Enhanced-Edition";
-      rev = "release-5.1.0.10";
+      rev = "release-5.1.0.11";
       fetchSubmodules = false;
-      sha256 = "sha256-wMPzasrWmPG+iOwUBkbswSMQQBJxq03GVlQg5ck54vQ=";
+      sha256 = "sha256-LY79Y7sG6EHGOh1hRujAOMRK3MKSAblJ+FFuGlj13iQ=";
     };
   };
   zydra = {
