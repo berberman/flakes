@@ -133,13 +133,13 @@
   };
   qbittorrent-enhanced = {
     pname = "qbittorrent-enhanced";
-    version = "release-5.1.1.10";
+    version = "release-5.1.2.10";
     src = fetchFromGitHub {
       owner = "c0re100";
       repo = "qBittorrent-Enhanced-Edition";
-      rev = "release-5.1.1.10";
+      rev = "release-5.1.2.10";
       fetchSubmodules = false;
-      sha256 = "sha256-BUBx1GbrajmCPMYHBngc/4yES7o+jwNi36Wqwcu7BIc=";
+      sha256 = "sha256-Q3gipRgZCzihKUQZZmETT65AUSEUfgj9dFxZFybq258=";
     };
   };
   zydra = {
