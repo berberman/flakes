@@ -149,11 +149,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-1Hw+odQrMWuvonB3u8ZOWyGIq471rf0X2Ti1dzq1/Fg=",
+            "sha256": "sha256-GXhinL2FF5JR4c/pXYzTB6CyYjMDNAWVPkv5rNG7BLw=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/f/fuo_qqmusic/fuo_qqmusic-1.0.8.tar.gz"
+            "url": "https://pypi.org/packages/source/f/fuo_qqmusic/fuo_qqmusic-1.0.9.tar.gz"
         },
-        "version": "1.0.8"
+        "version": "1.0.9"
     },
     "feeluown-ytmusic": {
         "cargoLocks": null,
