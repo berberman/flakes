@@ -102,25 +102,17 @@
       fetchSubmodules = false;
       sha256 = "sha256-lNmXnORDjcCecpz/16ggamVF/8RHjsoz37kKTxjMYkU=";
     };
-    cargoLock."querytrans/Cargo.lock" = {
-      lockFile = ./luoxu-a46c8435428f94116d6164d8fcd6226c5126c0a5/querytrans/Cargo.lock;
-      outputHashes = {
-        
-      };
-    };
     cargoLock."luoxu-cutwords/Cargo.lock" = {
       lockFile = ./luoxu-a46c8435428f94116d6164d8fcd6226c5126c0a5/luoxu-cutwords/Cargo.lock;
       outputHashes = {
         
       };
     };
-  };
-  py-term = {
-    pname = "py-term";
-    version = "0.7";
-    src = fetchurl {
-      url = "https://pypi.org/packages/source/p/py-term/py-term-0.7.tar.gz";
-      sha256 = "sha256-q6pNGsEnzMbdUNGTensDD1on6jvZOvNr7COu79BdUMk=";
+    cargoLock."querytrans/Cargo.lock" = {
+      lockFile = ./luoxu-a46c8435428f94116d6164d8fcd6226c5126c0a5/querytrans/Cargo.lock;
+      outputHashes = {
+        
+      };
     };
   };
   pypinyin = {
@@ -141,17 +133,5 @@
       fetchSubmodules = false;
       sha256 = "sha256-Q3gipRgZCzihKUQZZmETT65AUSEUfgj9dFxZFybq258=";
     };
-  };
-  zydra = {
-    pname = "zydra";
-    version = "791fabd188adcb1fd1cd8c53288b424740114cf9";
-    src = fetchFromGitHub {
-      owner = "hamedA2";
-      repo = "Zydra";
-      rev = "791fabd188adcb1fd1cd8c53288b424740114cf9";
-      fetchSubmodules = false;
-      sha256 = "sha256-6yHPlinmbg3M7Yun+fn34LJY1xggZy9mAgwRDgRZf9Y=";
-    };
-    date = "2020-07-22";
   };
 }

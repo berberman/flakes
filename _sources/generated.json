@@ -200,21 +200,6 @@
         },
         "version": "a46c8435428f94116d6164d8fcd6226c5126c0a5"
     },
-    "py-term": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "py-term",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-q6pNGsEnzMbdUNGTensDD1on6jvZOvNr7COu79BdUMk=",
-            "type": "url",
-            "url": "https://pypi.org/packages/source/p/py-term/py-term-0.7.tar.gz"
-        },
-        "version": "0.7"
-    },
     "pypinyin": {
         "cargoLocks": null,
         "date": null,
@@ -250,26 +235,5 @@
             "type": "github"
         },
         "version": "release-5.1.2.10"
-    },
-    "zydra": {
-        "cargoLocks": null,
-        "date": "2020-07-22",
-        "extract": null,
-        "name": "zydra",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "hamedA2",
-            "repo": "Zydra",
-            "rev": "791fabd188adcb1fd1cd8c53288b424740114cf9",
-            "sha256": "sha256-6yHPlinmbg3M7Yun+fn34LJY1xggZy9mAgwRDgRZf9Y=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "791fabd188adcb1fd1cd8c53288b424740114cf9"
     }
 }

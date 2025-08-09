@@ -67,6 +67,4 @@ In your [NixOS configuration flake](https://www.tweag.io/blog/2020-07-31-nixos-f
 * [feeluown-ytmusic](https://github.com/feeluown/feeluown-ytmusic) - 0.4.11
 * [luoxu](https://github.com/lilydjwg/luoxu) - a46c8435428f94116d6164d8fcd6226c5126c0a5
 * [luoxu-cutwords](https://github.com/lilydjwg/luoxu) - a46c8435428f94116d6164d8fcd6226c5126c0a5
-* [py-term](https://github.com/gravmatt/py-term) - 0.7
 * [pypinyin](https://github.com/mozillazg/python-pinyin) - 0.55.0
-* [zydra](https://github.com/hamedA2/Zydra) - 791fabd188adcb1fd1cd8c53288b424740114cf9
