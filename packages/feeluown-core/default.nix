@@ -8,6 +8,7 @@ in buildPythonApplication rec {
 
   inherit (mySource) version src;
 
+  format = "setuptools";
   doCheck = false;
 
   propagatedBuildInputs = (with pythonPackages; [
@@ -23,6 +24,7 @@ in buildPythonApplication rec {
     packaging
     mutagen
     qasync
+    openai
   ]) ++ [ mpv ];
 
   postUnpack = ''

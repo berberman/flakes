@@ -60,12 +60,6 @@ packageSet = do
   -----------------------------------------------------------------------------
   define $ package "fcitx5-material-color" `fromGitHub` ("hosxy", "fcitx5-material-color")
   -----------------------------------------------------------------------------
-  define $ package "zydra"
-    `sourceGit` "https://github.com/hamedA2/Zydra"
-    `fetchGitHub` ("hamedA2", "Zydra")
-  -----------------------------------------------------------------------------
-  define $ package "py-term" `fromPypi` "py-term"
-  -----------------------------------------------------------------------------
   define $
     package "luoxu" 
       `sourceManual` "a46c8435428f94116d6164d8fcd6226c5126c0a5"

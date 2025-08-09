@@ -6,6 +6,7 @@ in buildPythonPackage rec {
 
   inherit (mySource) pname version src;
 
+  format = "setuptools";
   doCheck = false;
 
   propagatedBuildInputs =
