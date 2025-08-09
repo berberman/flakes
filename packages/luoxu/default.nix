@@ -5,6 +5,7 @@ with python3.pkgs;
 
 buildPythonApplication rec {
   inherit (mySource) pname src version;
+  format = "setuptools";
 
   nativeBuildInputs =
     [ rustPlatform.cargoSetupHook setuptools-rust cargo rustc pkg-config ];
