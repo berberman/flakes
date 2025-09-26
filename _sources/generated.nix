@@ -78,10 +78,10 @@
   };
   feeluown-qqmusic = {
     pname = "feeluown-qqmusic";
-    version = "1.0.12";
+    version = "1.0.13";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/fuo_qqmusic/fuo_qqmusic-1.0.12.tar.gz";
-      sha256 = "sha256-4l74v0YkL+7g223R+hCpRzQUIAa7GdgGCWYNmcxS9r4=";
+      url = "https://pypi.org/packages/source/f/fuo_qqmusic/fuo_qqmusic-1.0.13.tar.gz";
+      sha256 = "sha256-NNpb4ADgdY589QlhuOCHtXrCij7DjxGURxgJALh8dww=";
     };
   };
   feeluown-ytmusic = {
