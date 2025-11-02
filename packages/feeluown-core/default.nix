@@ -15,7 +15,6 @@ in buildPythonApplication rec {
     dbus-python
     setuptools
     pyqt5
-    pyqtwebengine
     pyopengl
     janus
     requests
