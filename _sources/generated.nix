@@ -51,10 +51,10 @@
   };
   feeluown-bilibili = {
     pname = "feeluown-bilibili";
-    version = "0.5.2";
+    version = "0.5.3";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/feeluown_bilibili/feeluown_bilibili-0.5.2.tar.gz";
-      sha256 = "sha256-qKL9E7N6SE315UqkwubEvR2qp82l7OBx24dZgv/P/6Q=";
+      url = "https://pypi.org/packages/source/f/feeluown_bilibili/feeluown_bilibili-0.5.3.tar.gz";
+      sha256 = "sha256-D+ReIthu+PWwTdxM+Fbg7BzkVoK56cdayi0k4EiSTDk=";
     };
   };
   feeluown-core = {
@@ -91,10 +91,10 @@
   };
   feeluown-ytmusic = {
     pname = "feeluown-ytmusic";
-    version = "0.4.12";
+    version = "0.4.13";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/fuo_ytmusic/fuo_ytmusic-0.4.12.tar.gz";
-      sha256 = "sha256-irUfAj4ard5CQvp4BoypSc6g5JbUTju+vUv5DzLtTbw=";
+      url = "https://pypi.org/packages/source/f/fuo_ytmusic/fuo_ytmusic-0.4.13.tar.gz";
+      sha256 = "sha256-KbJczLRzNaGp0zUtLXmR1x3C/VIiiQnEmgDn5IBdc3U=";
     };
   };
   luoxu = {

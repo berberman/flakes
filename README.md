@@ -59,12 +59,12 @@ In your [NixOS configuration flake](https://www.tweag.io/blog/2020-07-31-nixos-f
 * [fcitx5-pinyin-moegirl](https://github.com/outloudvi/mw2fcitx) - 20251210
 * [fcitx5-pinyin-zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) - 0.3.0.20251104
 * [feeluown](https://github.com/feeluown/FeelUOwn) - 4.1.16
-* [feeluown-bilibili](https://github.com/feeluown/feeluown-bilibili) - 0.5.2
+* [feeluown-bilibili](https://github.com/feeluown/feeluown-bilibili) - 0.5.3
 * [feeluown-core](https://github.com/feeluown/FeelUOwn) - 4.1.16
 * [feeluown-kuwo](https://github.com/feeluown/feeluown-kuwo) - 0.2.2
 * [feeluown-netease](https://github.com/feeluown/feeluown-netease) - 1.0.6
 * [feeluown-qqmusic](https://github.com/feeluown/feeluown-qqmusic) - 1.0.14
-* [feeluown-ytmusic](https://github.com/feeluown/feeluown-ytmusic) - 0.4.12
+* [feeluown-ytmusic](https://github.com/feeluown/feeluown-ytmusic) - 0.4.13
 * [luoxu](https://github.com/lilydjwg/luoxu) - a46c8435428f94116d6164d8fcd6226c5126c0a5
 * [luoxu-cutwords](https://github.com/lilydjwg/luoxu) - a46c8435428f94116d6164d8fcd6226c5126c0a5
 * [pypinyin](https://github.com/mozillazg/python-pinyin) - 0.55.0
