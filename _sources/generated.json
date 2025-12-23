@@ -74,11 +74,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-bYp4HRUeXMUO7bkjmhp9nfotnBvyVRIROSeT7VapAKc=",
+            "sha256": "sha256-1/KKfeRhor1LGYBrOHqLvxfK9Byv3AplzqVX3lRO50Y=",
             "type": "url",
-            "url": "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.3.0/zhwiki-20251104.dict"
+            "url": "https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.3.0/zhwiki-20251223.dict"
         },
-        "version": "0.3.0.20251104"
+        "version": "0.3.0.20251223"
     },
     "feeluown-bilibili": {
         "cargoLock": null,
