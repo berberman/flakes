@@ -1,14 +1,13 @@
-{ lib, sources, rustPlatform }:
+{ lib, nv-sources, rustPlatform }:
 rustPlatform.buildRustPackage {
 
   pname = "luoxu-cutwords";
 
-  inherit (sources.luoxu) version;
+  inherit (nv-sources.luoxu) version;
 
-  src = "${sources.luoxu.src}/luoxu-cutwords";
+  src = "${nv-sources.luoxu.src}/luoxu-cutwords";
 
-  cargoLock = sources.luoxu.cargoLock."luoxu-cutwords/Cargo.lock";
-
+  cargoLock = nv-sources.luoxu.cargoLock."luoxu-cutwords/Cargo.lock";
   passthru.runnable = true;
 
   meta = with lib; {

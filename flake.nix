@@ -23,7 +23,7 @@
         prev.lib.composeManyExtensions [
           overlays
           (final: prev: {
-            sources = generated {
+            nv-sources = generated {
               inherit (final) fetchurl fetchgit fetchFromGitHub dockerTools;
             };
           })
@@ -34,7 +34,7 @@
                 override =
                   builtins.intersectAttrs (builtins.functionArgs pkg) ({
                     pythonPackages = final.python3.pkgs;
-                    mySource = prev.sources.${name} or null;
+                    mySource = prev.nv-sources.${name} or null;
                   });
               in final.callPackage pkg override))
         ] final prev;
