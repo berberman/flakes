@@ -8,10 +8,10 @@
 {
   apple-emoji = {
     pname = "apple-emoji";
-    version = "v18.4";
+    version = "v26.2.1";
     src = fetchurl {
-      url = "https://github.com/samuelngs/apple-emoji-linux/releases/download/v18.4/AppleColorEmoji.ttf";
-      sha256 = "sha256-pP0He9EUN7SUDYzwj0CE4e39SuNZ+SVz7FdmUviF6r0=";
+      url = "https://github.com/samuelngs/apple-emoji-linux/releases/download/v26.2.1/AppleColorEmoji.ttf";
+      sha256 = "sha256-57X5mIEtmrUNMvVibLHojt6jRdcl+O30Sn7DMzuBBD0=";
     };
   };
   fastocr = {
