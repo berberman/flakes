@@ -8,7 +8,7 @@ stdenv.mkDerivation rec {
   dontConfigure = true;
 
   installPhase = ''
-    install -D -m644 $src $out/share/fonts/truetype/AppleColorEmoji.ttf
+    install -D -m644 $src $out/share/fonts/truetype/AppleColorEmoji-Linux.ttf
   '';
 
   meta = with lib; {
