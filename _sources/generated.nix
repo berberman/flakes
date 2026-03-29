@@ -8,10 +8,10 @@
 {
   apple-emoji = {
     pname = "apple-emoji";
-    version = "v26.2.1";
+    version = "macos-26-20260219-2aa12422";
     src = fetchurl {
-      url = "https://github.com/samuelngs/apple-emoji-linux/releases/download/v26.2.1/AppleColorEmoji.ttf";
-      sha256 = "sha256-57X5mIEtmrUNMvVibLHojt6jRdcl+O30Sn7DMzuBBD0=";
+      url = "https://github.com/samuelngs/apple-emoji-linux/releases/download/macos-26-20260219-2aa12422/AppleColorEmoji-Linux.ttf";
+      sha256 = "sha256-U1oEOvBHBtJEcQWeZHRb/IDWYXraLuo0NdxWINwPUxg=";
     };
   };
   fastocr = {
@@ -35,10 +35,10 @@
   };
   fcitx5-pinyin-moegirl = {
     pname = "fcitx5-pinyin-moegirl";
-    version = "20260209";
+    version = "20260315";
     src = fetchurl {
-      url = "https://github.com/outloudvi/mw2fcitx/releases/download/20260209/moegirl.dict";
-      sha256 = "sha256-ZpuAcS6KgVRL8ru+U///Zi7jiXLGIbSx6dPF0KWLvwQ=";
+      url = "https://github.com/outloudvi/mw2fcitx/releases/download/20260315/moegirl.dict";
+      sha256 = "sha256-YnN1ArHyikV0kADquH2kwpk7cpiXKcL6YwUxVJXlQKM=";
     };
   };
   fcitx5-pinyin-zhwiki = {
@@ -59,10 +59,10 @@
   };
   feeluown-core = {
     pname = "feeluown-core";
-    version = "5.0.2";
+    version = "5.1";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/feeluown/feeluown-5.0.2.tar.gz";
-      sha256 = "sha256-z9l2b+0jCBpI2stfea20KCk0R/OUpVJwBoXEnw5PFV8=";
+      url = "https://pypi.org/packages/source/f/feeluown/feeluown-5.1.tar.gz";
+      sha256 = "sha256-NZy7/gT6RTkYs2qGLvcQYL8BVkgf2GGaRcICBu8TyvA=";
     };
   };
   feeluown-kuwo = {
@@ -91,10 +91,10 @@
   };
   feeluown-ytmusic = {
     pname = "feeluown-ytmusic";
-    version = "0.4.16";
+    version = "0.4.17";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/f/fuo_ytmusic/fuo_ytmusic-0.4.16.tar.gz";
-      sha256 = "sha256-s7vE74nDRCaPBCCmj+vuLbj7n/VelKPGmF7zeABUIAE=";
+      url = "https://pypi.org/packages/source/f/fuo_ytmusic/fuo_ytmusic-0.4.17.tar.gz";
+      sha256 = "sha256-oRf+SkGsqkboSlwx6GqgJ6EwyaARMeVec0zxCBaw34o=";
     };
   };
   luoxu = {

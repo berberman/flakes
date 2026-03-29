@@ -8,11 +8,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-57X5mIEtmrUNMvVibLHojt6jRdcl+O30Sn7DMzuBBD0=",
+            "sha256": "sha256-U1oEOvBHBtJEcQWeZHRb/IDWYXraLuo0NdxWINwPUxg=",
             "type": "url",
-            "url": "https://github.com/samuelngs/apple-emoji-linux/releases/download/v26.2.1/AppleColorEmoji.ttf"
+            "url": "https://github.com/samuelngs/apple-emoji-linux/releases/download/macos-26-20260219-2aa12422/AppleColorEmoji-Linux.ttf"
         },
-        "version": "v26.2.1"
+        "version": "macos-26-20260219-2aa12422"
     },
     "fastocr": {
         "cargoLock": null,
@@ -59,11 +59,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-ZpuAcS6KgVRL8ru+U///Zi7jiXLGIbSx6dPF0KWLvwQ=",
+            "sha256": "sha256-YnN1ArHyikV0kADquH2kwpk7cpiXKcL6YwUxVJXlQKM=",
             "type": "url",
-            "url": "https://github.com/outloudvi/mw2fcitx/releases/download/20260209/moegirl.dict"
+            "url": "https://github.com/outloudvi/mw2fcitx/releases/download/20260315/moegirl.dict"
         },
-        "version": "20260209"
+        "version": "20260315"
     },
     "fcitx5-pinyin-zhwiki": {
         "cargoLock": null,
@@ -104,11 +104,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-z9l2b+0jCBpI2stfea20KCk0R/OUpVJwBoXEnw5PFV8=",
+            "sha256": "sha256-NZy7/gT6RTkYs2qGLvcQYL8BVkgf2GGaRcICBu8TyvA=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/f/feeluown/feeluown-5.0.2.tar.gz"
+            "url": "https://pypi.org/packages/source/f/feeluown/feeluown-5.1.tar.gz"
         },
-        "version": "5.0.2"
+        "version": "5.1"
     },
     "feeluown-kuwo": {
         "cargoLock": null,
@@ -164,11 +164,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-s7vE74nDRCaPBCCmj+vuLbj7n/VelKPGmF7zeABUIAE=",
+            "sha256": "sha256-oRf+SkGsqkboSlwx6GqgJ6EwyaARMeVec0zxCBaw34o=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/f/fuo_ytmusic/fuo_ytmusic-0.4.16.tar.gz"
+            "url": "https://pypi.org/packages/source/f/fuo_ytmusic/fuo_ytmusic-0.4.17.tar.gz"
         },
-        "version": "0.4.16"
+        "version": "0.4.17"
     },
     "luoxu": {
         "cargoLock": {

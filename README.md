@@ -54,17 +54,17 @@ In your [NixOS configuration flake](https://www.tweag.io/blog/2020-07-31-nixos-f
 
 ## Packages available
 
-* [apple-emoji](https://github.com/samuelngs/apple-emoji-linux) - v26.2.1
+* [apple-emoji](https://github.com/samuelngs/apple-emoji-linux) - macos-26-20260219-2aa12422
 * [fcitx5-material-color](https://github.com/hosxy/Fcitx5-Material-Color) - 0.2.1
-* [fcitx5-pinyin-moegirl](https://github.com/outloudvi/mw2fcitx) - 20260209
+* [fcitx5-pinyin-moegirl](https://github.com/outloudvi/mw2fcitx) - 20260315
 * [fcitx5-pinyin-zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) - 0.3.0.20251223
-* [feeluown](https://github.com/feeluown/FeelUOwn) - 5.0.2
+* [feeluown](https://github.com/feeluown/FeelUOwn) - 5.1
 * [feeluown-bilibili](https://github.com/feeluown/feeluown-bilibili) - 0.5.4
-* [feeluown-core](https://github.com/feeluown/FeelUOwn) - 5.0.2
+* [feeluown-core](https://github.com/feeluown/FeelUOwn) - 5.1
 * [feeluown-kuwo](https://github.com/feeluown/feeluown-kuwo) - 0.2.2
 * [feeluown-netease](https://github.com/feeluown/feeluown-netease) - 1.0.8
 * [feeluown-qqmusic](https://github.com/feeluown/feeluown-qqmusic) - 1.0.16
-* [feeluown-ytmusic](https://github.com/feeluown/feeluown-ytmusic) - 0.4.16
+* [feeluown-ytmusic](https://github.com/feeluown/feeluown-ytmusic) - 0.4.17
 * [luoxu](https://github.com/lilydjwg/luoxu) - a46c8435428f94116d6164d8fcd6226c5126c0a5
 * [luoxu-cutwords](https://github.com/lilydjwg/luoxu) - a46c8435428f94116d6164d8fcd6226c5126c0a5
 * [pypinyin](https://github.com/mozillazg/python-pinyin) - 0.55.0
