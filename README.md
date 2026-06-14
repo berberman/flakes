@@ -54,7 +54,7 @@ In your [NixOS configuration flake](https://www.tweag.io/blog/2020-07-31-nixos-f
 
 ## Packages available
 
-* [apple-emoji](https://github.com/samuelngs/apple-emoji-linux) - macos-26-20260219-2aa12422
+* [apple-emoji](https://github.com/samuelngs/apple-emoji-linux) - macos-26-20260613-f1fc560b
 * [fcitx5-material-color](https://github.com/hosxy/Fcitx5-Material-Color) - 0.2.1
 * [fcitx5-pinyin-moegirl](https://github.com/outloudvi/mw2fcitx) - 20260511
 * [fcitx5-pinyin-zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) - 0.3.0.20260416

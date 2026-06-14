@@ -8,11 +8,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-U1oEOvBHBtJEcQWeZHRb/IDWYXraLuo0NdxWINwPUxg=",
+            "sha256": "sha256-uMjtl/ZCuJuko2o+CWYZ8IBdBswlrhEW5pU7mBQq4gw=",
             "type": "url",
-            "url": "https://github.com/samuelngs/apple-emoji-linux/releases/download/macos-26-20260219-2aa12422/AppleColorEmoji-Linux.ttf"
+            "url": "https://github.com/samuelngs/apple-emoji-linux/releases/download/macos-26-20260613-f1fc560b/AppleColorEmoji-Linux.ttf"
         },
-        "version": "macos-26-20260219-2aa12422"
+        "version": "macos-26-20260613-f1fc560b"
     },
     "fastocr": {
         "cargoLock": null,
@@ -230,7 +230,7 @@
             "owner": "c0re100",
             "repo": "qBittorrent-Enhanced-Edition",
             "rev": "release-5.2.1.10",
-            "sha256": "sha256-yvH+qHmkAZf/fgpb4gNocZMcExyKs88e814peYK8Xd4=",
+            "sha256": "sha256-WTzNIK6/ePLHfGN8vqnhvoO4Sbq57oLB5//RPYeG5As=",
             "sparseCheckout": [],
             "type": "github"
         },
