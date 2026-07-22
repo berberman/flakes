@@ -8,10 +8,10 @@
 {
   apple-emoji = {
     pname = "apple-emoji";
-    version = "macos-26-20260613-f1fc560b";
+    version = "macos-26-20260722-484daf4e";
     src = fetchurl {
-      url = "https://github.com/samuelngs/apple-emoji-linux/releases/download/macos-26-20260613-f1fc560b/AppleColorEmoji-Linux.ttf";
-      sha256 = "sha256-uMjtl/ZCuJuko2o+CWYZ8IBdBswlrhEW5pU7mBQq4gw=";
+      url = "https://github.com/samuelngs/apple-emoji-linux/releases/download/macos-26-20260722-484daf4e/AppleColorEmoji-Linux.ttf";
+      sha256 = "sha256-43x69iZaxKCvbVe8ZehhCad22ZZug0MzRVf2PaSCUW8=";
     };
   };
   fastocr = {
