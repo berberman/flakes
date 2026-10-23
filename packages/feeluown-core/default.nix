@@ -13,8 +13,7 @@ in buildPythonApplication rec {
 
   propagatedBuildInputs = (with pythonPackages; [
     dbus-python
-    setuptools
-    pyqt5
+    pyqt6
     pyopengl
     janus
     requests
@@ -24,6 +23,8 @@ in buildPythonApplication rec {
     mutagen
     qasync
     openai
+    langchain
+    fluent-runtime
   ]) ++ [ mpv ];
 
   postUnpack = ''
@@ -31,7 +32,7 @@ in buildPythonApplication rec {
       --replace "_dll = ctypes.util.find_library(_default_mpv_dylib)" \
                 '_dll = "${mpv}/lib/libmpv${stdenv.targetPlatform.extensions.sharedLibrary}"'
     substituteInPlace ./${pname}-${version}/feeluown/nowplaying/linux/__init__.py \
-      --replace dbus.mainloop.pyqt5 dbus.mainloop.glib \
+      --replace dbus.mainloop.pyqt6 dbus.mainloop.glib \
       --replace DBusQtMainLoop DBusGMainLoop
   '';
 
