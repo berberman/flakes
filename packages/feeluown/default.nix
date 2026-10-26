@@ -1,6 +1,6 @@
 { stdenv, lib, makeDesktopItem, copyDesktopItems, feeluown-core
 , feeluown-netease, feeluown-kuwo, feeluown-qqmusic, feeluown-ytmusic
-, feeluown-bilibili, pythonPackages, qt5, }:
+, feeluown-bilibili, pythonPackages, qt6, }:
 
 let
   inherit (pythonPackages) python wrapPython;
@@ -24,9 +24,10 @@ in stdenv.mkDerivation {
   inherit (feeluown-core) version src;
   inherit desktopItems;
 
-  nativeBuildInputs = [ wrapPython qt5.wrapQtAppsHook copyDesktopItems ];
+  nativeBuildInputs = [ wrapPython qt6.wrapQtAppsHook copyDesktopItems ];
 
   buildInputs = [
+    qt6.qtbase
     feeluown-core
     feeluown-netease
     feeluown-kuwo
